@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="ga-service-browser_8h" kind="file" language="C++">
+    <compoundname>ga-service-browser.h</compoundname>
+    <includes local="no">glib-object.h</includes>
+    <includes refid="lookup_8h" local="no">avahi-client/lookup.h</includes>
+    <includes refid="defs_8h" local="no">avahi-common/defs.h</includes>
+    <includes refid="ga-client_8h" local="yes">ga-client.h</includes>
+    <includes refid="ga-enums_8h" local="yes">ga-enums.h</includes>
+    <incdepgraph>
+      <node id="241">
+        <label>stdarg.h</label>
+      </node>
+      <node id="233">
+        <label>avahi-gobject/ga-service-browser.h</label>
+        <link refid="ga-service-browser_8h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>poll.h</label>
+      </node>
+      <node id="248">
+        <label>ga-client.h</label>
+        <link refid="ga-client_8h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="247">
+        <label>avahi-client/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>avahi-client/lookup.h</label>
+        <link refid="lookup_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>avahi-common/address.h</label>
+        <link refid="address_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>avahi-common/gccmacro.h</label>
+      </node>
+      <node id="249">
+        <label>ga-enums.h</label>
+        <link refid="ga-enums_8h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>sys/types.h</label>
+      </node>
+      <node id="240">
+        <label>avahi-common/strlst.h</label>
+        <link refid="strlst_8h"/>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="244">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch_8h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="246">
+        <label>sys/time.h</label>
+      </node>
+      <node id="236">
+        <label>inttypes.h</label>
+      </node>
+      <node id="234">
+        <label>glib-object.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct___ga_service_browser_class" prot="public">_GaServiceBrowserClass</innerclass>
+    <innerclass refid="struct___ga_service_browser" prot="public">_GaServiceBrowser</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ga-service-browser_8h_1af0fa5220f2889a90329c851b4ed94c6c" prot="public" static="no">
+        <name>GA_TYPE_SERVICE_BROWSER</name>
+        <initializer>(<ref refid="ga-service-browser_8h_1a762dbd520b0f79562e326101884aea7b" kindref="member">ga_service_browser_get_type</ref>())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="45" column="9" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-service-browser_8h_1a6a0cbc0f49ffd1bcd7f025b141ca331a" prot="public" static="no">
+        <name>GA_SERVICE_BROWSER</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_CHECK_INSTANCE_CAST((obj), <ref refid="ga-service-browser_8h_1af0fa5220f2889a90329c851b4ed94c6c" kindref="member">GA_TYPE_SERVICE_BROWSER</ref>, <ref refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" kindref="member">GaServiceBrowser</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="47" column="9" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-service-browser_8h_1ab507481ac5f43413962b1d33e5b0a714" prot="public" static="no">
+        <name>GA_SERVICE_BROWSER_CLASS</name>
+        <param><defname>klass</defname></param>
+        <initializer>(G_TYPE_CHECK_CLASS_CAST((klass), <ref refid="ga-service-browser_8h_1af0fa5220f2889a90329c851b4ed94c6c" kindref="member">GA_TYPE_SERVICE_BROWSER</ref>, <ref refid="ga-service-browser_8h_1af9e12f817abfb19d0d8c4c3b8282ea41" kindref="member">GaServiceBrowserClass</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="49" column="9" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-service-browser_8h_1ad8af864ddc8fd0f624f1eb7dfd20e489" prot="public" static="no">
+        <name>IS_GA_SERVICE_BROWSER</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_CHECK_INSTANCE_TYPE((obj), <ref refid="ga-service-browser_8h_1af0fa5220f2889a90329c851b4ed94c6c" kindref="member">GA_TYPE_SERVICE_BROWSER</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="51" column="9" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-service-browser_8h_1aeb207c178521ed3d77d48f93d1a6ed9b" prot="public" static="no">
+        <name>IS_GA_SERVICE_BROWSER_CLASS</name>
+        <param><defname>klass</defname></param>
+        <initializer>(G_TYPE_CHECK_CLASS_TYPE((klass), <ref refid="ga-service-browser_8h_1af0fa5220f2889a90329c851b4ed94c6c" kindref="member">GA_TYPE_SERVICE_BROWSER</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="53" column="9" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-service-browser_8h_1ab105d2587810dfda40dab2b522a07fe0" prot="public" static="no">
+        <name>GA_SERVICE_BROWSER_GET_CLASS</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_INSTANCE_GET_CLASS ((obj), <ref refid="ga-service-browser_8h_1af0fa5220f2889a90329c851b4ed94c6c" kindref="member">GA_TYPE_SERVICE_BROWSER</ref>, <ref refid="ga-service-browser_8h_1af9e12f817abfb19d0d8c4c3b8282ea41" kindref="member">GaServiceBrowserClass</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="55" column="9" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" prot="public" static="no">
+        <type>typedefG_BEGIN_DECLS struct <ref refid="struct___ga_service_browser" kindref="compound">_GaServiceBrowser</ref></type>
+        <definition>typedef typedefG_BEGIN_DECLS struct _GaServiceBrowser GaServiceBrowser</definition>
+        <argsstring></argsstring>
+        <name>GaServiceBrowser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="29" column="1" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ga-service-browser_8h_1af9e12f817abfb19d0d8c4c3b8282ea41" prot="public" static="no">
+        <type>struct <ref refid="struct___ga_service_browser_class" kindref="compound">_GaServiceBrowserClass</ref></type>
+        <definition>typedef struct _GaServiceBrowserClass GaServiceBrowserClass</definition>
+        <argsstring></argsstring>
+        <name>GaServiceBrowserClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="29" column="1" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ga-service-browser_8h_1a762dbd520b0f79562e326101884aea7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GType</type>
+        <definition>GType ga_service_browser_get_type</definition>
+        <argsstring>(void)</argsstring>
+        <name>ga_service_browser_get_type</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-service-browser_8h_1ab9bff8cf973d4ce9748c356a733465ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" kindref="member">GaServiceBrowser</ref> *</type>
+        <definition>GaServiceBrowser* ga_service_browser_new</definition>
+        <argsstring>(const gchar *type)</argsstring>
+        <name>ga_service_browser_new</name>
+        <param>
+          <type>const gchar *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-service-browser_8h_1a9d1abab955b5cd9976beb572ff29441a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" kindref="member">GaServiceBrowser</ref> *</type>
+        <definition>GaServiceBrowser* ga_service_browser_new_full</definition>
+        <argsstring>(AvahiIfIndex interface, AvahiProtocol protocol, const gchar *type, gchar *domain, GaLookupFlags flags)</argsstring>
+        <name>ga_service_browser_new_full</name>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>gchar *</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5" kindref="member">GaLookupFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-service-browser_8h_1ae9fcd0f34fd78d4ec5fd69433a3c280b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_service_browser_attach</definition>
+        <argsstring>(GaServiceBrowser *browser, GaClient *client, GError **error)</argsstring>
+        <name>ga_service_browser_attach</name>
+        <param>
+          <type><ref refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" kindref="member">GaServiceBrowser</ref> *</type>
+          <declname>browser</declname>
+        </param>
+        <param>
+          <type><ref refid="ga-client_8h_1ae8e7c30061823c30d100c12592dd7eb6" kindref="member">GaClient</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="66" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>ga-service-browser.h<sp/>-<sp/>Header<sp/>for<sp/>GaServiceBrowser</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2006-2007<sp/>Collabora<sp/>Ltd.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>St,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__GA_SERVICE_BROWSER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__GA_SERVICE_BROWSER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glib-object.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="lookup_8h" kindref="compound">avahi-client/lookup.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="defs_8h" kindref="compound">avahi-common/defs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ga-client_8h" kindref="compound">ga-client.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ga-enums_8h" kindref="compound">ga-enums.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">G_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_service_browser" kindref="compound">_GaServiceBrowser</ref><sp/><ref refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" kindref="member">GaServiceBrowser</ref>;</highlight></codeline>
+<codeline lineno="32" refid="ga-service-browser_8h_1af9e12f817abfb19d0d8c4c3b8282ea41" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_service_browser_class" kindref="compound">_GaServiceBrowserClass</ref><sp/><ref refid="struct___ga_service_browser_class" kindref="compound">GaServiceBrowserClass</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct___ga_service_browser_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_service_browser_class" kindref="compound">_GaServiceBrowserClass</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="struct___ga_service_browser_class_1af7064323f997dc61379647cc59f578e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GObjectClass<sp/><ref refid="struct___ga_service_browser_class_1af7064323f997dc61379647cc59f578e4" kindref="member">parent_class</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="struct___ga_service_browser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_service_browser" kindref="compound">_GaServiceBrowser</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="struct___ga_service_browser_1aa838ab35417bcb13de15f117f678b69b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GObject<sp/><ref refid="struct___ga_service_browser_1aa838ab35417bcb13de15f117f678b69b" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">GType<sp/><ref refid="ga-service-browser_8h_1a762dbd520b0f79562e326101884aea7b" kindref="member">ga_service_browser_get_type</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TYPE<sp/>MACROS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="ga-service-browser_8h_1af0fa5220f2889a90329c851b4ed94c6c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_TYPE_SERVICE_BROWSER<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/>(ga_service_browser_get_type())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="ga-service-browser_8h_1a6a0cbc0f49ffd1bcd7f025b141ca331a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_SERVICE_BROWSER(obj)<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_INSTANCE_CAST((obj),<sp/>GA_TYPE_SERVICE_BROWSER,<sp/>GaServiceBrowser))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="ga-service-browser_8h_1ab507481ac5f43413962b1d33e5b0a714" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_SERVICE_BROWSER_CLASS(klass)<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_CLASS_CAST((klass),<sp/>GA_TYPE_SERVICE_BROWSER,<sp/>GaServiceBrowserClass))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="ga-service-browser_8h_1ad8af864ddc8fd0f624f1eb7dfd20e489" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GA_SERVICE_BROWSER(obj)<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_INSTANCE_TYPE((obj),<sp/>GA_TYPE_SERVICE_BROWSER))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="ga-service-browser_8h_1aeb207c178521ed3d77d48f93d1a6ed9b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GA_SERVICE_BROWSER_CLASS(klass)<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_CLASS_TYPE((klass),<sp/>GA_TYPE_SERVICE_BROWSER))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="ga-service-browser_8h_1ab105d2587810dfda40dab2b522a07fe0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_SERVICE_BROWSER_GET_CLASS(obj)<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_INSTANCE_GET_CLASS<sp/>((obj),<sp/>GA_TYPE_SERVICE_BROWSER,<sp/>GaServiceBrowserClass))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" kindref="member">GaServiceBrowser</ref><sp/>*<ref refid="ga-service-browser_8h_1ab9bff8cf973d4ce9748c356a733465ab" kindref="member">ga_service_browser_new</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>type);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" kindref="member">GaServiceBrowser</ref><sp/>*<ref refid="ga-service-browser_8h_1a9d1abab955b5cd9976beb572ff29441a" kindref="member">ga_service_browser_new_full</ref>(<ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>type,<sp/>gchar<sp/>*<sp/>domain,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5" kindref="member">GaLookupFlags</ref><sp/>flags);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">gboolean</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="ga-service-browser_8h_1ae9fcd0f34fd78d4ec5fd69433a3c280b" kindref="member">ga_service_browser_attach</ref>(<ref refid="ga-service-browser_8h_1ab1f21b20a4c53489f479dd36f706db6f" kindref="member">GaServiceBrowser</ref><sp/>*<sp/>browser,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct___ga_client" kindref="compound">GaClient</ref><sp/>*<sp/>client,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">G_END_DECLS</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>#ifndef<sp/>__GA_SERVICE_BROWSER_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="avahi-gobject/ga-service-browser.h"/>
+  </compounddef>
+</doxygen>

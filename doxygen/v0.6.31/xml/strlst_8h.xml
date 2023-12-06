@@ -1,0 +1,656 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="strlst_8h" kind="file" language="C++">
+    <compoundname>strlst.h</compoundname>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includes local="no">avahi-common/gccmacro.h</includes>
+    <includedby refid="client_8h" local="no">avahi-client/client.h</includedby>
+    <includedby refid="publish_8h" local="no">avahi-client/publish.h</includedby>
+    <includedby refid="lookup_8h" local="no">avahi-client/lookup.h</includedby>
+    <incdepgraph>
+      <node id="110">
+        <label>stdarg.h</label>
+      </node>
+      <node id="111">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="112">
+        <label>avahi-common/gccmacro.h</label>
+      </node>
+      <node id="108">
+        <label>sys/types.h</label>
+      </node>
+      <node id="107">
+        <label>avahi-common/strlst.h</label>
+        <link refid="strlst.h"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="119">
+        <label>avahi-gobject/ga-service-resolver.h</label>
+        <link refid="ga-service-resolver_8h"/>
+      </node>
+      <node id="118">
+        <label>avahi-gobject/ga-service-browser.h</label>
+        <link refid="ga-service-browser_8h"/>
+      </node>
+      <node id="120">
+        <label>avahi-client/publish.h</label>
+        <link refid="publish_8h"/>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>avahi-gobject/ga-entry-group.h</label>
+        <link refid="ga-entry-group_8h"/>
+      </node>
+      <node id="115">
+        <label>avahi-gobject/ga-client.h</label>
+        <link refid="ga-client_8h"/>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>avahi-client/lookup.h</label>
+        <link refid="lookup_8h"/>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>avahi-ui/avahi-ui.h</label>
+        <link refid="avahi-ui_8h"/>
+      </node>
+      <node id="113">
+        <label>avahi-common/strlst.h</label>
+        <link refid="strlst.h"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>avahi-client/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>avahi-gobject/ga-record-browser.h</label>
+        <link refid="ga-record-browser_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_avahi_string_list" prot="public">AvahiStringList</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Construction and destruction</header>
+      <memberdef kind="function" id="strlst_8h_1a30c78e01c0fe04a07836d650290b6e5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_new</definition>
+        <argsstring>(const char *txt,...) AVAHI_GCC_SENTINEL</argsstring>
+        <name>avahi_string_list_new</name>
+        <param>
+          <type>const char *</type>
+          <declname>txt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Create a new string list by taking a variable list of NUL terminated strings. </para>        </briefdescription>
+        <detaileddescription>
+<para>The strings are copied using g_strdup(). The argument list must be terminated by a NULL pointer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1aa443ba933789865de641f9c37ac0de14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_new_from_array</definition>
+        <argsstring>(const char **array, int length)</argsstring>
+        <name>avahi_string_list_new_from_array</name>
+        <param>
+          <type>const char **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Create a new string list from a string array. </para>        </briefdescription>
+        <detaileddescription>
+<para>The strings are copied using g_strdup(). length should contain the length of the array, or -1 if the array is NULL terminated </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1a00fb6773ea7615664377c31618fdfc13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_string_list_free</definition>
+        <argsstring>(AvahiStringList *l)</argsstring>
+        <name>avahi_string_list_free</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Free a string list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="64" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Adding strings</header>
+      <memberdef kind="function" id="strlst_8h_1a75614d39a181583c81007ec04ea8770b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_add</definition>
+        <argsstring>(AvahiStringList *l, const char *text)</argsstring>
+        <name>avahi_string_list_add</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Append a NUL terminated string to the specified string list. </para>        </briefdescription>
+        <detaileddescription>
+<para>The passed string is copied using g_strdup(). Returns the new list start. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1a71aeec025ee00c41b844af104afe377f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_add_printf</definition>
+        <argsstring>(AvahiStringList *l, const char *format,...) AVAHI_GCC_PRINTF_ATTR23</argsstring>
+        <name>avahi_string_list_add_printf</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Append a new NUL terminated formatted string to the specified string list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1a956f9c2614ac4b9ef275d190d485782b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_add_arbitrary</definition>
+        <argsstring>(AvahiStringList *l, const uint8_t *text, size_t size)</argsstring>
+        <name>avahi_string_list_add_arbitrary</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Append an arbitrary length byte string to the list. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns the new list start. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1ab97468fa4fa94a75f71302856d287f26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_add_anonymous</definition>
+        <argsstring>(AvahiStringList *l, size_t size)</argsstring>
+        <name>avahi_string_list_add_anonymous</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Append a new entry to the string list. </para>        </briefdescription>
+        <detaileddescription>
+<para>The string is not filled with data. The caller should fill in string data afterwards by writing it to l-&gt;text, where l is the pointer returned by this function. This function exists solely to optimize a few operations where otherwise superfluous string copying would be necessary. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1abe85d83a5eb8e98155c5ed8da32df208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_add_many</definition>
+        <argsstring>(AvahiStringList *r,...) AVAHI_GCC_SENTINEL</argsstring>
+        <name>avahi_string_list_add_many</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Same as <ref refid="strlst_8h_1a75614d39a181583c81007ec04ea8770b" kindref="member">avahi_string_list_add()</ref>, but takes a variable number of NUL terminated strings. </para>        </briefdescription>
+        <detaileddescription>
+<para>The argument list must be terminated by a NULL pointer. Returns the new list start. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="97" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>String list operations</header>
+      <memberdef kind="function" id="strlst_8h_1a5c4b9ab709f22f7741c165ca3756a78b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_string_list_to_string</definition>
+        <argsstring>(AvahiStringList *l)</argsstring>
+        <name>avahi_string_list_to_string</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Convert the string list object to a single character string, seperated by spaces and enclosed in &quot;&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free()</ref> the result! This function doesn&apos;t work well with strings that contain NUL bytes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1af568e68084efaa42301aab13d3585e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_string_list_equal</definition>
+        <argsstring>(const AvahiStringList *a, const AvahiStringList *b)</argsstring>
+        <name>avahi_string_list_equal</name>
+        <param>
+          <type>const <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Compare to string lists. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1a07bf1f9833591f701f2b52d60e8a7304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_copy</definition>
+        <argsstring>(const AvahiStringList *l)</argsstring>
+        <name>avahi_string_list_copy</name>
+        <param>
+          <type>const <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Copy a string list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1aa8b026ff6b8e0f49afab322eaa0e65ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_reverse</definition>
+        <argsstring>(AvahiStringList *l)</argsstring>
+        <name>avahi_string_list_reverse</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Reverse the string list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1a806c571b338e882390a180b1360c1456" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned avahi_string_list_length</definition>
+        <argsstring>(const AvahiStringList *l)</argsstring>
+        <name>avahi_string_list_length</name>
+        <param>
+          <type>const <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Return the number of elements in the string list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="133" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Accessing items</header>
+      <memberdef kind="function" id="strlst_8h_1a15c81dec8bcfdb0f5c11eee7942d2e9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_get_next</definition>
+        <argsstring>(AvahiStringList *l)</argsstring>
+        <name>avahi_string_list_get_next</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Returns the next item in the string list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1a8778eae1edde0d53da4422c1b15d5bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t* avahi_string_list_get_text</definition>
+        <argsstring>(AvahiStringList *l)</argsstring>
+        <name>avahi_string_list_get_text</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Returns the text for the current item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1ad0a65bafffe7c87fe28543004bc65870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t avahi_string_list_get_size</definition>
+        <argsstring>(AvahiStringList *l)</argsstring>
+        <name>avahi_string_list_get_size</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of the current text. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="146" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DNS-SD TXT pair handling</header>
+      <memberdef kind="function" id="strlst_8h_1aafc54c009a2a1608b517c15a7cf29944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_find</definition>
+        <argsstring>(AvahiStringList *l, const char *key)</argsstring>
+        <name>avahi_string_list_find</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Find the string list entry for the given DNS-SD TXT key. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1af4a4a311055d4ff05b692bf3aef8e6e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_string_list_get_pair</definition>
+        <argsstring>(AvahiStringList *l, char **key, char **value, size_t *size)</argsstring>
+        <name>avahi_string_list_get_pair</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Return the DNS-SD TXT key and value for the specified string list item. </para>        </briefdescription>
+        <detaileddescription>
+<para>If size is not NULL it will be filled with the length of value. (for strings containing NUL bytes). If the entry doesn&apos;t contain a value *value will be set to NULL. You need to <ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free()</ref> the strings returned in *key and *value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1a72e1b0f724f0c29b5e3c8792f385223f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_add_pair</definition>
+        <argsstring>(AvahiStringList *l, const char *key, const char *value)</argsstring>
+        <name>avahi_string_list_add_pair</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a new DNS-SD TXT key value pair to the string list. </para>        </briefdescription>
+        <detaileddescription>
+<para>value may be NULL in case you want to specify a key without a value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="strlst_8h_1ae75209b38b2eecf19e5643e8d77c88c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>AvahiStringList* avahi_string_list_add_pair_arbitrary</definition>
+        <argsstring>(AvahiStringList *l, const char *key, const uint8_t *value, size_t size)</argsstring>
+        <name>avahi_string_list_add_pair_arbitrary</name>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Same as <ref refid="strlst_8h_1a72e1b0f724f0c29b5e3c8792f385223f" kindref="member">avahi_string_list_add_pair()</ref> but allow strings containing NUL bytes in *value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="167" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="strlst_8h_1aced0fd9d9a742fffcfb42c7ee52059dc" prot="public" static="no">
+        <type>struct <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref></type>
+        <definition>typedef struct AvahiStringList  AvahiStringList</definition>
+        <argsstring></argsstring>
+        <name>AvahiStringList</name>
+        <briefdescription>
+<para>Linked list of strings that can contain any number of binary characters, including NUL bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para>An empty list is created by assigning a NULL to a pointer to <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref>. The string list is stored in reverse order, so that appending to the string list is effectively a prepending to the linked list. This object is used primarily for storing DNS TXT record data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/strlst.h" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of a data type to store lists of strings. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>footxtlisthfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>footxtlisthfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/gccmacro.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="struct_avahi_string_list" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="struct_avahi_string_list_1af8915748f8a26bdbdcdab307924f8c15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="struct_avahi_string_list_1af8915748f8a26bdbdcdab307924f8c15" kindref="member">next</ref>;<sp/></highlight></codeline>
+<codeline lineno="42" refid="struct_avahi_string_list_1ab615405193a5d265adbdbaa723b899e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_string_list_1ab615405193a5d265adbdbaa723b899e6" kindref="member">size</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="struct_avahi_string_list_1adf37d03d2ce058716d4c6a5841f0387a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_avahi_string_list_1adf37d03d2ce058716d4c6a5841f0387a" kindref="member">text</ref>[1];<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/><ref refid="strlst_8h_1aced0fd9d9a742fffcfb42c7ee52059dc" kindref="member">AvahiStringList</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1a30c78e01c0fe04a07836d650290b6e5a" kindref="member">avahi_string_list_new</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*txt,<sp/>...)<sp/>AVAHI_GCC_SENTINEL;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*avahi_string_list_new_va(va_list<sp/>va);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1aa443ba933789865de641f9c37ac0de14" kindref="member">avahi_string_list_new_from_array</ref>(const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="strlst_8h_1a00fb6773ea7615664377c31618fdfc13" kindref="member">avahi_string_list_free</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1a75614d39a181583c81007ec04ea8770b" kindref="member">avahi_string_list_add</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="struct_avahi_string_list_1adf37d03d2ce058716d4c6a5841f0387a" kindref="member">text</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1a71aeec025ee00c41b844af104afe377f" kindref="member">avahi_string_list_add_printf</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>...)<sp/>AVAHI_GCC_PRINTF_ATTR23;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*avahi_string_list_add_vprintf(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>va_list<sp/>va);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1a956f9c2614ac4b9ef275d190d485782b" kindref="member">avahi_string_list_add_arbitrary</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/>const<sp/>uint8_t<sp/>*text,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_string_list_1ab615405193a5d265adbdbaa723b899e6" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref>*<ref refid="strlst_8h_1ab97468fa4fa94a75f71302856d287f26" kindref="member">avahi_string_list_add_anonymous</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1abe85d83a5eb8e98155c5ed8da32df208" kindref="member">avahi_string_list_add_many</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*r,<sp/>...)<sp/>AVAHI_GCC_SENTINEL;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*avahi_string_list_add_many_va(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*r,<sp/>va_list<sp/>va);</highlight></codeline>
+<codeline lineno="112"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="strlst_8h_1a5c4b9ab709f22f7741c165ca3756a78b" kindref="member">avahi_string_list_to_string</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>avahi_string_list_serialize(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>avahi_string_list_parse(const<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>**ret);</highlight></codeline>
+<codeline lineno="124"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="strlst_8h_1af568e68084efaa42301aab13d3585e96" kindref="member">avahi_string_list_equal</ref>(const<sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*a,<sp/>const<sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*b);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1a07bf1f9833591f701f2b52d60e8a7304" kindref="member">avahi_string_list_copy</ref>(const<sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref>*<sp/><ref refid="strlst_8h_1aa8b026ff6b8e0f49afab322eaa0e65ad" kindref="member">avahi_string_list_reverse</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="strlst_8h_1a806c571b338e882390a180b1360c1456" kindref="member">avahi_string_list_length</ref>(const<sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1a15c81dec8bcfdb0f5c11eee7942d2e9d" kindref="member">avahi_string_list_get_next</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">uint8_t<sp/>*<ref refid="strlst_8h_1a8778eae1edde0d53da4422c1b15d5bc3" kindref="member">avahi_string_list_get_text</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="strlst_8h_1ad0a65bafffe7c87fe28543004bc65870" kindref="member">avahi_string_list_get_size</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1aafc54c009a2a1608b517c15a7cf29944" kindref="member">avahi_string_list_find</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="strlst_8h_1af4a4a311055d4ff05b692bf3aef8e6e2" kindref="member">avahi_string_list_get_pair</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**key,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**value,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*size);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1a72e1b0f724f0c29b5e3c8792f385223f" kindref="member">avahi_string_list_add_pair</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="strlst_8h_1ae75209b38b2eecf19e5643e8d77c88c4" kindref="member">avahi_string_list_add_pair_arbitrary</ref>(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/>const<sp/>uint8_t<sp/>*value,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">uint32_t<sp/>avahi_string_list_get_service_cookie(<ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*l);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-common/strlst.h"/>
+  </compounddef>
+</doxygen>

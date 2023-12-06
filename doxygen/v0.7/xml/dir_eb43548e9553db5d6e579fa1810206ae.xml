@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_eb43548e9553db5d6e579fa1810206ae" kind="dir">
+    <compoundname>avahi-gobject</compoundname>
+    <innerfile refid="ga-client_8h">ga-client.h</innerfile>
+    <innerfile refid="ga-entry-group_8h">ga-entry-group.h</innerfile>
+    <innerfile refid="ga-enums_8h">ga-enums.h</innerfile>
+    <innerfile refid="ga-error_8h">ga-error.h</innerfile>
+    <innerfile refid="ga-record-browser_8h">ga-record-browser.h</innerfile>
+    <innerfile refid="ga-service-browser_8h">ga-service-browser.h</innerfile>
+    <innerfile refid="ga-service-resolver_8h">ga-service-resolver.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="avahi-gobject/"/>
+  </compounddef>
+</doxygen>

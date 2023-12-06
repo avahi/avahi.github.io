@@ -1,0 +1,38 @@
+var ga_entry_group_8h =
+[
+    [ "_GaEntryGroupService", "struct___ga_entry_group_service.html", "struct___ga_entry_group_service" ],
+    [ "_GaEntryGroupClass", "struct___ga_entry_group_class.html", "struct___ga_entry_group_class" ],
+    [ "_GaEntryGroup", "struct___ga_entry_group.html", "struct___ga_entry_group" ],
+    [ "GA_ENTRY_GROUP", "ga-entry-group_8h.html#a59d863a18f5a33bd0afb1e46dc01b305", null ],
+    [ "GA_ENTRY_GROUP_CLASS", "ga-entry-group_8h.html#aef56718a291e3d831ff020048c3dea69", null ],
+    [ "GA_ENTRY_GROUP_GET_CLASS", "ga-entry-group_8h.html#a8f1c98baf309f172df794f898a7ef2ef", null ],
+    [ "GA_TYPE_ENTRY_GROUP", "ga-entry-group_8h.html#a711864b4ed9b61a1c325febec29ec0a5", null ],
+    [ "IS_GA_ENTRY_GROUP", "ga-entry-group_8h.html#aed5acbed6ec944d76275a249a95d5b94", null ],
+    [ "IS_GA_ENTRY_GROUP_CLASS", "ga-entry-group_8h.html#ac2fa18c60d0349a4f8c29cd6cb0545a0", null ],
+    [ "GaEntryGroup", "ga-entry-group_8h.html#ac8ac617d1ae046cc8ab3a7929f5a6f38", null ],
+    [ "GaEntryGroupClass", "ga-entry-group_8h.html#a4c75f4ccfd580e2936057f06c4e07fea", null ],
+    [ "GaEntryGroupService", "ga-entry-group_8h.html#a0e07a70ea5c666d1807ce2cf38c3a1c6", null ],
+    [ "GaEntryGroupState", "ga-entry-group_8h.html#afe69a46248be7b76db981449e7ae0302", [
+      [ "GA_ENTRY_GROUP_STATE_UNCOMMITED", "ga-entry-group_8h.html#afe69a46248be7b76db981449e7ae0302a23bbcb3477ae902cf165f6f0c5aa5a0f", null ],
+      [ "GA_ENTRY_GROUP_STATE_REGISTERING", "ga-entry-group_8h.html#afe69a46248be7b76db981449e7ae0302a00a287590e87913374971812696abc0c", null ],
+      [ "GA_ENTRY_GROUP_STATE_ESTABLISHED", "ga-entry-group_8h.html#afe69a46248be7b76db981449e7ae0302a1fc8a37d455e685bf35a7f69d9810fe5", null ],
+      [ "GA_ENTRY_GROUP_STATE_COLLISTION", "ga-entry-group_8h.html#afe69a46248be7b76db981449e7ae0302a40334b1f007e8db8c996c86698735c05", null ],
+      [ "GA_ENTRY_GROUP_STATE_FAILURE", "ga-entry-group_8h.html#afe69a46248be7b76db981449e7ae0302a23e05dd750e9fa0a48152b751ed837c2", null ]
+    ] ],
+    [ "ga_entry_group_add_record", "ga-entry-group_8h.html#a0811b8b9d3be1f6cdb47e6bd17734a7e", null ],
+    [ "ga_entry_group_add_record_full", "ga-entry-group_8h.html#a758a789239af2665b038a472faf74ce2", null ],
+    [ "ga_entry_group_add_service", "ga-entry-group_8h.html#ae5c1f3dd65d381896c9b6177abe3aaf3", null ],
+    [ "ga_entry_group_add_service_full", "ga-entry-group_8h.html#ade823b26c3f92c8e010f74b1b5dc8067", null ],
+    [ "ga_entry_group_add_service_full_strlist", "ga-entry-group_8h.html#ac32d807922b680e6fc49958a39aabbe7", null ],
+    [ "ga_entry_group_add_service_strlist", "ga-entry-group_8h.html#aac7fa90a9cfc1c3a6533d336c20483cc", null ],
+    [ "ga_entry_group_attach", "ga-entry-group_8h.html#a442b15d6befc1e0c688797665aa65ca9", null ],
+    [ "ga_entry_group_commit", "ga-entry-group_8h.html#ada7417150403088073adf9b943b01819", null ],
+    [ "ga_entry_group_get_type", "ga-entry-group_8h.html#af6439a9bfe4957a5bf7fd41414d5ce95", null ],
+    [ "ga_entry_group_new", "ga-entry-group_8h.html#ac8a3d5036805cc5c89742a81bca0ed31", null ],
+    [ "ga_entry_group_reset", "ga-entry-group_8h.html#a4c66b603f0fd0d6dd336247580a5ffa2", null ],
+    [ "ga_entry_group_service_freeze", "ga-entry-group_8h.html#a96fd5c3a64d9fbb2a8fc860443797c1c", null ],
+    [ "ga_entry_group_service_remove_key", "ga-entry-group_8h.html#aaae530e2e0d5e08eca77c6693d17c4dd", null ],
+    [ "ga_entry_group_service_set", "ga-entry-group_8h.html#a45506d6625bf0b3811e08cd76d9b48e4", null ],
+    [ "ga_entry_group_service_set_arbitrary", "ga-entry-group_8h.html#a83f1ed9be89794bf1657b4a5ed342a76", null ],
+    [ "ga_entry_group_service_thaw", "ga-entry-group_8h.html#a9a006600ca3e7ff8844ded9f880b7abb", null ]
+];

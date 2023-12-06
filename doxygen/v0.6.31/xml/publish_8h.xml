@@ -1,0 +1,744 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="publish_8h" kind="file" language="C++">
+    <compoundname>publish.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includes refid="address_8h" local="no">avahi-common/address.h</includes>
+    <includes refid="strlst_8h" local="no">avahi-common/strlst.h</includes>
+    <includes refid="defs_8h" local="no">avahi-common/defs.h</includes>
+    <includes refid="watch_8h" local="no">avahi-common/watch.h</includes>
+    <includes local="no">avahi-common/gccmacro.h</includes>
+    <includes refid="client_8h" local="no">avahi-client/client.h</includes>
+    <includedby refid="ga-entry-group_8h" local="no">avahi-gobject/ga-entry-group.h</includedby>
+    <incdepgraph>
+      <node id="43">
+        <label>stdarg.h</label>
+      </node>
+      <node id="46">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>sys/poll.h</label>
+      </node>
+      <node id="37">
+        <label>avahi-client/publish.h</label>
+        <link refid="publish.h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="45">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>avahi-common/gccmacro.h</label>
+      </node>
+      <node id="40">
+        <label>avahi-common/address.h</label>
+        <link refid="address_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>sys/types.h</label>
+      </node>
+      <node id="42">
+        <label>avahi-common/strlst.h</label>
+        <link refid="strlst_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>avahi-client/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>sys/time.h</label>
+      </node>
+      <node id="38">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="50">
+        <label>avahi-client/publish.h</label>
+        <link refid="publish.h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>avahi-gobject/ga-entry-group.h</label>
+        <link refid="ga-entry-group_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Construction and destruction</header>
+      <memberdef kind="function" id="publish_8h_1abb17598f2b6ec3c3f69defdd488d568c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+        <definition>AvahiEntryGroup* avahi_entry_group_new</definition>
+        <argsstring>(AvahiClient *c, AvahiEntryGroupCallback callback, void *userdata)</argsstring>
+        <name>avahi_entry_group_new</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="publish_8h_1a848c22c5f7f59870b60bb8d6b829c085" kindref="member">AvahiEntryGroupCallback</ref></type>
+          <declname>callback</declname>
+          <briefdescription><para>This callback is called whenever the state of this entry group changes. May not be NULL. Please note that this function is called for the first time from within the <ref refid="publish_8h_1abb17598f2b6ec3c3f69defdd488d568c" kindref="member">avahi_entry_group_new()</ref> context! Thus, in the callback you should not make use of global variables that are initialized only after your call to <ref refid="publish_8h_1abb17598f2b6ec3c3f69defdd488d568c" kindref="member">avahi_entry_group_new()</ref>. A common mistake is to store the AvahiEntryGroup pointer returned by <ref refid="publish_8h_1abb17598f2b6ec3c3f69defdd488d568c" kindref="member">avahi_entry_group_new()</ref> in a global variable and assume that this global variable already contains the valid pointer when the callback is called for the first time. A work-around for this is to always use the AvahiEntryGroup pointer passed to the callback function instead of the global pointer. </para></briefdescription>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+          <briefdescription><para>This arbitrary user data pointer will be passed to the callback functon </para></briefdescription>
+        </param>
+        <briefdescription>
+<para>Create a new AvahiEntryGroup object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1a56049b6942bb9fad9a06c81e681e9e5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_free</definition>
+        <argsstring>(AvahiEntryGroup *)</argsstring>
+        <name>avahi_entry_group_free</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Clean up and free an AvahiEntryGroup object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="60" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>State</header>
+      <memberdef kind="function" id="publish_8h_1a2375338d23af4281399404758840a2de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_commit</definition>
+        <argsstring>(AvahiEntryGroup *)</argsstring>
+        <name>avahi_entry_group_commit</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Commit an AvahiEntryGroup. </para>        </briefdescription>
+        <detaileddescription>
+<para>The entries in the entry group are now registered on the network. Commiting empty entry groups is considered an error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1a1293bbccf878dbeb9916660022bc71b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_reset</definition>
+        <argsstring>(AvahiEntryGroup *)</argsstring>
+        <name>avahi_entry_group_reset</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Reset an AvahiEntryGroup. </para>        </briefdescription>
+        <detaileddescription>
+<para>This takes effect immediately. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1a0df69410a7248e614f5ac574988ebfcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_get_state</definition>
+        <argsstring>(AvahiEntryGroup *)</argsstring>
+        <name>avahi_entry_group_get_state</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get an AvahiEntryGroup&apos;s state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1af5a78ee1fda6678970536889d459d85c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_is_empty</definition>
+        <argsstring>(AvahiEntryGroup *)</argsstring>
+        <name>avahi_entry_group_is_empty</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Check if an AvahiEntryGroup is empty. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1a5a0a69e977bb46bf7ab69002c509a040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        <definition>AvahiClient* avahi_entry_group_get_client</definition>
+        <argsstring>(AvahiEntryGroup *)</argsstring>
+        <name>avahi_entry_group_get_client</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get an AvahiEntryGroup&apos;s owning client instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="79" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Adding and updating entries</header>
+      <memberdef kind="function" id="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_add_service</definition>
+        <argsstring>(AvahiEntryGroup *group, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const char *name, const char *type, const char *domain, const char *host, uint16_t port,...) AVAHI_GCC_SENTINEL</argsstring>
+        <name>avahi_entry_group_add_service</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+          <briefdescription><para>The interface this service shall be announced on. We recommend to pass AVAHI_IF_UNSPEC here, to announce on all interfaces. </para></briefdescription>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+          <briefdescription><para>The protocol this service shall be announced with, i.e. MDNS over IPV4 or MDNS over IPV6. We recommend to pass AVAHI_PROTO_UNSPEC here, to announce this service on all protocols the daemon supports. </para></briefdescription>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+          <briefdescription><para>Usually 0, unless you know what you do </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <briefdescription><para>The name for the new service. Must be valid service name. i.e. a string shorter than 63 characters and valid UTF-8. May not be NULL. </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+          <briefdescription><para>The service type for the new service, such as _http._tcp. May not be NULL. </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>domain</declname>
+          <briefdescription><para>The domain to register this domain in. We recommend to pass NULL here, to let the daemon decide </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+          <briefdescription><para>The host this services is residing on. We recommend to pass NULL here, the daemon will than automatically insert the local host name in that case </para></briefdescription>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+          <briefdescription><para>The IP port number of this service </para></briefdescription>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Add a service. </para>        </briefdescription>
+        <detaileddescription>
+<para>Takes a variable NULL terminated list of TXT record strings as last arguments. Please note that this service is not announced on the network before <ref refid="publish_8h_1a2375338d23af4281399404758840a2de" kindref="member">avahi_entry_group_commit()</ref> is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1ab8e3c344edfb94847541f77768c261ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_add_service_strlst</definition>
+        <argsstring>(AvahiEntryGroup *group, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const char *name, const char *type, const char *domain, const char *host, uint16_t port, AvahiStringList *txt)</argsstring>
+        <name>avahi_entry_group_add_service_strlst</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>txt</declname>
+          <briefdescription><para>The TXT data for this service. You may free this object after calling this function, it is not referenced any further </para></briefdescription>
+        </param>
+        <briefdescription>
+<para>Add a service, takes an <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> for TXT records. </para>        </briefdescription>
+        <detaileddescription>
+<para>Arguments have the same meaning as for <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1a93841be69a152d3134b408c25bb4d5d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_add_service_subtype</definition>
+        <argsstring>(AvahiEntryGroup *group, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const char *name, const char *type, const char *domain, const char *subtype)</argsstring>
+        <name>avahi_entry_group_add_service_subtype</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+          <briefdescription><para>The interface this subtype shall be announced on. This should match the value passed for the original <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref> call. </para></briefdescription>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+          <briefdescription><para>The protocol this subtype shall be announced with. This should match the value passed for the original <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref> call. </para></briefdescription>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+          <briefdescription><para>Only != 0 if you really know what you do </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <briefdescription><para>The name of the service, as passed to <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref>. May not be NULL. </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+          <briefdescription><para>The type of the service, as passed to <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref>. May not be NULL. </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>domain</declname>
+          <briefdescription><para>The domain this service resides is, as passed to <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref>. May be NULL. </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>subtype</declname>
+          <briefdescription><para>The new subtype to register for the specified service. May not be NULL. </para></briefdescription>
+        </param>
+        <briefdescription>
+<para>Add a subtype for a service. </para>        </briefdescription>
+        <detaileddescription>
+<para>The service should already be existent in the entry group. You may add as many subtypes for a service as you wish. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1a9f805d25a03009baf606c14a4d7cb3dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_update_service_txt</definition>
+        <argsstring>(AvahiEntryGroup *g, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const char *name, const char *type, const char *domain,...) AVAHI_GCC_SENTINEL</argsstring>
+        <name>avahi_entry_group_update_service_txt</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+          <briefdescription><para>The interface this service is announced on. This should match the value passed to the original <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref> call. </para></briefdescription>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+          <briefdescription><para>The protocol this service is announced with. This should match the value passed to the original <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref> call. </para></briefdescription>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+          <briefdescription><para>Only != 0 if you really know what you do </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <briefdescription><para>The name of the service, as passed to <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref>. May not be NULL. </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+          <briefdescription><para>The type of the service, as passed to <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref>. May not be NULL. </para></briefdescription>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>domain</declname>
+          <briefdescription><para>The domain this service resides is, as passed to <ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service()</ref>. May be NULL. </para></briefdescription>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Update a TXT record for an existing service. </para>        </briefdescription>
+        <detaileddescription>
+<para>The service should already be existent in the entry group. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1a0da667be4a7c4f8e4b22f7512ecaddda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_update_service_txt_strlst</definition>
+        <argsstring>(AvahiEntryGroup *g, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const char *name, const char *type, const char *domain, AvahiStringList *strlst)</argsstring>
+        <name>avahi_entry_group_update_service_txt_strlst</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>strlst</declname>
+        </param>
+        <briefdescription>
+<para>Update a TXT record for an existing service. </para>        </briefdescription>
+        <detaileddescription>
+<para>Similar to <ref refid="publish_8h_1a9f805d25a03009baf606c14a4d7cb3dc" kindref="member">avahi_entry_group_update_service_txt()</ref> but takes an <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> for the TXT strings, instead of a NULL terminated list of arguments. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="publish_8h_1a849f3042580d6c8534cba820644517ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_entry_group_add_record</definition>
+        <argsstring>(AvahiEntryGroup *group, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const char *name, uint16_t clazz, uint16_t type, uint32_t ttl, const void *rdata, size_t size)</argsstring>
+        <name>avahi_entry_group_add_record</name>
+        <param>
+          <type><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>clazz</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ttl</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>rdata</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Add an arbitrary record. </para>        </briefdescription>
+        <detaileddescription>
+<para>I hope you know what you do. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="156" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="publish_8h_1ab6622b54fce4299a56ba12421be4e985" prot="public" static="no">
+        <type>struct <ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref></type>
+        <definition>typedef struct AvahiEntryGroup AvahiEntryGroup</definition>
+        <argsstring></argsstring>
+        <name>AvahiEntryGroup</name>
+        <briefdescription>
+<para>An entry group object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="308" column="1" bodyfile="/home/lathiat/src/avahi/avahi-client/publish.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="publish_8h_1a848c22c5f7f59870b60bb8d6b829c085" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* AvahiEntryGroupCallback) (AvahiEntryGroup *g, AvahiEntryGroupState state, void *userdata)</definition>
+        <argsstring>)(AvahiEntryGroup *g, AvahiEntryGroupState state, void *userdata)</argsstring>
+        <name>AvahiEntryGroupCallback</name>
+        <briefdescription>
+<para>The function prototype for the callback of an AvahiEntryGroup. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/publish.h" line="46" column="1" bodyfile="/home/lathiat/src/avahi/avahi-client/publish.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Publishing Client API. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>fooclientpublishhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fooclientpublishhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="address_8h" kindref="compound">avahi-common/address.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="strlst_8h" kindref="compound">avahi-common/strlst.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="defs_8h" kindref="compound">avahi-common/defs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="watch_8h" kindref="compound">avahi-common/watch.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/gccmacro.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="client_8h" kindref="compound">avahi-client/client.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="publish_8h_1a848c22c5f7f59870b60bb8d6b829c085" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="publish_8h_1a848c22c5f7f59870b60bb8d6b829c085" kindref="member">AvahiEntryGroupCallback</ref>)<sp/>(</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*g,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217" kindref="member">AvahiEntryGroupState</ref><sp/>state<sp/>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>userdata<sp/></highlight><highlight class="comment">/*<sp/>The<sp/>arbitrary<sp/>user<sp/>data<sp/>pointer<sp/>originally<sp/>passed<sp/>to<sp/>avahi_entry_group_new()*/</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref>*<sp/><ref refid="publish_8h_1abb17598f2b6ec3c3f69defdd488d568c" kindref="member">avahi_entry_group_new</ref>(</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*<sp/>c,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1a848c22c5f7f59870b60bb8d6b829c085" kindref="member">AvahiEntryGroupCallback</ref><sp/>callback<sp/>,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1a56049b6942bb9fad9a06c81e681e9e5a" kindref="member">avahi_entry_group_free</ref><sp/>(<ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1a2375338d23af4281399404758840a2de" kindref="member">avahi_entry_group_commit</ref><sp/>(<ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref>*);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1a1293bbccf878dbeb9916660022bc71b2" kindref="member">avahi_entry_group_reset</ref><sp/>(<ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref>*);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1a0df69410a7248e614f5ac574988ebfcf" kindref="member">avahi_entry_group_get_state</ref><sp/>(<ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref>*);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1af5a78ee1fda6678970536889d459d85c" kindref="member">avahi_entry_group_is_empty</ref><sp/>(<ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref>*);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*<sp/><ref refid="publish_8h_1a5a0a69e977bb46bf7ab69002c509a040" kindref="member">avahi_entry_group_get_client</ref><sp/>(<ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref>*);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service</ref>(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*group,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface<sp/>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol<sp/>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags<sp/>,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain<sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*host<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>port<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>...)<sp/>AVAHI_GCC_SENTINEL;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1ab8e3c344edfb94847541f77768c261ae" kindref="member">avahi_entry_group_add_service_strlst</ref>(</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*group,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*host,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>port,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*txt<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1a93841be69a152d3134b408c25bb4d5d5" kindref="member">avahi_entry_group_add_service_subtype</ref>(</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*group,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface<sp/>,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol<sp/>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags<sp/><sp/>,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain<sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*subtype<sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1a9f805d25a03009baf606c14a4d7cb3dc" kindref="member">avahi_entry_group_update_service_txt</ref>(</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*g,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface<sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol<sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags<sp/><sp/>,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain<sp/><sp/><sp/><sp/><sp/><sp/><sp/>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>...)<sp/>AVAHI_GCC_SENTINEL;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1a0da667be4a7c4f8e4b22f7512ecaddda" kindref="member">avahi_entry_group_update_service_txt_strlst</ref>(</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*g,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*strlst);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>avahi_entry_group_add_address(</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*group,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/>,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/><ref refid="struct_avahi_address" kindref="compound">AvahiAddress</ref><sp/>*a<sp/>);</highlight></codeline>
+<codeline lineno="156"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1a849f3042580d6c8534cba820644517ac" kindref="member">avahi_entry_group_add_record</ref>(</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*group,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>clazz,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>type,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ttl,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*rdata,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-client/publish.h"/>
+  </compounddef>
+</doxygen>

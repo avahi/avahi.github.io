@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="client-browse-services_8c-example" kind="example">
+    <compoundname>client-browse-services.c</compoundname>
+    <detaileddescription>
+<para>Example how to browse for DNS-SD services using the client interface to avahi-daemon. <programlisting><codeline><highlight class="comment">/***</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONFIG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="client_8h" kindref="compound">avahi-client/client.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="lookup_8h" kindref="compound">avahi-client/lookup.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="simple-watch_8h" kindref="compound">avahi-common/simple-watch.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="malloc_8h" kindref="compound">avahi-common/malloc.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="error_8h" kindref="compound">avahi-common/error.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="simple-watch_8h_1a0e40ccdfdc9d60e7baf0c312347f79b2" kindref="member">AvahiSimplePoll</ref><sp/>*simple_poll<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>resolve_callback(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lookup_8h_1a95be4e88f06410270e1695304e26f54d" kindref="member">AvahiServiceResolver</ref><sp/>*r,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_GCC_UNUSED<sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_GCC_UNUSED<sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1ae524657615ba2ec3b17613098a3394cf" kindref="member">AvahiResolverEvent</ref><sp/>event,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*host_name,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_address" kindref="compound">AvahiAddress</ref><sp/>*address,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>port,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*txt,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7" kindref="member">AvahiLookupResultFlags</ref><sp/>flags,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_GCC_UNUSED<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>userdata)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>assert(r);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Called<sp/>whenever<sp/>a<sp/>service<sp/>has<sp/>been<sp/>resolved<sp/>successfully<sp/>or<sp/>timed<sp/>out<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(event)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1ae524657615ba2ec3b17613098a3394cfa407f93fe14b008cc1a7ff00eef454528" kindref="member">AVAHI_RESOLVER_FAILURE</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;(Resolver)<sp/>Failed<sp/>to<sp/>resolve<sp/>service<sp/>&apos;%s&apos;<sp/>of<sp/>type<sp/>&apos;%s&apos;<sp/>in<sp/>domain<sp/>&apos;%s&apos;:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>type,<sp/>domain,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(<ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref>(<ref refid="lookup_8h_1a4fe474c16833eef22b1cebe8388f7dff" kindref="member">avahi_service_resolver_get_client</ref>(r))));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1ae524657615ba2ec3b17613098a3394cfaa27397e0a76171dd9afe7cf2fe9b1f22" kindref="member">AVAHI_RESOLVER_FOUND</ref>:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>a[<ref refid="address_8h_1a30245a7d8dabf1e655e0282e5d427dac" kindref="member">AVAHI_ADDRESS_STR_MAX</ref>],<sp/>*t;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Service<sp/>&apos;%s&apos;<sp/>of<sp/>type<sp/>&apos;%s&apos;<sp/>in<sp/>domain<sp/>&apos;%s&apos;:\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>type,<sp/>domain);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1adb9715709be6f8ef6a09899d17664185" kindref="member">avahi_address_snprint</ref>(a,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(a),<sp/>address);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/><ref refid="strlst_8h_1a5c4b9ab709f22f7741c165ca3756a78b" kindref="member">avahi_string_list_to_string</ref>(txt);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\t%s:%u<sp/>(%s)\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\tTXT=%s\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\tcookie<sp/>is<sp/>%u\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\tis_local:<sp/>%i\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\tour_own:<sp/>%i\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\twide_area:<sp/>%i\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\tmulticast:<sp/>%i\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\tcached:<sp/>%i\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>host_name,<sp/>port,<sp/>a,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>avahi_string_list_get_service_cookie(txt),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!!(flags<sp/>&amp;<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7abbf16c5d7a3790451bd1a9d835702d5d" kindref="member">AVAHI_LOOKUP_RESULT_LOCAL</ref>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!!(flags<sp/>&amp;<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a25d1fbc291fd65bcc1d12a5b51ebd6c9" kindref="member">AVAHI_LOOKUP_RESULT_OUR_OWN</ref>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!!(flags<sp/>&amp;<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7aa1617f6736538c40bb14b3d54336e66c" kindref="member">AVAHI_LOOKUP_RESULT_WIDE_AREA</ref>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!!(flags<sp/>&amp;<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7ac34ea399ed04f8650fad8a5e098cfa29" kindref="member">AVAHI_LOOKUP_RESULT_MULTICAST</ref>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!!(flags<sp/>&amp;<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a901cb53511bc147c0b5373a93b623b54" kindref="member">AVAHI_LOOKUP_RESULT_CACHED</ref>));</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free</ref>(t);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lookup_8h_1a0fc2e738e567f56ad57c0ad023ebbf05" kindref="member">avahi_service_resolver_free</ref>(r);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>browse_callback(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lookup_8h_1ade1392a93ff4d0407c1735374bc0ff7b" kindref="member">AvahiServiceBrowser</ref><sp/>*b,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87" kindref="member">AvahiBrowserEvent</ref><sp/>event,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_GCC_UNUSED<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7" kindref="member">AvahiLookupResultFlags</ref><sp/>flags,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>userdata)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*c<sp/>=<sp/>userdata;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>assert(b);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Called<sp/>whenever<sp/>a<sp/>new<sp/>services<sp/>becomes<sp/>available<sp/>on<sp/>the<sp/>LAN<sp/>or<sp/>is<sp/>removed<sp/>from<sp/>the<sp/>LAN<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(event)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a84a4230c3a9f25afde40f65d21909675" kindref="member">AVAHI_BROWSER_FAILURE</ref>:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;(Browser)<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(<ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref>(<ref refid="lookup_8h_1afb7165e6c3a38b6da70eddd510211784" kindref="member">avahi_service_browser_get_client</ref>(b))));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1ac2771664e4e6c7e75e5b5a270e5e0490" kindref="member">avahi_simple_poll_quit</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87adb84c76ca1876beeb4f1ac718633667c" kindref="member">AVAHI_BROWSER_NEW</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;(Browser)<sp/>NEW:<sp/>service<sp/>&apos;%s&apos;<sp/>of<sp/>type<sp/>&apos;%s&apos;<sp/>in<sp/>domain<sp/>&apos;%s&apos;\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>type,<sp/>domain);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>ignore<sp/>the<sp/>returned<sp/>resolver<sp/>object.<sp/>In<sp/>the<sp/>callback</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>function<sp/>we<sp/>free<sp/>it.<sp/>If<sp/>the<sp/>server<sp/>is<sp/>terminated<sp/>before</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>callback<sp/>function<sp/>is<sp/>called<sp/>the<sp/>server<sp/>will<sp/>free</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>resolver<sp/>for<sp/>us.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(<ref refid="lookup_8h_1a904611a4134ceb5919f6bb637df84124" kindref="member">avahi_service_resolver_new</ref>(c,<sp/>interface,<sp/>protocol,<sp/>name,<sp/>type,<sp/>domain,<sp/><ref refid="address_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6c1837afa356a983f188e35911dc0d84" kindref="member">AVAHI_PROTO_UNSPEC</ref>,<sp/>0,<sp/>resolve_callback,<sp/>c)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>resolve<sp/>service<sp/>&apos;%s&apos;:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(<ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref>(c)));</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87ab3adb8824483c87b557a885ee280814c" kindref="member">AVAHI_BROWSER_REMOVE</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;(Browser)<sp/>REMOVE:<sp/>service<sp/>&apos;%s&apos;<sp/>of<sp/>type<sp/>&apos;%s&apos;<sp/>in<sp/>domain<sp/>&apos;%s&apos;\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>type,<sp/>domain);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a430e1134047305e7b892e784cf72f815" kindref="member">AVAHI_BROWSER_ALL_FOR_NOW</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a796b2e4c7e82580fb93fd29151aa5752" kindref="member">AVAHI_BROWSER_CACHE_EXHAUSTED</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;(Browser)<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>event<sp/>==<sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a796b2e4c7e82580fb93fd29151aa5752" kindref="member">AVAHI_BROWSER_CACHE_EXHAUSTED</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;CACHE_EXHAUSTED&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;ALL_FOR_NOW&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>client_callback(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*c,<sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9" kindref="member">AvahiClientState</ref><sp/>state,<sp/>AVAHI_GCC_UNUSED<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>userdata)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>assert(c);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Called<sp/>whenever<sp/>the<sp/>client<sp/>or<sp/>server<sp/>state<sp/>changes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>==<sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a04583aa28fec0f0987fd2d3a1814db4b" kindref="member">AVAHI_CLIENT_FAILURE</ref>)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Server<sp/>connection<sp/>failure:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(<ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref>(c)));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1ac2771664e4e6c7e75e5b5a270e5e0490" kindref="member">avahi_simple_poll_quit</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(AVAHI_GCC_UNUSED<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/>AVAHI_GCC_UNUSED<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*argv[])<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*client<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lookup_8h_1ade1392a93ff4d0407c1735374bc0ff7b" kindref="member">AvahiServiceBrowser</ref><sp/>*sb<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>main<sp/>loop<sp/>object<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(simple_poll<sp/>=<sp/><ref refid="simple-watch_8h_1a4548a645c8ae50edd0617c8d9a15a9bd" kindref="member">avahi_simple_poll_new</ref>()))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>simple<sp/>poll<sp/>object.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>a<sp/>new<sp/>client<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>client<sp/>=<sp/><ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new</ref>(<ref refid="simple-watch_8h_1a8e7a53b4116c2379d04f8298398e59e8" kindref="member">avahi_simple_poll_get</ref>(simple_poll),<sp/>0,<sp/>client_callback,<sp/>NULL,<sp/>&amp;error);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>wether<sp/>creating<sp/>the<sp/>client<sp/>object<sp/>succeeded<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!client)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>client:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(error));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>the<sp/>service<sp/>browser<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(sb<sp/>=<sp/><ref refid="lookup_8h_1a52d55a5156a7943012d03e6700880d2b" kindref="member">avahi_service_browser_new</ref>(client,<sp/><ref refid="address_8h_1adf764cbdea00d65edcd07bb9953ad2b7a9cefc02b2cc49f5a4c8effb3f610cca6" kindref="member">AVAHI_IF_UNSPEC</ref>,<sp/><ref refid="address_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6c1837afa356a983f188e35911dc0d84" kindref="member">AVAHI_PROTO_UNSPEC</ref>,<sp/></highlight><highlight class="stringliteral">&quot;_http._tcp&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>0,<sp/>browse_callback,<sp/>client)))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>service<sp/>browser:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(<ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref>(client)));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Run<sp/>the<sp/>main<sp/>loop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1a14b4cb29832e8c3de609d4c4e5611985" kindref="member">avahi_simple_poll_loop</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">fail:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cleanup<sp/>things<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sb)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lookup_8h_1a2221ea447d014e3d962470aa8fe96ae1" kindref="member">avahi_service_browser_free</ref>(sb);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(client)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="client_8h_1aceb92c59523def4de9f745f4149cb392" kindref="member">avahi_client_free</ref>(client);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(simple_poll)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1a2d23c812725d77cf4c6478d249bb434e" kindref="member">avahi_simple_poll_free</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

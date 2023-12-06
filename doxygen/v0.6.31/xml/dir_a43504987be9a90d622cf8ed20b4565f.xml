@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_a43504987be9a90d622cf8ed20b4565f" kind="dir">
+    <compoundname>avahi-common</compoundname>
+    <innerfile refid="address_8h">address.h</innerfile>
+    <innerfile refid="alternative_8h">alternative.h</innerfile>
+    <innerfile refid="defs_8h">defs.h</innerfile>
+    <innerfile refid="domain_8h">domain.h</innerfile>
+    <innerfile refid="error_8h">error.h</innerfile>
+    <innerfile refid="malloc_8h">malloc.h</innerfile>
+    <innerfile refid="simple-watch_8h">simple-watch.h</innerfile>
+    <innerfile refid="strlst_8h">strlst.h</innerfile>
+    <innerfile refid="thread-watch_8h">thread-watch.h</innerfile>
+    <innerfile refid="watch_8h">watch.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lathiat/src/avahi/avahi-common/"/>
+  </compounddef>
+</doxygen>

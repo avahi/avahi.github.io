@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="struct___ga_client_class" kind="struct" language="C++" prot="public">
+    <compoundname>_GaClientClass</compoundname>
+    <includes refid="ga-client_8h" local="no">avahi-gobject/ga-client.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_client_class_1a41777460d0b9f7cc1a0625b71cfa8fd8" prot="public" static="no" mutable="no">
+        <type>GObjectClass</type>
+        <definition>GObjectClass _GaClientClass::parent_class</definition>
+        <argsstring></argsstring>
+        <name>parent_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-client.h" line="47" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-client.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>_GaClientClass</label>
+        <link refid="struct___ga_client_class"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>parent_class</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GObjectClass</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lathiat/src/avahi/avahi-gobject/ga-client.h" line="46" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-client.h" bodystart="46" bodyend="48"/>
+    <listofallmembers>
+      <member refid="struct___ga_client_class_1a41777460d0b9f7cc1a0625b71cfa8fd8" prot="public" virt="non-virtual"><scope>_GaClientClass</scope><name>parent_class</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

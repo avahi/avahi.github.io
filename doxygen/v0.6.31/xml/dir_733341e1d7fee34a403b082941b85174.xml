@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_733341e1d7fee34a403b082941b85174" kind="dir">
+    <compoundname>avahi-ui</compoundname>
+    <innerfile refid="avahi-ui_8h">avahi-ui.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lathiat/src/avahi/avahi-ui/"/>
+  </compounddef>
+</doxygen>

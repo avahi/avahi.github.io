@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="alternative_8h" kind="file" language="C++">
+    <compoundname>alternative.h</compoundname>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <incdepgraph>
+      <node id="67">
+        <label>avahi-common/alternative.h</label>
+        <link refid="alternative.h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="alternative_8h_1a96cb698b266253eeed331a868bc84b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_alternative_host_name</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>avahi_alternative_host_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Find an alternative for the specified host name. </para>        </briefdescription>
+        <detaileddescription>
+<para>If called with an original host name, &quot;-2&quot; is appended, afterwards the number is increased on each call. (i.e. &quot;foo&quot; becomes &quot;foo-2&quot; becomes &quot;foo-3&quot; and so on.) <ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free()</ref> the result. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/alternative.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="alternative_8h_1ae0b973d05cf10ee64ff755cff0b85d14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_alternative_service_name</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>avahi_alternative_service_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Find an alternative for the specified service name. </para>        </briefdescription>
+        <detaileddescription>
+<para>If called with an original service name, &quot; #2&quot; is appended. Afterwards the number is increased on each call (i.e. &quot;foo&quot; becomes &quot;foo #2&quot; becomes &quot;foo
+#3&quot; and so on.) <ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free()</ref> the result. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/alternative.h" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Functions to find alternative names for hosts and services in the case of name collision. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>fooalternativehfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fooalternativehfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="alternative_8h_1a96cb698b266253eeed331a868bc84b5c" kindref="member">avahi_alternative_host_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="alternative_8h_1ae0b973d05cf10ee64ff755cff0b85d14" kindref="member">avahi_alternative_service_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-common/alternative.h"/>
+  </compounddef>
+</doxygen>

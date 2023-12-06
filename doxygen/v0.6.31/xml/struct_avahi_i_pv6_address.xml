@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="struct_avahi_i_pv6_address" kind="struct" language="C++" prot="public">
+    <compoundname>AvahiIPv6Address</compoundname>
+    <includes refid="address_8h" local="no">avahi-common/address.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_avahi_i_pv6_address_1a9889446ee3d4a2bccf929b97a433a91d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AvahiIPv6Address::address[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>address</name>
+        <briefdescription>
+<para>Address data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/address.h" line="66" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/address.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An IPv6 address. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="55">
+        <label>AvahiIPv6Address</label>
+        <link refid="struct_avahi_i_pv6_address"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+      <node id="56">
+        <label>uint8_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lathiat/src/avahi/avahi-common/address.h" line="65" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/address.h" bodystart="65" bodyend="67"/>
+    <listofallmembers>
+      <member refid="struct_avahi_i_pv6_address_1a9889446ee3d4a2bccf929b97a433a91d" prot="public" virt="non-virtual"><scope>AvahiIPv6Address</scope><name>address</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

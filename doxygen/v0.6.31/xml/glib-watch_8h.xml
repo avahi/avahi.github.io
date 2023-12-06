@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="glib-watch_8h" kind="file" language="C++">
+    <compoundname>glib-watch.h</compoundname>
+    <includes local="no">glib.h</includes>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includes refid="watch_8h" local="no">avahi-common/watch.h</includes>
+    <incdepgraph>
+      <node id="160">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch_8h"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="161">
+        <label>sys/poll.h</label>
+      </node>
+      <node id="159">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="157">
+        <label>avahi-glib/glib-watch.h</label>
+        <link refid="glib-watch.h"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>glib.h</label>
+      </node>
+      <node id="162">
+        <label>sys/time.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" prot="public" static="no">
+        <type>struct <ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref></type>
+        <definition>typedef struct AvahiGLibPoll AvahiGLibPoll</definition>
+        <argsstring></argsstring>
+        <name>AvahiGLibPoll</name>
+        <briefdescription>
+<para>GLib main loop adapter. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can safely cast this into a GSource </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-glib/glib-watch.h" line="30" column="1" bodyfile="/home/lathiat/src/avahi/avahi-glib/glib-watch.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="glib-watch_8h_1a7605e1f832a19c7910a47f90059652cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref> *</type>
+        <definition>AvahiGLibPoll* avahi_glib_poll_new</definition>
+        <argsstring>(GMainContext *context, gint priority)</argsstring>
+        <name>avahi_glib_poll_new</name>
+        <param>
+          <type>GMainContext *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>gint</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+<para>Create a new GLib main loop adapter attached to the specified context. </para>        </briefdescription>
+        <detaileddescription>
+<para>If context is NULL, the default main loop context is used. You can attach as many AvahiGLibPoll objects to the same context as you want. priority takes one of GLib&apos;s G_PRIORITY constants. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-glib/glib-watch.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="glib-watch_8h_1adb35c3bc5773317e239f98ab2d883fcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_glib_poll_free</definition>
+        <argsstring>(AvahiGLibPoll *g)</argsstring>
+        <name>avahi_glib_poll_free</name>
+        <param>
+          <type><ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+<para>Free GLib main loop adapter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-glib/glib-watch.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="glib-watch_8h_1a9d53612fea4caa5266ac43014226e147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref> *</type>
+        <definition>const AvahiPoll* avahi_glib_poll_get</definition>
+        <argsstring>(AvahiGLibPoll *g)</argsstring>
+        <name>avahi_glib_poll_get</name>
+        <param>
+          <type><ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+<para>Return the abstract poll API structure for this object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will return the same pointer to a internally allocated structure on each call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-glib/glib-watch.h" line="50" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>GLib main loop adapter. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>fooglibwatchhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fooglibwatchhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#include<sp/>&lt;glib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="watch_8h" kindref="compound">avahi-common/watch.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref><sp/><ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref><sp/>*<ref refid="glib-watch_8h_1a7605e1f832a19c7910a47f90059652cb" kindref="member">avahi_glib_poll_new</ref>(GMainContext<sp/>*context,<sp/>gint<sp/>priority);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="glib-watch_8h_1adb35c3bc5773317e239f98ab2d883fcf" kindref="member">avahi_glib_poll_free</ref>(<ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref><sp/>*g);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref><sp/>*<ref refid="glib-watch_8h_1a9d53612fea4caa5266ac43014226e147" kindref="member">avahi_glib_poll_get</ref>(<ref refid="glib-watch_8h_1adbe6a8c5897e02573fa709cfc79423a6" kindref="member">AvahiGLibPoll</ref><sp/>*g);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-glib/glib-watch.h"/>
+  </compounddef>
+</doxygen>

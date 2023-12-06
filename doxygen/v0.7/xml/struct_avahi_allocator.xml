@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_avahi_allocator" kind="struct" language="C++" prot="public">
+    <compoundname>AvahiAllocator</compoundname>
+    <includes refid="malloc_8h" local="no">avahi-common/malloc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_avahi_allocator_1a2417e2991c412eec4a130d1914e559d2" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* AvahiAllocator::malloc) (size_t size) AVAHI_GCC_ALLOC_SIZE(1)</definition>
+        <argsstring>)(size_t size) AVAHI_GCC_ALLOC_SIZE(1)</argsstring>
+        <name>malloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/malloc.h" line="76" column="1" bodyfile="avahi-common/malloc.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_allocator_1a02717514f40a9b190fa95c61aeb5344c" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AvahiAllocator::free) (void *p)</definition>
+        <argsstring>)(void *p)</argsstring>
+        <name>free</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/malloc.h" line="77" column="1" bodyfile="avahi-common/malloc.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_allocator_1a5bb32661ea98a544e16add307c825292" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* AvahiAllocator::realloc) (void *p, size_t size) AVAHI_GCC_ALLOC_SIZE(2)</definition>
+        <argsstring>)(void *p, size_t size) AVAHI_GCC_ALLOC_SIZE(2)</argsstring>
+        <name>realloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/malloc.h" line="78" column="1" bodyfile="avahi-common/malloc.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_allocator_1a5adbda1b3f1286b44bbae4269a6f93d8" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* AvahiAllocator::calloc) (size_t nmemb, size_t size) AVAHI_GCC_ALLOC_SIZE2(1</definition>
+        <argsstring>)(size_t nmemb, size_t size) AVAHI_GCC_ALLOC_SIZE2(1</argsstring>
+        <name>calloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/malloc.h" line="79" column="1" bodyfile="avahi-common/malloc.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wraps allocator functions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="48">
+        <label>void *(*)(void *p, size_t size) AVAHI_GCC_ALLOC_SIZE(2)</label>
+      </node>
+      <node id="49">
+        <label>void(*)(void *p)</label>
+      </node>
+      <node id="50">
+        <label>void *(*)(size_t size) AVAHI_GCC_ALLOC_SIZE(1)</label>
+      </node>
+      <node id="47">
+        <label>void *(*)(size_t nmemb, size_t size) AVAHI_GCC_ALLOC_SIZE2(1</label>
+      </node>
+      <node id="46">
+        <label>AvahiAllocator</label>
+        <link refid="struct_avahi_allocator"/>
+        <childnode refid="47" relation="usage">
+          <edgelabel>calloc</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>realloc</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>malloc</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-common/malloc.h" line="75" column="1" bodyfile="avahi-common/malloc.h" bodystart="75" bodyend="80"/>
+    <listofallmembers>
+      <member refid="struct_avahi_allocator_1a5adbda1b3f1286b44bbae4269a6f93d8" prot="public" virt="non-virtual"><scope>AvahiAllocator</scope><name>calloc</name></member>
+      <member refid="struct_avahi_allocator_1a02717514f40a9b190fa95c61aeb5344c" prot="public" virt="non-virtual"><scope>AvahiAllocator</scope><name>free</name></member>
+      <member refid="struct_avahi_allocator_1a2417e2991c412eec4a130d1914e559d2" prot="public" virt="non-virtual"><scope>AvahiAllocator</scope><name>malloc</name></member>
+      <member refid="struct_avahi_allocator_1a5bb32661ea98a544e16add307c825292" prot="public" virt="non-virtual"><scope>AvahiAllocator</scope><name>realloc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

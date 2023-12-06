@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="client-publish-service_8c-example" kind="example">
+    <compoundname>client-publish-service.c</compoundname>
+    <detaileddescription>
+<para>Example how to register a DNS-SD service using the client interface to avahi-daemon. It behaves like a network printer registering both an IPP and a BSD LPR service. <programlisting><codeline><highlight class="comment">/***</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONFIG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;config.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="client_8h" kindref="compound">avahi-client/client.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="publish_8h" kindref="compound">avahi-client/publish.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="alternative_8h" kindref="compound">avahi-common/alternative.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="simple-watch_8h" kindref="compound">avahi-common/simple-watch.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="malloc_8h" kindref="compound">avahi-common/malloc.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="error_8h" kindref="compound">avahi-common/error.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/timeval.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*group<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="simple-watch_8h_1a0e40ccdfdc9d60e7baf0c312347f79b2" kindref="member">AvahiSimplePoll</ref><sp/>*simple_poll<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>create_services(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*c);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>entry_group_callback(<ref refid="publish_8h_1ab6622b54fce4299a56ba12421be4e985" kindref="member">AvahiEntryGroup</ref><sp/>*g,<sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217" kindref="member">AvahiEntryGroupState</ref><sp/>state,<sp/>AVAHI_GCC_UNUSED<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>assert(g<sp/>==<sp/>group<sp/>||<sp/>group<sp/>==<sp/>NULL);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>group<sp/>=<sp/>g;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Called<sp/>whenever<sp/>the<sp/>entry<sp/>group<sp/>state<sp/>changes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(state)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217acdb3fe1295e58561c666cbf7ee6adf5a" kindref="member">AVAHI_ENTRY_GROUP_ESTABLISHED</ref><sp/>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>entry<sp/>group<sp/>has<sp/>been<sp/>established<sp/>successfully<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Service<sp/>&apos;%s&apos;<sp/>successfully<sp/>established.\n&quot;</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a8f163dbd719eb71f404f89415d8c9f3e" kindref="member">AVAHI_ENTRY_GROUP_COLLISION</ref><sp/>:<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*n;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>service<sp/>name<sp/>collision<sp/>with<sp/>a<sp/>remote<sp/>service</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>happened.<sp/>Let&apos;s<sp/>pick<sp/>a<sp/>new<sp/>name<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/><ref refid="alternative_8h_1ae0b973d05cf10ee64ff755cff0b85d14" kindref="member">avahi_alternative_service_name</ref>(name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free</ref>(name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name<sp/>=<sp/>n;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Service<sp/>name<sp/>collision,<sp/>renaming<sp/>service<sp/>to<sp/>&apos;%s&apos;\n&quot;</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>And<sp/>recreate<sp/>the<sp/>services<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>create_services(<ref refid="publish_8h_1a5a0a69e977bb46bf7ab69002c509a040" kindref="member">avahi_entry_group_get_client</ref>(g));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a83adf26c6d556c2f4ce32cce3a62030e" kindref="member">AVAHI_ENTRY_GROUP_FAILURE</ref><sp/>:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Entry<sp/>group<sp/>failure:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(<ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref>(<ref refid="publish_8h_1a5a0a69e977bb46bf7ab69002c509a040" kindref="member">avahi_entry_group_get_client</ref>(g))));</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Some<sp/>kind<sp/>of<sp/>failure<sp/>happened<sp/>while<sp/>we<sp/>were<sp/>registering<sp/>our<sp/>services<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1ac2771664e4e6c7e75e5b5a270e5e0490" kindref="member">avahi_simple_poll_quit</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a6afdc2228658792da73171e5b26dc328" kindref="member">AVAHI_ENTRY_GROUP_UNCOMMITED</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a5627957ceaf2fdd51e1f2585aa871213" kindref="member">AVAHI_ENTRY_GROUP_REGISTERING</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>create_services(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*c)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*n,<sp/>r[128];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>assert(c);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>is<sp/>the<sp/>first<sp/>time<sp/>we&apos;re<sp/>called,<sp/>let&apos;s<sp/>create<sp/>a<sp/>new</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>entry<sp/>group<sp/>if<sp/>necessary<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!group)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(group<sp/>=<sp/><ref refid="publish_8h_1abb17598f2b6ec3c3f69defdd488d568c" kindref="member">avahi_entry_group_new</ref>(c,<sp/>entry_group_callback,<sp/>NULL)))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;avahi_entry_group_new()<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(<ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref>(c)));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>the<sp/>group<sp/>is<sp/>empty<sp/>(either<sp/>because<sp/>it<sp/>was<sp/>just<sp/>created,<sp/>or</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>because<sp/>it<sp/>was<sp/>reset<sp/>previously,<sp/>add<sp/>our<sp/>entries.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="publish_8h_1af5a78ee1fda6678970536889d459d85c" kindref="member">avahi_entry_group_is_empty</ref>(group))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Adding<sp/>service<sp/>&apos;%s&apos;\n&quot;</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>some<sp/>random<sp/>TXT<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(r,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(r),<sp/></highlight><highlight class="stringliteral">&quot;random=%i&quot;</highlight><highlight class="normal">,<sp/>rand());</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>will<sp/>now<sp/>add<sp/>two<sp/>services<sp/>and<sp/>one<sp/>subtype<sp/>to<sp/>the<sp/>entry</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>group.<sp/>The<sp/>two<sp/>services<sp/>have<sp/>the<sp/>same<sp/>name,<sp/>but<sp/>differ<sp/>in</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>service<sp/>type<sp/>(IPP<sp/>vs.<sp/>BSD<sp/>LPR).<sp/>Only<sp/>services<sp/>with<sp/>the</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>same<sp/>name<sp/>should<sp/>be<sp/>put<sp/>in<sp/>the<sp/>same<sp/>entry<sp/>group.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Add<sp/>the<sp/>service<sp/>for<sp/>IPP<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ret<sp/>=<sp/><ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service</ref>(group,<sp/><ref refid="address_8h_1adf764cbdea00d65edcd07bb9953ad2b7a9cefc02b2cc49f5a4c8effb3f610cca6" kindref="member">AVAHI_IF_UNSPEC</ref>,<sp/><ref refid="address_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6c1837afa356a983f188e35911dc0d84" kindref="member">AVAHI_PROTO_UNSPEC</ref>,<sp/>0,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;_ipp._tcp&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>NULL,<sp/>651,<sp/></highlight><highlight class="stringliteral">&quot;test=blah&quot;</highlight><highlight class="normal">,<sp/>r,<sp/>NULL))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea5162d9b82323f79097bb72ffdab3dda5" kindref="member">AVAHI_ERR_COLLISION</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>collision;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>add<sp/>_ipp._tcp<sp/>service:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(ret));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Add<sp/>the<sp/>same<sp/>service<sp/>for<sp/>BSD<sp/>LPR<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ret<sp/>=<sp/><ref refid="publish_8h_1acb05a7d3d23a3b825ca77cb1c7d00ce4" kindref="member">avahi_entry_group_add_service</ref>(group,<sp/><ref refid="address_8h_1adf764cbdea00d65edcd07bb9953ad2b7a9cefc02b2cc49f5a4c8effb3f610cca6" kindref="member">AVAHI_IF_UNSPEC</ref>,<sp/><ref refid="address_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6c1837afa356a983f188e35911dc0d84" kindref="member">AVAHI_PROTO_UNSPEC</ref>,<sp/>0,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;_printer._tcp&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>NULL,<sp/>515,<sp/>NULL))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea5162d9b82323f79097bb72ffdab3dda5" kindref="member">AVAHI_ERR_COLLISION</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>collision;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>add<sp/>_printer._tcp<sp/>service:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(ret));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Add<sp/>an<sp/>additional<sp/>(hypothetic)<sp/>subtype<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ret<sp/>=<sp/><ref refid="publish_8h_1a93841be69a152d3134b408c25bb4d5d5" kindref="member">avahi_entry_group_add_service_subtype</ref>(group,<sp/><ref refid="address_8h_1adf764cbdea00d65edcd07bb9953ad2b7a9cefc02b2cc49f5a4c8effb3f610cca6" kindref="member">AVAHI_IF_UNSPEC</ref>,<sp/><ref refid="address_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6c1837afa356a983f188e35911dc0d84" kindref="member">AVAHI_PROTO_UNSPEC</ref>,<sp/>0,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;_printer._tcp&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/></highlight><highlight class="stringliteral">&quot;_magic._sub._printer._tcp&quot;</highlight><highlight class="normal">)<sp/>&lt;<sp/>0))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>add<sp/>subtype<sp/>_magic._sub._printer._tcp:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(ret));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Tell<sp/>the<sp/>server<sp/>to<sp/>register<sp/>the<sp/>service<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ret<sp/>=<sp/><ref refid="publish_8h_1a2375338d23af4281399404758840a2de" kindref="member">avahi_entry_group_commit</ref>(group))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>commit<sp/>entry<sp/>group:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(ret));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">collision:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>service<sp/>name<sp/>collision<sp/>with<sp/>a<sp/>local<sp/>service<sp/>happened.<sp/>Let&apos;s</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>pick<sp/>a<sp/>new<sp/>name<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/><ref refid="alternative_8h_1ae0b973d05cf10ee64ff755cff0b85d14" kindref="member">avahi_alternative_service_name</ref>(name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free</ref>(name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/>n;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Service<sp/>name<sp/>collision,<sp/>renaming<sp/>service<sp/>to<sp/>&apos;%s&apos;\n&quot;</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="publish_8h_1a1293bbccf878dbeb9916660022bc71b2" kindref="member">avahi_entry_group_reset</ref>(group);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>create_services(c);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">fail:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1ac2771664e4e6c7e75e5b5a270e5e0490" kindref="member">avahi_simple_poll_quit</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>client_callback(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*c,<sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9" kindref="member">AvahiClientState</ref><sp/>state,<sp/>AVAHI_GCC_UNUSED<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>userdata)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>assert(c);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Called<sp/>whenever<sp/>the<sp/>client<sp/>or<sp/>server<sp/>state<sp/>changes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(state)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aa938fb22163a04c7b30722aa7827c125" kindref="member">AVAHI_CLIENT_S_RUNNING</ref>:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>server<sp/>has<sp/>startup<sp/>successfully<sp/>and<sp/>registered<sp/>its<sp/>host</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>name<sp/>on<sp/>the<sp/>network,<sp/>so<sp/>it&apos;s<sp/>time<sp/>to<sp/>create<sp/>our<sp/>services<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>create_services(c);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a04583aa28fec0f0987fd2d3a1814db4b" kindref="member">AVAHI_CLIENT_FAILURE</ref>:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Client<sp/>failure:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(<ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref>(c)));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1ac2771664e4e6c7e75e5b5a270e5e0490" kindref="member">avahi_simple_poll_quit</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9afb8608994e0d88eaedacd31a46f54ec5" kindref="member">AVAHI_CLIENT_S_COLLISION</ref>:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Let&apos;s<sp/>drop<sp/>our<sp/>registered<sp/>services.<sp/>When<sp/>the<sp/>server<sp/>is<sp/>back</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>in<sp/>AVAHI_SERVER_RUNNING<sp/>state<sp/>we<sp/>will<sp/>register<sp/>them</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>again<sp/>with<sp/>the<sp/>new<sp/>host<sp/>name.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aab8998306026f5c6d1984fd99f8d3a33" kindref="member">AVAHI_CLIENT_S_REGISTERING</ref>:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>server<sp/>records<sp/>are<sp/>now<sp/>being<sp/>established.<sp/>This</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>might<sp/>be<sp/>caused<sp/>by<sp/>a<sp/>host<sp/>name<sp/>change.<sp/>We<sp/>need<sp/>to<sp/>wait</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>for<sp/>our<sp/>own<sp/>records<sp/>to<sp/>register<sp/>until<sp/>the<sp/>host<sp/>name<sp/>is</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>properly<sp/>esatblished.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(group)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="publish_8h_1a1293bbccf878dbeb9916660022bc71b2" kindref="member">avahi_entry_group_reset</ref>(group);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a0edc78ba86f12b22407707fe63b8fbfa" kindref="member">AVAHI_CLIENT_CONNECTING</ref>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>modify_callback(AVAHI_GCC_UNUSED<sp/><ref refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" kindref="member">AvahiTimeout</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*client<sp/>=<sp/>userdata;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Doing<sp/>some<sp/>weird<sp/>modification\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free</ref>(name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/><ref refid="malloc_8h_1a8b3595843b0c658fef2131640b8a549f" kindref="member">avahi_strdup</ref>(</highlight><highlight class="stringliteral">&quot;Modified<sp/>MegaPrinter&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>the<sp/>server<sp/>is<sp/>currently<sp/>running,<sp/>we<sp/>need<sp/>to<sp/>remove<sp/>our</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>service<sp/>and<sp/>create<sp/>it<sp/>anew<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="client_8h_1a3c392604bac6c14522e90bb78b1e17bd" kindref="member">avahi_client_get_state</ref>(client)<sp/>==<sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aa938fb22163a04c7b30722aa7827c125" kindref="member">AVAHI_CLIENT_S_RUNNING</ref>)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Remove<sp/>the<sp/>old<sp/>services<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(group)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="publish_8h_1a1293bbccf878dbeb9916660022bc71b2" kindref="member">avahi_entry_group_reset</ref>(group);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>And<sp/>create<sp/>them<sp/>again<sp/>with<sp/>the<sp/>new<sp/>name<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>create_services(client);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(AVAHI_GCC_UNUSED<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/>AVAHI_GCC_UNUSED<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*argv[])<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*client<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>tv;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>main<sp/>loop<sp/>object<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(simple_poll<sp/>=<sp/><ref refid="simple-watch_8h_1a4548a645c8ae50edd0617c8d9a15a9bd" kindref="member">avahi_simple_poll_new</ref>()))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>simple<sp/>poll<sp/>object.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>name<sp/>=<sp/><ref refid="malloc_8h_1a8b3595843b0c658fef2131640b8a549f" kindref="member">avahi_strdup</ref>(</highlight><highlight class="stringliteral">&quot;MegaPrinter&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>a<sp/>new<sp/>client<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>client<sp/>=<sp/><ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new</ref>(<ref refid="simple-watch_8h_1a8e7a53b4116c2379d04f8298398e59e8" kindref="member">avahi_simple_poll_get</ref>(simple_poll),<sp/>0,<sp/>client_callback,<sp/>NULL,<sp/>&amp;error);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>wether<sp/>creating<sp/>the<sp/>client<sp/>object<sp/>succeeded<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!client)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>client:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(error));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>After<sp/>10s<sp/>do<sp/>some<sp/>weird<sp/>modification<sp/>to<sp/>the<sp/>service<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1a8e7a53b4116c2379d04f8298398e59e8" kindref="member">avahi_simple_poll_get</ref>(simple_poll)-&gt;<ref refid="struct_avahi_poll_1abc2890fd69c1753aae84fb8e48044be4" kindref="member">timeout_new</ref>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1a8e7a53b4116c2379d04f8298398e59e8" kindref="member">avahi_simple_poll_get</ref>(simple_poll),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>avahi_elapse_time(&amp;tv,<sp/>1000*10,<sp/>0),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modify_callback,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>client);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Run<sp/>the<sp/>main<sp/>loop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1a14b4cb29832e8c3de609d4c4e5611985" kindref="member">avahi_simple_poll_loop</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">fail:</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cleanup<sp/>things<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(client)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="client_8h_1aceb92c59523def4de9f745f4149cb392" kindref="member">avahi_client_free</ref>(client);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(simple_poll)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="simple-watch_8h_1a2d23c812725d77cf4c6478d249bb434e" kindref="member">avahi_simple_poll_free</ref>(simple_poll);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free</ref>(name);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

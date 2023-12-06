@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="ga-enums_8h" kind="file" language="C++">
+    <compoundname>ga-enums.h</compoundname>
+    <includes local="no">glib-object.h</includes>
+    <includes refid="defs_8h" local="no">avahi-common/defs.h</includes>
+    <includes refid="address_8h" local="no">avahi-common/address.h</includes>
+    <includedby refid="ga-record-browser_8h" local="yes">avahi-gobject/ga-record-browser.h</includedby>
+    <includedby refid="ga-service-browser_8h" local="yes">avahi-gobject/ga-service-browser.h</includedby>
+    <includedby refid="ga-service-resolver_8h" local="yes">avahi-gobject/ga-service-resolver.h</includedby>
+    <incdepgraph>
+      <node id="202">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="203">
+        <label>avahi-common/address.h</label>
+        <link refid="address_8h"/>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>avahi-gobject/ga-enums.h</label>
+        <link refid="ga-enums_8h"/>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+      </node>
+      <node id="201">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="205">
+        <label>sys/types.h</label>
+      </node>
+      <node id="204">
+        <label>inttypes.h</label>
+      </node>
+      <node id="200">
+        <label>glib-object.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="208">
+        <label>avahi-gobject/ga-service-browser.h</label>
+        <link refid="ga-service-browser_8h"/>
+      </node>
+      <node id="206">
+        <label>avahi-gobject/ga-enums.h</label>
+        <link refid="ga-enums_8h"/>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>avahi-gobject/ga-service-resolver.h</label>
+        <link refid="ga-service-resolver_8h"/>
+      </node>
+      <node id="207">
+        <label>avahi-gobject/ga-record-browser.h</label>
+        <link refid="ga-record-browser_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303" prot="public" static="no">
+        <name>GaProtocol</name>
+        <enumvalue id="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303a248a0b272dea21131b3ad5a9a7ebf37e" prot="public">
+          <name>GA_PROTOCOL_INET</name>
+          <initializer>= AVAHI_PROTO_INET</initializer>
+          <briefdescription>
+<para>IPv4. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303aa4c8d4e73f0c172cab9b7d0a58ee6de7" prot="public">
+          <name>GA_PROTOCOL_INET6</name>
+          <initializer>= AVAHI_PROTO_INET6</initializer>
+          <briefdescription>
+<para>IPv6. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303a8271628b4df24c0efb9aba5eb1d9b86c" prot="public">
+          <name>GA_PROTOCOL_UNSPEC</name>
+          <initializer>= AVAHI_PROTO_UNSPEC</initializer>
+          <briefdescription>
+<para>Unspecified/all protocol(s) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Values for GaProtocol. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-enums.h" line="29" column="1" bodyfile="avahi-gobject/ga-enums.h" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="enum" id="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989" prot="public" static="no">
+        <name>GaLookupResultFlags</name>
+        <enumvalue id="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989abcdab2e9b48710daebd487ed48f2096f" prot="public">
+          <name>GA_LOOKUP_RESULT_CACHED</name>
+          <initializer>= AVAHI_LOOKUP_RESULT_CACHED</initializer>
+          <briefdescription>
+<para>This response originates from the cache. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989af3a69deecb0378e2663a048f132a204a" prot="public">
+          <name>GA_LOOKUP_RESULT_WIDE_AREA</name>
+          <initializer>= AVAHI_LOOKUP_RESULT_WIDE_AREA</initializer>
+          <briefdescription>
+<para>This response originates from wide area DNS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a49395bc4b8b521d01b55fc7718bd67af" prot="public">
+          <name>GA_LOOKUP_RESULT_MULTICAST</name>
+          <initializer>= AVAHI_LOOKUP_RESULT_MULTICAST</initializer>
+          <briefdescription>
+<para>This response originates from multicast DNS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989afdd8c24b05237e71f2a230619a76c14a" prot="public">
+          <name>GA_LOOKUP_RESULT_LOCAL</name>
+          <initializer>= AVAHI_LOOKUP_RESULT_LOCAL</initializer>
+          <briefdescription>
+<para>This record/service resides on and was announced by the local host. </para>          </briefdescription>
+          <detaileddescription>
+<para>Only available in service and record browsers and only on AVAHI_BROWSER_NEW. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a9fc105123da963015ce98e48fcf67f10" prot="public">
+          <name>GA_LOOKUP_RESULT_OUR_OWN</name>
+          <initializer>= AVAHI_LOOKUP_RESULT_OUR_OWN</initializer>
+          <briefdescription>
+<para>This service belongs to the same local client as the browser object. </para>          </briefdescription>
+          <detaileddescription>
+<para>Only available in avahi-client, and only for service browsers and only on AVAHI_BROWSER_NEW. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a079b33813f50228c5b09b5c54b3e1c61" prot="public">
+          <name>GA_LOOKUP_RESULT_STATIC</name>
+          <initializer>= AVAHI_LOOKUP_RESULT_STATIC</initializer>
+          <briefdescription>
+<para>The returned data has been defined statically by some configuration option. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Some flags for lookup callback functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-enums.h" line="37" column="1" bodyfile="avahi-gobject/ga-enums.h" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5" prot="public" static="no">
+        <name>GaLookupFlags</name>
+        <enumvalue id="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ae13be933b8ae682b91fc7aaa6ecf341a" prot="public">
+          <name>GA_LOOKUP_NO_FLAGS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ad44550bb0d1f3f8b8d23f2085b9de908" prot="public">
+          <name>GA_LOOKUP_USE_WIDE_AREA</name>
+          <initializer>= AVAHI_LOOKUP_USE_WIDE_AREA</initializer>
+          <briefdescription>
+<para>Force lookup via wide area DNS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5afe8c018e8e16a09e21a03c389856a408" prot="public">
+          <name>GA_LOOKUP_USE_MULTICAST</name>
+          <initializer>= AVAHI_LOOKUP_USE_MULTICAST</initializer>
+          <briefdescription>
+<para>Force lookup via multicast DNS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5acf2297ff509fa43494796a83efd7415c" prot="public">
+          <name>GA_LOOKUP_NO_TXT</name>
+          <initializer>= AVAHI_LOOKUP_NO_TXT</initializer>
+          <briefdescription>
+<para>When doing service resolving, don&apos;t lookup TXT record. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ae2bfbf5ab21706ad21beebb837d24b13" prot="public">
+          <name>GA_LOOKUP_NO_ADDRESS</name>
+          <initializer>= AVAHI_LOOKUP_NO_ADDRESS</initializer>
+          <briefdescription>
+<para>When doing service resolving, don&apos;t lookup A/AAAA record. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-enums.h" line="48" column="1" bodyfile="avahi-gobject/ga-enums.h" bodystart="48" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="enum" id="ga-enums_8h_1aa9cca72549ed107b75429332ac39123e" prot="public" static="no">
+        <name>GaResolverEvent</name>
+        <enumvalue id="ga-enums_8h_1aa9cca72549ed107b75429332ac39123ea3798be8054fca0a5385258074080ffa4" prot="public">
+          <name>GA_RESOLVER_FOUND</name>
+          <initializer>= AVAHI_RESOLVER_FOUND</initializer>
+          <briefdescription>
+<para>RR found, resolving successful. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1aa9cca72549ed107b75429332ac39123ea34afa34cba1fa3e3559afd6ac05a80ac" prot="public">
+          <name>GA_RESOLVER_FAILURE</name>
+          <initializer>= AVAHI_RESOLVER_FAILURE</initializer>
+          <briefdescription>
+<para>Resolving failed due to some reason which can be retrieved using avahi_server_errno()/avahi_client_errno() </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-enums.h" line="56" column="1" bodyfile="avahi-gobject/ga-enums.h" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="enum" id="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2" prot="public" static="no">
+        <name>GaBrowserEvent</name>
+        <enumvalue id="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a74a701f6d424d6d383a97334b943e773" prot="public">
+          <name>GA_BROWSER_NEW</name>
+          <initializer>= AVAHI_BROWSER_NEW</initializer>
+          <briefdescription>
+<para>The object is new on the network. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a54c68f52309078ca2a9e630f725eb05a" prot="public">
+          <name>GA_BROWSER_REMOVE</name>
+          <initializer>= AVAHI_BROWSER_REMOVE</initializer>
+          <briefdescription>
+<para>The object has been removed from the network. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a1d1bae224ce134e1dcb3b4e03b42777f" prot="public">
+          <name>GA_BROWSER_CACHE_EXHAUSTED</name>
+          <initializer>= AVAHI_BROWSER_CACHE_EXHAUSTED</initializer>
+          <briefdescription>
+<para>One-time event, to notify the user that all entries from the caches have been send. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2ad67fe4b9976533aeb8aaf5e2230fe8fa" prot="public">
+          <name>GA_BROWSER_ALL_FOR_NOW</name>
+          <initializer>= AVAHI_BROWSER_ALL_FOR_NOW</initializer>
+          <briefdescription>
+<para>One-time event, to notify the user that more records will probably not show up in the near future, i.e. </para>          </briefdescription>
+          <detaileddescription>
+<para>all cache entries have been read and all static servers been queried </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2ad61cd9a794ff2f876e30b08900eaa5f8" prot="public">
+          <name>GA_BROWSER_FAILURE</name>
+          <initializer>= AVAHI_BROWSER_FAILURE</initializer>
+          <briefdescription>
+<para>Browsing failed due to some reason which can be retrieved using avahi_server_errno()/avahi_client_errno() </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-enums.h" line="61" column="1" bodyfile="avahi-gobject/ga-enums.h" bodystart="61" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>ga-enums.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2006-2007<sp/>Collabora<sp/>Ltd.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>St,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__GA_ENUMS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__GA_ENUMS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glib-object.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="defs_8h" kindref="compound">avahi-common/defs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="address_8h" kindref="compound">avahi-common/address.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">G_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="29" refid="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303a248a0b272dea21131b3ad5a9a7ebf37e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303a248a0b272dea21131b3ad5a9a7ebf37e" kindref="member">GA_PROTOCOL_INET</ref><sp/>=<sp/><ref refid="address_8h_1a06fc87d81c62e9abb8790b6e5713c55ba4f19fb8b322772bf535c2e10e19e1474" kindref="member">AVAHI_PROTO_INET</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303aa4c8d4e73f0c172cab9b7d0a58ee6de7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303aa4c8d4e73f0c172cab9b7d0a58ee6de7" kindref="member">GA_PROTOCOL_INET6</ref><sp/>=<sp/><ref refid="address_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6b73d7a5fe00b8d3ba105932ab83cc5b" kindref="member">AVAHI_PROTO_INET6</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303a8271628b4df24c0efb9aba5eb1d9b86c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303a8271628b4df24c0efb9aba5eb1d9b86c" kindref="member">GA_PROTOCOL_UNSPEC</ref><sp/>=<sp/><ref refid="address_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6c1837afa356a983f188e35911dc0d84" kindref="member">AVAHI_PROTO_UNSPEC</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}<sp/><ref refid="ga-enums_8h_1aaa2cbe5487d4161998e455e46a979303" kindref="member">GaProtocol</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989abcdab2e9b48710daebd487ed48f2096f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989abcdab2e9b48710daebd487ed48f2096f" kindref="member">GA_LOOKUP_RESULT_CACHED</ref><sp/>=<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a901cb53511bc147c0b5373a93b623b54" kindref="member">AVAHI_LOOKUP_RESULT_CACHED</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989af3a69deecb0378e2663a048f132a204a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989af3a69deecb0378e2663a048f132a204a" kindref="member">GA_LOOKUP_RESULT_WIDE_AREA</ref><sp/>=<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7aa1617f6736538c40bb14b3d54336e66c" kindref="member">AVAHI_LOOKUP_RESULT_WIDE_AREA</ref>,</highlight></codeline>
+<codeline lineno="41" refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a49395bc4b8b521d01b55fc7718bd67af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a49395bc4b8b521d01b55fc7718bd67af" kindref="member">GA_LOOKUP_RESULT_MULTICAST</ref><sp/>=<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7ac34ea399ed04f8650fad8a5e098cfa29" kindref="member">AVAHI_LOOKUP_RESULT_MULTICAST</ref>,</highlight></codeline>
+<codeline lineno="43" refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989afdd8c24b05237e71f2a230619a76c14a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989afdd8c24b05237e71f2a230619a76c14a" kindref="member">GA_LOOKUP_RESULT_LOCAL</ref><sp/>=<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7abbf16c5d7a3790451bd1a9d835702d5d" kindref="member">AVAHI_LOOKUP_RESULT_LOCAL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a9fc105123da963015ce98e48fcf67f10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a9fc105123da963015ce98e48fcf67f10" kindref="member">GA_LOOKUP_RESULT_OUR_OWN</ref><sp/>=<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a25d1fbc291fd65bcc1d12a5b51ebd6c9" kindref="member">AVAHI_LOOKUP_RESULT_OUR_OWN</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a079b33813f50228c5b09b5c54b3e1c61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989a079b33813f50228c5b09b5c54b3e1c61" kindref="member">GA_LOOKUP_RESULT_STATIC</ref><sp/>=<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7af14e302768822589ce3ee73667c942f1" kindref="member">AVAHI_LOOKUP_RESULT_STATIC</ref><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><ref refid="ga-enums_8h_1a34c784e5c218032d234b97fe0270e989" kindref="member">GaLookupResultFlags</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="49" refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ae13be933b8ae682b91fc7aaa6ecf341a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ae13be933b8ae682b91fc7aaa6ecf341a" kindref="member">GA_LOOKUP_NO_FLAGS</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="50" refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ad44550bb0d1f3f8b8d23f2085b9de908" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ad44550bb0d1f3f8b8d23f2085b9de908" kindref="member">GA_LOOKUP_USE_WIDE_AREA</ref><sp/>=<sp/>AVAHI_LOOKUP_USE_WIDE_AREA,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5afe8c018e8e16a09e21a03c389856a408" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5afe8c018e8e16a09e21a03c389856a408" kindref="member">GA_LOOKUP_USE_MULTICAST</ref><sp/>=<sp/>AVAHI_LOOKUP_USE_MULTICAST,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5acf2297ff509fa43494796a83efd7415c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5acf2297ff509fa43494796a83efd7415c" kindref="member">GA_LOOKUP_NO_TXT</ref><sp/>=<sp/><ref refid="defs_8h_1afa669747c3ff55190d86673dff960e50a6424641f01e829bd62854df0ca2354b1" kindref="member">AVAHI_LOOKUP_NO_TXT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ae2bfbf5ab21706ad21beebb837d24b13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5ae2bfbf5ab21706ad21beebb837d24b13" kindref="member">GA_LOOKUP_NO_ADDRESS</ref><sp/>=<sp/><ref refid="defs_8h_1afa669747c3ff55190d86673dff960e50a1e6cab5169236e3d23581fad5e337d04" kindref="member">AVAHI_LOOKUP_NO_ADDRESS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}<sp/><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5" kindref="member">GaLookupFlags</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="ga-enums_8h_1aa9cca72549ed107b75429332ac39123e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="57" refid="ga-enums_8h_1aa9cca72549ed107b75429332ac39123ea3798be8054fca0a5385258074080ffa4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1aa9cca72549ed107b75429332ac39123ea3798be8054fca0a5385258074080ffa4" kindref="member">GA_RESOLVER_FOUND</ref><sp/>=<sp/><ref refid="defs_8h_1ae524657615ba2ec3b17613098a3394cfaa27397e0a76171dd9afe7cf2fe9b1f22" kindref="member">AVAHI_RESOLVER_FOUND</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="ga-enums_8h_1aa9cca72549ed107b75429332ac39123ea34afa34cba1fa3e3559afd6ac05a80ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1aa9cca72549ed107b75429332ac39123ea34afa34cba1fa3e3559afd6ac05a80ac" kindref="member">GA_RESOLVER_FAILURE</ref><sp/>=<sp/><ref refid="defs_8h_1ae524657615ba2ec3b17613098a3394cfa407f93fe14b008cc1a7ff00eef454528" kindref="member">AVAHI_RESOLVER_FAILURE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/><ref refid="ga-enums_8h_1aa9cca72549ed107b75429332ac39123e" kindref="member">GaResolverEvent</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="62" refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a74a701f6d424d6d383a97334b943e773" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a74a701f6d424d6d383a97334b943e773" kindref="member">GA_BROWSER_NEW</ref><sp/>=<sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87adb84c76ca1876beeb4f1ac718633667c" kindref="member">AVAHI_BROWSER_NEW</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a54c68f52309078ca2a9e630f725eb05a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a54c68f52309078ca2a9e630f725eb05a" kindref="member">GA_BROWSER_REMOVE</ref><sp/>=<sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87ab3adb8824483c87b557a885ee280814c" kindref="member">AVAHI_BROWSER_REMOVE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a1d1bae224ce134e1dcb3b4e03b42777f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2a1d1bae224ce134e1dcb3b4e03b42777f" kindref="member">GA_BROWSER_CACHE_EXHAUSTED</ref><sp/>=<sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a796b2e4c7e82580fb93fd29151aa5752" kindref="member">AVAHI_BROWSER_CACHE_EXHAUSTED</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2ad67fe4b9976533aeb8aaf5e2230fe8fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2ad67fe4b9976533aeb8aaf5e2230fe8fa" kindref="member">GA_BROWSER_ALL_FOR_NOW</ref><sp/>=<sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a430e1134047305e7b892e784cf72f815" kindref="member">AVAHI_BROWSER_ALL_FOR_NOW</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2ad61cd9a794ff2f876e30b08900eaa5f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2ad61cd9a794ff2f876e30b08900eaa5f8" kindref="member">GA_BROWSER_FAILURE</ref><sp/>=<sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a84a4230c3a9f25afde40f65d21909675" kindref="member">AVAHI_BROWSER_FAILURE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}<sp/><ref refid="ga-enums_8h_1a8e25c80bab191cee73e75ac488684ec2" kindref="member">GaBrowserEvent</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">G_END_DECLS</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>#ifndef<sp/>__GA_CLIENT_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="avahi-gobject/ga-enums.h"/>
+  </compounddef>
+</doxygen>

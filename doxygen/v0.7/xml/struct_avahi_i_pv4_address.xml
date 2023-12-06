@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_avahi_i_pv4_address" kind="struct" language="C++" prot="public">
+    <compoundname>AvahiIPv4Address</compoundname>
+    <includes refid="address_8h" local="no">avahi-common/address.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_avahi_i_pv4_address_1a3befb53ec1c862ec6f815608dad6946a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AvahiIPv4Address::address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+<para>Address data in network byte order. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/address.h" line="61" column="1" bodyfile="avahi-common/address.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An IPv4 address. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="52">
+        <label>AvahiIPv4Address</label>
+        <link refid="struct_avahi_i_pv4_address"/>
+        <childnode refid="53" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>uint32_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-common/address.h" line="60" column="1" bodyfile="avahi-common/address.h" bodystart="60" bodyend="62"/>
+    <listofallmembers>
+      <member refid="struct_avahi_i_pv4_address_1a3befb53ec1c862ec6f815608dad6946a" prot="public" virt="non-virtual"><scope>AvahiIPv4Address</scope><name>address</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

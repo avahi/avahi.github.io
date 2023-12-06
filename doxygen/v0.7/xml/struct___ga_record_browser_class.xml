@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct___ga_record_browser_class" kind="struct" language="C++" prot="public">
+    <compoundname>_GaRecordBrowserClass</compoundname>
+    <includes refid="ga-record-browser_8h" local="no">avahi-gobject/ga-record-browser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_record_browser_class_1a353e1bbb0ae01a08d8cd42d3e57a00e1" prot="public" static="no" mutable="no">
+        <type>GObjectClass</type>
+        <definition>GObjectClass _GaRecordBrowserClass::parent_class</definition>
+        <argsstring></argsstring>
+        <name>parent_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-record-browser.h" line="36" column="1" bodyfile="avahi-gobject/ga-record-browser.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="23">
+        <label>_GaRecordBrowserClass</label>
+        <link refid="struct___ga_record_browser_class"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>parent_class</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>GObjectClass</label>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-gobject/ga-record-browser.h" line="35" column="1" bodyfile="avahi-gobject/ga-record-browser.h" bodystart="35" bodyend="37"/>
+    <listofallmembers>
+      <member refid="struct___ga_record_browser_class_1a353e1bbb0ae01a08d8cd42d3e57a00e1" prot="public" virt="non-virtual"><scope>_GaRecordBrowserClass</scope><name>parent_class</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

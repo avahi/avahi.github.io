@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_f8797b490d8093bbd2aacc70420ed179" kind="dir">
+    <compoundname>avahi-qt</compoundname>
+    <innerfile refid="qt-watch_8h">qt-watch.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lathiat/src/avahi/avahi-qt/"/>
+  </compounddef>
+</doxygen>

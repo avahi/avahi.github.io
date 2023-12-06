@@ -1,0 +1,25 @@
+var strlst_8h =
+[
+    [ "AvahiStringList", "struct_avahi_string_list.html", "struct_avahi_string_list" ],
+    [ "AvahiStringList", "strlst_8h.html#aced0fd9d9a742fffcfb42c7ee52059dc", null ],
+    [ "avahi_string_list_add", "strlst_8h.html#a75614d39a181583c81007ec04ea8770b", null ],
+    [ "avahi_string_list_add_anonymous", "strlst_8h.html#ab97468fa4fa94a75f71302856d287f26", null ],
+    [ "avahi_string_list_add_arbitrary", "strlst_8h.html#a956f9c2614ac4b9ef275d190d485782b", null ],
+    [ "avahi_string_list_add_many", "strlst_8h.html#abe85d83a5eb8e98155c5ed8da32df208", null ],
+    [ "avahi_string_list_add_pair", "strlst_8h.html#a72e1b0f724f0c29b5e3c8792f385223f", null ],
+    [ "avahi_string_list_add_pair_arbitrary", "strlst_8h.html#ae75209b38b2eecf19e5643e8d77c88c4", null ],
+    [ "avahi_string_list_add_printf", "strlst_8h.html#a71aeec025ee00c41b844af104afe377f", null ],
+    [ "avahi_string_list_copy", "strlst_8h.html#a07bf1f9833591f701f2b52d60e8a7304", null ],
+    [ "avahi_string_list_equal", "strlst_8h.html#af568e68084efaa42301aab13d3585e96", null ],
+    [ "avahi_string_list_find", "strlst_8h.html#aafc54c009a2a1608b517c15a7cf29944", null ],
+    [ "avahi_string_list_free", "strlst_8h.html#a00fb6773ea7615664377c31618fdfc13", null ],
+    [ "avahi_string_list_get_next", "strlst_8h.html#a15c81dec8bcfdb0f5c11eee7942d2e9d", null ],
+    [ "avahi_string_list_get_pair", "strlst_8h.html#af4a4a311055d4ff05b692bf3aef8e6e2", null ],
+    [ "avahi_string_list_get_size", "strlst_8h.html#ad0a65bafffe7c87fe28543004bc65870", null ],
+    [ "avahi_string_list_get_text", "strlst_8h.html#a8778eae1edde0d53da4422c1b15d5bc3", null ],
+    [ "avahi_string_list_length", "strlst_8h.html#a806c571b338e882390a180b1360c1456", null ],
+    [ "avahi_string_list_new", "strlst_8h.html#a30c78e01c0fe04a07836d650290b6e5a", null ],
+    [ "avahi_string_list_new_from_array", "strlst_8h.html#aa443ba933789865de641f9c37ac0de14", null ],
+    [ "avahi_string_list_reverse", "strlst_8h.html#aa8b026ff6b8e0f49afab322eaa0e65ad", null ],
+    [ "avahi_string_list_to_string", "strlst_8h.html#a5c4b9ab709f22f7741c165ca3756a78b", null ]
+];

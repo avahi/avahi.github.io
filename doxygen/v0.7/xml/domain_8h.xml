@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="domain_8h" kind="file" language="C++">
+    <compoundname>domain.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <incdepgraph>
+      <node id="83">
+        <label>avahi-common/domain.h</label>
+        <link refid="domain_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="85">
+        <label>sys/types.h</label>
+      </node>
+      <node id="84">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Normalization</header>
+      <memberdef kind="function" id="domain_8h_1acd81083f10d62056e28f575232ed08b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_normalize_name</definition>
+        <argsstring>(const char *s, char *ret_s, size_t size)</argsstring>
+        <name>avahi_normalize_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>ret_s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Normalize a domain name into canonical form. </para>        </briefdescription>
+        <detaileddescription>
+<para>This drops trailing dots and removes useless backslash escapes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1abee8e8cd5bf63a8f61e79b9d91e3137f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_normalize_name_strdup</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>avahi_normalize_name_strdup</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Normalize a domain name into canonical form. </para>        </briefdescription>
+        <detaileddescription>
+<para>This drops trailing dots and removes useless backslash escapes. <ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free()</ref> the result! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Comparison</header>
+      <memberdef kind="function" id="domain_8h_1ab1a33eae3d243e78dfed387bc434a6dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_domain_equal</definition>
+        <argsstring>(const char *a, const char *b)</argsstring>
+        <name>avahi_domain_equal</name>
+        <param>
+          <type>const char *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 when the specified domain names are equal, 0 otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1ad9828242474bed87dcf2ffd104f51275" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned avahi_domain_hash</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>avahi_domain_hash</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Return some kind of hash value for the domain, useful for using domains as hash table keys. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="65" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Escaping</header>
+      <memberdef kind="function" id="domain_8h_1a1881b025d219a84bcb7e52a14c28e7d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_unescape_label</definition>
+        <argsstring>(const char **name, char *dest, size_t size)</argsstring>
+        <name>avahi_unescape_label</name>
+        <param>
+          <type>const char **</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Read the first label from the textual domain name *name, unescape it and write it to dest, *name is changed to point to the next label. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1ae9f9ea4637fc2d862a569ea94f342ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_escape_label</definition>
+        <argsstring>(const char *src, size_t src_length, char **ret_name, size_t *ret_size)</argsstring>
+        <name>avahi_escape_label</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>src_length</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>ret_name</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>ret_size</declname>
+        </param>
+        <briefdescription>
+<para>Escape the domain name in *src and write it to *ret_name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="76" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Validity Checks</header>
+      <memberdef kind="function" id="domain_8h_1a5e3dcb6cd9d29f561b1faea62b25a3cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_is_valid_service_type_generic</definition>
+        <argsstring>(const char *t)</argsstring>
+        <name>avahi_is_valid_service_type_generic</name>
+        <param>
+          <type>const char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 when the specified string contains a valid generic DNS-SD service type (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>a series of words starting with &quot;_&quot;), 0 otherwise </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1abfa46e801768a88b9bd36765acfffc37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_is_valid_service_type_strict</definition>
+        <argsstring>(const char *t)</argsstring>
+        <name>avahi_is_valid_service_type_strict</name>
+        <param>
+          <type>const char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 when the specified string contains a valid strict DNS-SD service type (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>consisting of only two words, the latter being either _udp or _tcp), 0 otherwise </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1aa6f86e033ad674eda710f7cb56de637c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_is_valid_service_subtype</definition>
+        <argsstring>(const char *t)</argsstring>
+        <name>avahi_is_valid_service_subtype</name>
+        <param>
+          <type>const char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 when the specified string contains a valid DNS-SD service subtype, 0 otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1ac09edfff962617d9f65ccb96e1f757c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_is_valid_domain_name</definition>
+        <argsstring>(const char *t)</argsstring>
+        <name>avahi_is_valid_domain_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 when the specified string contains a valid domain name, 0 otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1a7ccf8adfafdd3ac2144b33dd8afab7fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_is_valid_service_name</definition>
+        <argsstring>(const char *t)</argsstring>
+        <name>avahi_is_valid_service_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 when the specified string contains a valid DNS-SD service name, 0 otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1a5fa88b895765a67de37b679b8fcfcd4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_is_valid_host_name</definition>
+        <argsstring>(const char *t)</argsstring>
+        <name>avahi_is_valid_host_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 when the specified string contains a valid non-FQDN host name (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>without dots), 0 otherwise </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1a34d680f9e25d379f64faa50fd7a72af4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_is_valid_fqdn</definition>
+        <argsstring>(const char *t)</argsstring>
+        <name>avahi_is_valid_fqdn</name>
+        <param>
+          <type>const char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 when the specified string contains a valid FQDN host name (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>with more than one label and non-numerical), 0 otherwise. <simplesect kind="since"><para>0.6.9 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="106" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DNS-SD service name handling</header>
+      <memberdef kind="function" id="domain_8h_1ae08ef1206bf639acdb0f099f27ac0c08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_service_name_join</definition>
+        <argsstring>(char *p, size_t size, const char *name, const char *type, const char *domain)</argsstring>
+        <name>avahi_service_name_join</name>
+        <param>
+          <type>char *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Construct a valid complete DNS-SD service name from a name, a type and a domain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="domain_8h_1a2cf75d3c7b054d3d123355fa6e753a88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_service_name_split</definition>
+        <argsstring>(const char *p, char *name, size_t name_size, char *type, size_t type_size, char *domain, size_t domain_size)</argsstring>
+        <name>avahi_service_name_split</name>
+        <param>
+          <type>const char *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>name_size</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>type_size</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>domain_size</declname>
+        </param>
+        <briefdescription>
+<para>Split a full service name into name, type and domain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="116" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DNS-SD Subtype handling</header>
+      <memberdef kind="function" id="domain_8h_1af8c4313d46076465cb7d6eaae3f79b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* avahi_get_type_from_subtype</definition>
+        <argsstring>(const char *t)</argsstring>
+        <name>avahi_get_type_from_subtype</name>
+        <param>
+          <type>const char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Return a pointer to the type section of a subtype i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>_foo._sub._bar._tcp =&gt; _bar._tcp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="123" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="domain_8h_1a8c77e5402f4ccbe56b8b2fd8c5ce627e" prot="public" static="no">
+        <name>AVAHI_DOMAIN_NAME_MAX</name>
+        <initializer>1014</initializer>
+        <briefdescription>
+<para>The maximum length of a a fully escaped domain name C string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is calculated like this: RFC1034 mandates maximum length of FQDNs is 255. The maximum label length is 63. To minimize the number of (non-escaped) dots, we comprise our maximum-length domain name of four labels á 63 characters plus three inner dots. Escaping the four labels quadruples their length at maximum. An escaped domain name has the therefore the maximum length of 63*4*4+3=1011. A trailing NUL and perhaps two unnecessary dots leading and trailing the string brings us to 1014. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="41" column="9" bodyfile="avahi-common/domain.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="domain_8h_1aa3afae3e73320ecda156b23541f50d8d" prot="public" static="no">
+        <name>AVAHI_LABEL_MAX</name>
+        <initializer>64</initializer>
+        <briefdescription>
+<para>Maximum size of an unescaped label. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/domain.h" line="44" column="9" bodyfile="avahi-common/domain.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Domain name handling functions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>foodomainhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>foodomainhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="domain_8h_1a8c77e5402f4ccbe56b8b2fd8c5ce627e" refkind="member"><highlight class="preprocessor">#define<sp/>AVAHI_DOMAIN_NAME_MAX<sp/>1014</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="domain_8h_1aa3afae3e73320ecda156b23541f50d8d" refkind="member"><highlight class="preprocessor">#define<sp/>AVAHI_LABEL_MAX<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="domain_8h_1acd81083f10d62056e28f575232ed08b7" kindref="member">avahi_normalize_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ret_s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="domain_8h_1abee8e8cd5bf63a8f61e79b9d91e3137f" kindref="member">avahi_normalize_name_strdup</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1ab1a33eae3d243e78dfed387bc434a6dd" kindref="member">avahi_domain_equal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1ad9828242474bed87dcf2ffd104f51275" kindref="member">avahi_domain_hash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="domain_8h_1a1881b025d219a84bcb7e52a14c28e7d4" kindref="member">avahi_unescape_label</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**name,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dest,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="domain_8h_1ae9f9ea4637fc2d862a569ea94f342ac8" kindref="member">avahi_escape_label</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>src_length,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**ret_name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*ret_size);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1a5e3dcb6cd9d29f561b1faea62b25a3cf" kindref="member">avahi_is_valid_service_type_generic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1abfa46e801768a88b9bd36765acfffc37" kindref="member">avahi_is_valid_service_type_strict</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1aa6f86e033ad674eda710f7cb56de637c" kindref="member">avahi_is_valid_service_subtype</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1ac09edfff962617d9f65ccb96e1f757c2" kindref="member">avahi_is_valid_domain_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1a7ccf8adfafdd3ac2144b33dd8afab7fd" kindref="member">avahi_is_valid_service_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1a5fa88b895765a67de37b679b8fcfcd4d" kindref="member">avahi_is_valid_host_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1a34d680f9e25d379f64faa50fd7a72af4" kindref="member">avahi_is_valid_fqdn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1ae08ef1206bf639acdb0f099f27ac0c08" kindref="member">avahi_service_name_join</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="domain_8h_1a2cf75d3c7b054d3d123355fa6e753a88" kindref="member">avahi_service_name_split</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>name_size,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>type_size,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>domain_size);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="domain_8h_1af8c4313d46076465cb7d6eaae3f79b03" kindref="member">avahi_get_type_from_subtype</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="avahi-common/domain.h"/>
+  </compounddef>
+</doxygen>

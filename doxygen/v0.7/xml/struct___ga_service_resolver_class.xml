@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct___ga_service_resolver_class" kind="struct" language="C++" prot="public">
+    <compoundname>_GaServiceResolverClass</compoundname>
+    <includes refid="ga-service-resolver_8h" local="no">avahi-gobject/ga-service-resolver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_service_resolver_class_1a5312b5e116e8175bafc695e32c489cf4" prot="public" static="no" mutable="no">
+        <type>GObjectClass</type>
+        <definition>GObjectClass _GaServiceResolverClass::parent_class</definition>
+        <argsstring></argsstring>
+        <name>parent_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-resolver.h" line="36" column="1" bodyfile="avahi-gobject/ga-service-resolver.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>_GaServiceResolverClass</label>
+        <link refid="struct___ga_service_resolver_class"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>parent_class</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>GObjectClass</label>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-gobject/ga-service-resolver.h" line="35" column="1" bodyfile="avahi-gobject/ga-service-resolver.h" bodystart="35" bodyend="37"/>
+    <listofallmembers>
+      <member refid="struct___ga_service_resolver_class_1a5312b5e116e8175bafc695e32c489cf4" prot="public" virt="non-virtual"><scope>_GaServiceResolverClass</scope><name>parent_class</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

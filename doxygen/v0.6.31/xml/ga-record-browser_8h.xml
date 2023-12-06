@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="ga-record-browser_8h" kind="file" language="C++">
+    <compoundname>ga-record-browser.h</compoundname>
+    <includes local="no">glib-object.h</includes>
+    <includes refid="lookup_8h" local="no">avahi-client/lookup.h</includes>
+    <includes refid="defs_8h" local="no">avahi-common/defs.h</includes>
+    <includes refid="ga-client_8h" local="yes">ga-client.h</includes>
+    <includes refid="ga-enums_8h" local="yes">ga-enums.h</includes>
+    <incdepgraph>
+      <node id="224">
+        <label>stdarg.h</label>
+      </node>
+      <node id="227">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch_8h"/>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="228">
+        <label>sys/poll.h</label>
+      </node>
+      <node id="220">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="231">
+        <label>ga-client.h</label>
+        <link refid="ga-client_8h"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>avahi-common/gccmacro.h</label>
+      </node>
+      <node id="218">
+        <label>avahi-client/lookup.h</label>
+        <link refid="lookup_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>avahi-common/address.h</label>
+        <link refid="address_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>sys/types.h</label>
+      </node>
+      <node id="223">
+        <label>avahi-common/strlst.h</label>
+        <link refid="strlst_8h"/>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>ga-enums.h</label>
+        <link refid="ga-enums_8h"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+      </node>
+      <node id="230">
+        <label>avahi-client/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="229">
+        <label>sys/time.h</label>
+      </node>
+      <node id="216">
+        <label>avahi-gobject/ga-record-browser.h</label>
+        <link refid="ga-record-browser.h"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>inttypes.h</label>
+      </node>
+      <node id="217">
+        <label>glib-object.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct___ga_record_browser_class" prot="public">_GaRecordBrowserClass</innerclass>
+    <innerclass refid="struct___ga_record_browser" prot="public">_GaRecordBrowser</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ga-record-browser_8h_1a879d9158a3f9ce3aec6c104152163346" prot="public" static="no">
+        <name>GA_TYPE_RECORD_BROWSER</name>
+        <initializer>(<ref refid="ga-record-browser_8h_1a63c8f335f4c86b968678d985d3224936" kindref="member">ga_record_browser_get_type</ref>())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="46" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-record-browser_8h_1a0ac1864bd332a3b121c66627b1de4b5c" prot="public" static="no">
+        <name>GA_RECORD_BROWSER</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_CHECK_INSTANCE_CAST((obj), <ref refid="ga-record-browser_8h_1a879d9158a3f9ce3aec6c104152163346" kindref="member">GA_TYPE_RECORD_BROWSER</ref>, <ref refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" kindref="member">GaRecordBrowser</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="48" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-record-browser_8h_1ad37a80b973fe1ae6116c9879c20cb84f" prot="public" static="no">
+        <name>GA_RECORD_BROWSER_CLASS</name>
+        <param><defname>klass</defname></param>
+        <initializer>(G_TYPE_CHECK_CLASS_CAST((klass), <ref refid="ga-record-browser_8h_1a879d9158a3f9ce3aec6c104152163346" kindref="member">GA_TYPE_RECORD_BROWSER</ref>, <ref refid="ga-record-browser_8h_1a9e5e3469324c21eab345e227ec95b19b" kindref="member">GaRecordBrowserClass</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="50" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-record-browser_8h_1a9ae4c2a1cf0d51bdfec46229ff8786cd" prot="public" static="no">
+        <name>IS_GA_RECORD_BROWSER</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_CHECK_INSTANCE_TYPE((obj), <ref refid="ga-record-browser_8h_1a879d9158a3f9ce3aec6c104152163346" kindref="member">GA_TYPE_RECORD_BROWSER</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="52" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-record-browser_8h_1ace33ce2822d05a293f6415910f11626b" prot="public" static="no">
+        <name>IS_GA_RECORD_BROWSER_CLASS</name>
+        <param><defname>klass</defname></param>
+        <initializer>(G_TYPE_CHECK_CLASS_TYPE((klass), <ref refid="ga-record-browser_8h_1a879d9158a3f9ce3aec6c104152163346" kindref="member">GA_TYPE_RECORD_BROWSER</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="54" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-record-browser_8h_1a11ec0e2dd38ff246c7800bc899ae1c3d" prot="public" static="no">
+        <name>GA_RECORD_BROWSER_GET_CLASS</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_INSTANCE_GET_CLASS ((obj), <ref refid="ga-record-browser_8h_1a879d9158a3f9ce3aec6c104152163346" kindref="member">GA_TYPE_RECORD_BROWSER</ref>, <ref refid="ga-record-browser_8h_1a9e5e3469324c21eab345e227ec95b19b" kindref="member">GaRecordBrowserClass</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="56" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" prot="public" static="no">
+        <type>typedefG_BEGIN_DECLS struct <ref refid="struct___ga_record_browser" kindref="compound">_GaRecordBrowser</ref></type>
+        <definition>typedef typedefG_BEGIN_DECLS struct _GaRecordBrowser GaRecordBrowser</definition>
+        <argsstring></argsstring>
+        <name>GaRecordBrowser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="30" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ga-record-browser_8h_1a9e5e3469324c21eab345e227ec95b19b" prot="public" static="no">
+        <type>struct <ref refid="struct___ga_record_browser_class" kindref="compound">_GaRecordBrowserClass</ref></type>
+        <definition>typedef struct _GaRecordBrowserClass GaRecordBrowserClass</definition>
+        <argsstring></argsstring>
+        <name>GaRecordBrowserClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="30" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ga-record-browser_8h_1a63c8f335f4c86b968678d985d3224936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GType</type>
+        <definition>GType ga_record_browser_get_type</definition>
+        <argsstring>(void)</argsstring>
+        <name>ga_record_browser_get_type</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-record-browser_8h_1ad3c9482e04b9e9335538a9ce5e996f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" kindref="member">GaRecordBrowser</ref> *</type>
+        <definition>GaRecordBrowser* ga_record_browser_new</definition>
+        <argsstring>(const gchar *name, guint16 type)</argsstring>
+        <name>ga_record_browser_new</name>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-record-browser_8h_1a48f3282552335d167c8f90cca5295ec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" kindref="member">GaRecordBrowser</ref> *</type>
+        <definition>GaRecordBrowser* ga_record_browser_new_full</definition>
+        <argsstring>(AvahiIfIndex interface, AvahiProtocol protocol, const gchar *name, guint16 clazz, guint16 type, GaLookupFlags flags)</argsstring>
+        <name>ga_record_browser_new_full</name>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>clazz</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5" kindref="member">GaLookupFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-record-browser_8h_1afcf167837b2caaaaaf994d5981c1cfdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_record_browser_attach</definition>
+        <argsstring>(GaRecordBrowser *browser, GaClient *client, GError **error)</argsstring>
+        <name>ga_record_browser_attach</name>
+        <param>
+          <type><ref refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" kindref="member">GaRecordBrowser</ref> *</type>
+          <declname>browser</declname>
+        </param>
+        <param>
+          <type><ref refid="ga-client_8h_1ae8e7c30061823c30d100c12592dd7eb6" kindref="member">GaClient</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h" line="69" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>ga-record-browser.h<sp/>-<sp/>Header<sp/>for<sp/>GaRecordBrowser</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2007<sp/>Collabora<sp/>Ltd.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>@author<sp/>Sjoerd<sp/>Simons<sp/>&lt;sjoerd@luon.net&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>St,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__GA_RECORD_BROWSER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__GA_RECORD_BROWSER_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glib-object.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="lookup_8h" kindref="compound">avahi-client/lookup.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="defs_8h" kindref="compound">avahi-common/defs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ga-client_8h" kindref="compound">ga-client.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ga-enums_8h" kindref="compound">ga-enums.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">G_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_record_browser" kindref="compound">_GaRecordBrowser</ref><sp/><ref refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" kindref="member">GaRecordBrowser</ref>;</highlight></codeline>
+<codeline lineno="33" refid="ga-record-browser_8h_1a9e5e3469324c21eab345e227ec95b19b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_record_browser_class" kindref="compound">_GaRecordBrowserClass</ref><sp/><ref refid="struct___ga_record_browser_class" kindref="compound">GaRecordBrowserClass</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct___ga_record_browser_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_record_browser_class" kindref="compound">_GaRecordBrowserClass</ref><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="struct___ga_record_browser_class_1a353e1bbb0ae01a08d8cd42d3e57a00e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GObjectClass<sp/><ref refid="struct___ga_record_browser_class_1a353e1bbb0ae01a08d8cd42d3e57a00e1" kindref="member">parent_class</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="struct___ga_record_browser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_record_browser" kindref="compound">_GaRecordBrowser</ref><sp/>{</highlight></codeline>
+<codeline lineno="40" refid="struct___ga_record_browser_1ae193661955056e79ebdcc3eab21ebb96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GObject<sp/><ref refid="struct___ga_record_browser_1ae193661955056e79ebdcc3eab21ebb96" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">GType<sp/><ref refid="ga-record-browser_8h_1a63c8f335f4c86b968678d985d3224936" kindref="member">ga_record_browser_get_type</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TYPE<sp/>MACROS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="ga-record-browser_8h_1a879d9158a3f9ce3aec6c104152163346" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_TYPE_RECORD_BROWSER<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/>(ga_record_browser_get_type())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="ga-record-browser_8h_1a0ac1864bd332a3b121c66627b1de4b5c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_RECORD_BROWSER(obj)<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_INSTANCE_CAST((obj),<sp/>GA_TYPE_RECORD_BROWSER,<sp/>GaRecordBrowser))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="ga-record-browser_8h_1ad37a80b973fe1ae6116c9879c20cb84f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_RECORD_BROWSER_CLASS(klass)<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_CLASS_CAST((klass),<sp/>GA_TYPE_RECORD_BROWSER,<sp/>GaRecordBrowserClass))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="ga-record-browser_8h_1a9ae4c2a1cf0d51bdfec46229ff8786cd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GA_RECORD_BROWSER(obj)<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_INSTANCE_TYPE((obj),<sp/>GA_TYPE_RECORD_BROWSER))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="ga-record-browser_8h_1ace33ce2822d05a293f6415910f11626b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GA_RECORD_BROWSER_CLASS(klass)<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_CLASS_TYPE((klass),<sp/>GA_TYPE_RECORD_BROWSER))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="ga-record-browser_8h_1a11ec0e2dd38ff246c7800bc899ae1c3d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_RECORD_BROWSER_GET_CLASS(obj)<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_INSTANCE_GET_CLASS<sp/>((obj),<sp/>GA_TYPE_RECORD_BROWSER,<sp/>GaRecordBrowserClass))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" kindref="member">GaRecordBrowser</ref><sp/>*<ref refid="ga-record-browser_8h_1ad3c9482e04b9e9335538a9ce5e996f9b" kindref="member">ga_record_browser_new</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>name,<sp/>guint16<sp/>type);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" kindref="member">GaRecordBrowser</ref><sp/>*<ref refid="ga-record-browser_8h_1a48f3282552335d167c8f90cca5295ec7" kindref="member">ga_record_browser_new_full</ref>(<ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>name,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>clazz,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>type,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ga-enums_8h_1ace0b6275102f1a5d0126aca9e4e940c5" kindref="member">GaLookupFlags</ref><sp/>flags);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">gboolean</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="ga-record-browser_8h_1afcf167837b2caaaaaf994d5981c1cfdb" kindref="member">ga_record_browser_attach</ref>(<ref refid="ga-record-browser_8h_1aff2d02f7d541bb3dc845160dd0650398" kindref="member">GaRecordBrowser</ref><sp/>*<sp/>browser,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct___ga_client" kindref="compound">GaClient</ref><sp/>*<sp/>client,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">G_END_DECLS</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>#ifndef<sp/>__GA_RECORD_BROWSER_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-gobject/ga-record-browser.h"/>
+  </compounddef>
+</doxygen>

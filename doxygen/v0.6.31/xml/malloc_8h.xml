@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="malloc_8h" kind="file" language="C++">
+    <compoundname>malloc.h</compoundname>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includes local="no">avahi-common/gccmacro.h</includes>
+    <includedby refid="glib-malloc_8h" local="no">avahi-glib/glib-malloc.h</includedby>
+    <incdepgraph>
+      <node id="94">
+        <label>stdarg.h</label>
+      </node>
+      <node id="96">
+        <label>assert.h</label>
+      </node>
+      <node id="97">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="98">
+        <label>avahi-common/gccmacro.h</label>
+      </node>
+      <node id="95">
+        <label>limits.h</label>
+      </node>
+      <node id="93">
+        <label>sys/types.h</label>
+      </node>
+      <node id="92">
+        <label>avahi-common/malloc.h</label>
+        <link refid="malloc.h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="100">
+        <label>avahi-glib/glib-malloc.h</label>
+        <link refid="glib-malloc_8h"/>
+      </node>
+      <node id="99">
+        <label>avahi-common/malloc.h</label>
+        <link refid="malloc.h"/>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_avahi_allocator" prot="public">AvahiAllocator</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="malloc_8h_1a810ef85583606b4c4eaf578dae756dc6" prot="public" static="no">
+        <name>avahi_new</name>
+        <param><defname>type</defname></param>
+        <param><defname>n</defname></param>
+        <initializer>((type*) avahi_new_internal((n), sizeof(type)))</initializer>
+        <briefdescription>
+<para>Allocate n new structures of the specified type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="54" column="9" bodyfile="/home/lathiat/src/avahi/avahi-common/malloc.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="malloc_8h_1a4922271d3965caa7fd6f1f0af74b71ea" prot="public" static="no">
+        <name>avahi_new0</name>
+        <param><defname>type</defname></param>
+        <param><defname>n</defname></param>
+        <initializer>((type*) avahi_new0_internal((n), sizeof(type)))</initializer>
+        <briefdescription>
+<para>Same as <ref refid="malloc_8h_1a810ef85583606b4c4eaf578dae756dc6" kindref="member">avahi_new()</ref> but set the memory to zero. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="63" column="9" bodyfile="/home/lathiat/src/avahi/avahi-common/malloc.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="malloc_8h_1a61d1b084dc92ff7173e255cdbc66ba80" prot="public" static="no">
+        <type>struct <ref refid="struct_avahi_allocator" kindref="compound">AvahiAllocator</ref></type>
+        <definition>typedef struct AvahiAllocator  AvahiAllocator</definition>
+        <argsstring></argsstring>
+        <name>AvahiAllocator</name>
+        <briefdescription>
+<para>Wraps allocator functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="malloc_8h_1a4b3d9fee1d673bd1aa66d05f19e6cde5" prot="public" static="no" mutable="no">
+        <type>void size_t</type>
+        <definition>static void size_t k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <initializer>{
+    assert(n &lt; INT_MAX/k)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="48" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/malloc.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="malloc_8h_1a949b32b72e820acd3f69c7866e35c44a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* avahi_malloc</definition>
+        <argsstring>(size_t size) AVAHI_GCC_ALLOC_SIZE(1)</argsstring>
+        <name>avahi_malloc</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Allocate some memory, just like the libc malloc() </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1a091703d41b1ba0a8dd94c4f224733890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* avahi_malloc0</definition>
+        <argsstring>(size_t size) AVAHI_GCC_ALLOC_SIZE(1)</argsstring>
+        <name>avahi_malloc0</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Similar to <ref refid="malloc_8h_1a949b32b72e820acd3f69c7866e35c44a" kindref="member">avahi_malloc()</ref> but set the memory to zero. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_free</definition>
+        <argsstring>(void *p)</argsstring>
+        <name>avahi_free</name>
+        <param>
+          <type>void *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Free some memory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1acb252fef401e60110b475c3c8f35b156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* avahi_realloc</definition>
+        <argsstring>(void *p, size_t size) AVAHI_GCC_ALLOC_SIZE(2)</argsstring>
+        <name>avahi_realloc</name>
+        <param>
+          <type>void *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Similar to libc&apos;s realloc() </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1a838dce1fde3e933553301e0f2c9d5bea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>static void * AVAHI_GCC_ALLOC_SIZE2</definition>
+        <argsstring>(1, 2) avahi_new_internal(unsigned n</argsstring>
+        <name>AVAHI_GCC_ALLOC_SIZE2</name>
+        <param>
+          <type>1</type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+<para>Internal helper for <ref refid="malloc_8h_1a810ef85583606b4c4eaf578dae756dc6" kindref="member">avahi_new()</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>Internal helper for <ref refid="malloc_8h_1a4922271d3965caa7fd6f1f0af74b71ea" kindref="member">avahi_new0()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1a213868dc2daee765b44bcded21ecee01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>return</type>
+        <definition>return avahi_malloc</definition>
+        <argsstring>(n *k)</argsstring>
+        <name>avahi_malloc</name>
+        <param>
+          <type>n *</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1a5f8415b7fee2973b04694eaf825e2560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>return</type>
+        <definition>return avahi_malloc0</definition>
+        <argsstring>(n *k)</argsstring>
+        <name>avahi_malloc0</name>
+        <param>
+          <type>n *</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1a8b3595843b0c658fef2131640b8a549f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_strdup</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>avahi_strdup</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Just like libc&apos;s strdup() </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1aa1333633fa50c5ca3261000c459f06dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_strndup</definition>
+        <argsstring>(const char *s, size_t l)</argsstring>
+        <name>avahi_strndup</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Just like libc&apos;s strndup() </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1af566714564633bfb1ce28cc7051ff932" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* avahi_memdup</definition>
+        <argsstring>(const void *s, size_t l) AVAHI_GCC_ALLOC_SIZE(2)</argsstring>
+        <name>avahi_memdup</name>
+        <param>
+          <type>const void *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Duplicate the given memory block into a new one allocated with <ref refid="malloc_8h_1a949b32b72e820acd3f69c7866e35c44a" kindref="member">avahi_malloc()</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1accd9f7a4ce488082ff2681c381f7d035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_set_allocator</definition>
+        <argsstring>(const AvahiAllocator *a)</argsstring>
+        <name>avahi_set_allocator</name>
+        <param>
+          <type>const <ref refid="struct_avahi_allocator" kindref="compound">AvahiAllocator</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Change the allocator. </para>        </briefdescription>
+        <detaileddescription>
+<para>May be NULL to return to default (libc) allocators. The structure is not copied! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="malloc_8h_1a7ed05b3ceb14473b262e439c7700822d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* avahi_strdup_printf</definition>
+        <argsstring>(const char *fmt,...) AVAHI_GCC_PRINTF_ATTR12</argsstring>
+        <name>avahi_strdup_printf</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Like sprintf() but store the result in a freshly allocated buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Free this with <ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/malloc.h" line="87" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Memory allocation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>foomallochfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>foomallochfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/gccmacro.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="malloc_8h_1a949b32b72e820acd3f69c7866e35c44a" kindref="member">avahi_malloc</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>AVAHI_GCC_ALLOC_SIZE(1);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="malloc_8h_1a091703d41b1ba0a8dd94c4f224733890" kindref="member">avahi_malloc0</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>AVAHI_GCC_ALLOC_SIZE(1);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="malloc_8h_1af0d93804e70823f30f7680d2f8845ed4" kindref="member">avahi_free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="malloc_8h_1acb252fef401e60110b475c3c8f35b156" kindref="member">avahi_realloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>AVAHI_GCC_ALLOC_SIZE(2);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="malloc_8h_1a4b3d9fee1d673bd1aa66d05f19e6cde5" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>AVAHI_GCC_ALLOC_SIZE2(1,2)<sp/>avahi_new_internal(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="malloc_8h_1a4b3d9fee1d673bd1aa66d05f19e6cde5" kindref="member">k</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(n<sp/>&lt;<sp/>INT_MAX/k);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="malloc_8h_1a949b32b72e820acd3f69c7866e35c44a" kindref="member">avahi_malloc</ref>(n*k);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="malloc_8h_1a810ef85583606b4c4eaf578dae756dc6" refkind="member"><highlight class="preprocessor">#define<sp/>avahi_new(type,<sp/>n)<sp/>((type*)<sp/>avahi_new_internal((n),<sp/>sizeof(type)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>AVAHI_GCC_ALLOC_SIZE2(1,2)<sp/>avahi_new0_internal(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="malloc_8h_1a4b3d9fee1d673bd1aa66d05f19e6cde5" kindref="member">k</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(n<sp/>&lt;<sp/>INT_MAX/k);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="malloc_8h_1a091703d41b1ba0a8dd94c4f224733890" kindref="member">avahi_malloc0</ref>(n*k);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="malloc_8h_1a4922271d3965caa7fd6f1f0af74b71ea" refkind="member"><highlight class="preprocessor">#define<sp/>avahi_new0(type,<sp/>n)<sp/>((type*)<sp/>avahi_new0_internal((n),<sp/>sizeof(type)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="malloc_8h_1a8b3595843b0c658fef2131640b8a549f" kindref="member">avahi_strdup</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="malloc_8h_1aa1333633fa50c5ca3261000c459f06dd" kindref="member">avahi_strndup</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>l);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="malloc_8h_1af566714564633bfb1ce28cc7051ff932" kindref="member">avahi_memdup</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>l)<sp/>AVAHI_GCC_ALLOC_SIZE(2);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="struct_avahi_allocator" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_avahi_allocator" kindref="compound">AvahiAllocator</ref><sp/>{</highlight></codeline>
+<codeline lineno="76" refid="struct_avahi_allocator_1a2417e2991c412eec4a130d1914e559d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*malloc)(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>AVAHI_GCC_ALLOC_SIZE(1);</highlight></codeline>
+<codeline lineno="77" refid="struct_avahi_allocator_1a02717514f40a9b190fa95c61aeb5344c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct_avahi_allocator_1a02717514f40a9b190fa95c61aeb5344c" kindref="member">free</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="78" refid="struct_avahi_allocator_1a5bb32661ea98a544e16add307c825292" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*realloc)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>AVAHI_GCC_ALLOC_SIZE(2);</highlight></codeline>
+<codeline lineno="79" refid="struct_avahi_allocator_1a5adbda1b3f1286b44bbae4269a6f93d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*calloc)(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nmemb,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>AVAHI_GCC_ALLOC_SIZE2(1,2);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}<sp/><ref refid="malloc_8h_1a61d1b084dc92ff7173e255cdbc66ba80" kindref="member">AvahiAllocator</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="malloc_8h_1accd9f7a4ce488082ff2681c381f7d035" kindref="member">avahi_set_allocator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_allocator" kindref="compound">AvahiAllocator</ref><sp/>*a);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="malloc_8h_1a7ed05b3ceb14473b262e439c7700822d" kindref="member">avahi_strdup_printf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...<sp/>)<sp/>AVAHI_GCC_PRINTF_ATTR12;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*avahi_strdup_vprintf(const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>va_list<sp/>ap);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-common/malloc.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct___ga_client" kind="struct" language="C++" prot="public">
+    <compoundname>_GaClient</compoundname>
+    <includes refid="ga-client_8h" local="no">avahi-gobject/ga-client.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_client_1a4601019b945dcaf38291e4dce53dad74" prot="public" static="no" mutable="no">
+        <type>GObject</type>
+        <definition>GObject _GaClient::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-client.h" line="51" column="1" bodyfile="avahi-gobject/ga-client.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___ga_client_1a0c11791f16d366b9d53072a371f99684" prot="public" static="no" mutable="no">
+        <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        <definition>AvahiClient* _GaClient::avahi_client</definition>
+        <argsstring></argsstring>
+        <name>avahi_client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-client.h" line="53" column="1" bodyfile="avahi-gobject/ga-client.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>AvahiClient *</label>
+      </node>
+      <node id="2">
+        <label>GObject</label>
+      </node>
+      <node id="1">
+        <label>_GaClient</label>
+        <link refid="struct___ga_client"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>avahi_client</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-gobject/ga-client.h" line="50" column="1" bodyfile="avahi-gobject/ga-client.h" bodystart="50" bodyend="54"/>
+    <listofallmembers>
+      <member refid="struct___ga_client_1a0c11791f16d366b9d53072a371f99684" prot="public" virt="non-virtual"><scope>_GaClient</scope><name>avahi_client</name></member>
+      <member refid="struct___ga_client_1a4601019b945dcaf38291e4dce53dad74" prot="public" virt="non-virtual"><scope>_GaClient</scope><name>parent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

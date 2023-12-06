@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_46992e12245f3f273d77cc278390356d" kind="dir">
+    <compoundname>avahi-client</compoundname>
+    <innerfile refid="client_8h">client.h</innerfile>
+    <innerfile refid="lookup_8h">lookup.h</innerfile>
+    <innerfile refid="publish_8h">publish.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="avahi-client/"/>
+  </compounddef>
+</doxygen>

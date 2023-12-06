@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="thread-watch_8h" kind="file" language="C++">
+    <compoundname>thread-watch.h</compoundname>
+    <includes local="no">sys/poll.h</includes>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includes refid="watch_8h" local="no">avahi-common/watch.h</includes>
+    <incdepgraph>
+      <node id="126">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch_8h"/>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>sys/poll.h</label>
+      </node>
+      <node id="125">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="127">
+        <label>sys/time.h</label>
+      </node>
+      <node id="123">
+        <label>avahi-common/thread-watch.h</label>
+        <link refid="thread-watch.h"/>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" prot="public" static="no">
+        <type>struct <ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref></type>
+        <definition>typedef struct AvahiThreadedPoll AvahiThreadedPoll</definition>
+        <argsstring></argsstring>
+        <name>AvahiThreadedPoll</name>
+        <briefdescription>
+<para>A main loop object that runs an AvahiSimplePoll in its own thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="81" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/thread-watch.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="thread-watch_8h_1a78dcadbe99bf2409932f3680e68d2237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref> *</type>
+        <definition>AvahiThreadedPoll* avahi_threaded_poll_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>avahi_threaded_poll_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Create a new event loop object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will allocate the internal AvahiSimplePoll, but will not start the helper thread. <simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread-watch_8h_1a30d4c00456d75476bb935e8252b5616b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_threaded_poll_free</definition>
+        <argsstring>(AvahiThreadedPoll *p)</argsstring>
+        <name>avahi_threaded_poll_free</name>
+        <param>
+          <type><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Free an event loop object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will stop the associated event loop thread (if it is running). <simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread-watch_8h_1a12a43f0446a7c649fc6a0ef976085fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref> *</type>
+        <definition>const AvahiPoll* avahi_threaded_poll_get</definition>
+        <argsstring>(AvahiThreadedPoll *p)</argsstring>
+        <name>avahi_threaded_poll_get</name>
+        <param>
+          <type><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Return the abstracted poll API object for this event loop object. </para>        </briefdescription>
+        <detaileddescription>
+<para>The will return the same pointer each time it is called. <simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread-watch_8h_1a7d86118c568bddbc788f8a5ca75227e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_threaded_poll_start</definition>
+        <argsstring>(AvahiThreadedPoll *p)</argsstring>
+        <name>avahi_threaded_poll_start</name>
+        <param>
+          <type><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Start the event loop helper thread. </para>        </briefdescription>
+        <detaileddescription>
+<para>After the thread has started you must make sure to access the event loop object (AvahiThreadedPoll, <ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref> and all its associated objects) synchronized, i.e. with proper locking. You may want to use <ref refid="thread-watch_8h_1a09bac165e5b3f39bc0ec6c381ca48975" kindref="member">avahi_threaded_poll_lock()</ref>/avahi_threaded_poll_unlock() for this, which will lock the the entire event loop. Please note that event loop callback functions are called from the event loop helper thread with that lock held, i.e. <ref refid="thread-watch_8h_1a09bac165e5b3f39bc0ec6c381ca48975" kindref="member">avahi_threaded_poll_lock()</ref> calls are not required from event callbacks. <simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread-watch_8h_1aec90bd3bb24ce256955941d82952fb7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_threaded_poll_stop</definition>
+        <argsstring>(AvahiThreadedPoll *p)</argsstring>
+        <name>avahi_threaded_poll_stop</name>
+        <param>
+          <type><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Request that the event loop quits and the associated thread stops. </para>        </briefdescription>
+        <detaileddescription>
+<para>Call this from outside the helper thread if you want to shut it down. <simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread-watch_8h_1ae615ac4c3e7e08451345d9cdedf700f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_threaded_poll_quit</definition>
+        <argsstring>(AvahiThreadedPoll *p)</argsstring>
+        <name>avahi_threaded_poll_quit</name>
+        <param>
+          <type><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Request that the event loop quits and the associated thread stops. </para>        </briefdescription>
+        <detaileddescription>
+<para>Call this from inside the helper thread if you want to shut it down. <simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread-watch_8h_1a09bac165e5b3f39bc0ec6c381ca48975" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_threaded_poll_lock</definition>
+        <argsstring>(AvahiThreadedPoll *p)</argsstring>
+        <name>avahi_threaded_poll_lock</name>
+        <param>
+          <type><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Lock the main loop object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use this if you want to access the event loop objects (such as creating a new event source) from anything else but the event loop helper thread, i.e. from anything else but event loop callbacks <simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread-watch_8h_1a73be6a83eb1d9e16c63d59da2434931b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_threaded_poll_unlock</definition>
+        <argsstring>(AvahiThreadedPoll *p)</argsstring>
+        <name>avahi_threaded_poll_unlock</name>
+        <param>
+          <type><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Unlock the event loop object, use this as counterpart to <ref refid="thread-watch_8h_1a09bac165e5b3f39bc0ec6c381ca48975" kindref="member">avahi_threaded_poll_lock()</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>0.6.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h" line="76" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Threaded poll() based main loop implementation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>foothreadedwatchhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>foothreadedwatchhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#include<sp/>&lt;sys/poll.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="watch_8h" kindref="compound">avahi-common/watch.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/>*<ref refid="thread-watch_8h_1a78dcadbe99bf2409932f3680e68d2237" kindref="member">avahi_threaded_poll_new</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="thread-watch_8h_1a30d4c00456d75476bb935e8252b5616b" kindref="member">avahi_threaded_poll_free</ref>(<ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref>*<sp/><ref refid="thread-watch_8h_1a12a43f0446a7c649fc6a0ef976085fef" kindref="member">avahi_threaded_poll_get</ref>(<ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="thread-watch_8h_1a7d86118c568bddbc788f8a5ca75227e5" kindref="member">avahi_threaded_poll_start</ref>(<ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="thread-watch_8h_1aec90bd3bb24ce256955941d82952fb7f" kindref="member">avahi_threaded_poll_stop</ref>(<ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="thread-watch_8h_1ae615ac4c3e7e08451345d9cdedf700f7" kindref="member">avahi_threaded_poll_quit</ref>(<ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="thread-watch_8h_1a09bac165e5b3f39bc0ec6c381ca48975" kindref="member">avahi_threaded_poll_lock</ref>(<ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="thread-watch_8h_1a73be6a83eb1d9e16c63d59da2434931b" kindref="member">avahi_threaded_poll_unlock</ref>(<ref refid="thread-watch_8h_1a9ef427f0089bffbc64ceb581592611f0" kindref="member">AvahiThreadedPoll</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-common/thread-watch.h"/>
+  </compounddef>
+</doxygen>

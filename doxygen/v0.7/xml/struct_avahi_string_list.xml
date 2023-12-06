@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_avahi_string_list" kind="struct" language="C++" prot="public">
+    <compoundname>AvahiStringList</compoundname>
+    <includes refid="strlst_8h" local="no">avahi-common/strlst.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_avahi_string_list_1af8915748f8a26bdbdcdab307924f8c15" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>struct AvahiStringList* AvahiStringList::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+<para>Pointer to the next linked list element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/strlst.h" line="41" column="1" bodyfile="avahi-common/strlst.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_string_list_1ab615405193a5d265adbdbaa723b899e6" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t AvahiStringList::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Size of text[]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/strlst.h" line="42" column="1" bodyfile="avahi-common/strlst.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_string_list_1adf37d03d2ce058716d4c6a5841f0387a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AvahiStringList::text[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>text</name>
+        <briefdescription>
+<para>Character data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/strlst.h" line="43" column="1" bodyfile="avahi-common/strlst.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Linked list of strings that can contain any number of binary characters, including NUL bytes. </para>    </briefdescription>
+    <detaileddescription>
+<para>An empty list is created by assigning a NULL to a pointer to <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref>. The string list is stored in reverse order, so that appending to the string list is effectively a prepending to the linked list. This object is used primarily for storing DNS TXT record data. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="69">
+        <label>size_t</label>
+      </node>
+      <node id="70">
+        <label>uint8_t</label>
+      </node>
+      <node id="68">
+        <label>AvahiStringList</label>
+        <link refid="struct_avahi_string_list"/>
+        <childnode refid="68" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="69" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="70" relation="usage">
+          <edgelabel>text</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-common/strlst.h" line="40" column="1" bodyfile="avahi-common/strlst.h" bodystart="40" bodyend="44"/>
+    <listofallmembers>
+      <member refid="struct_avahi_string_list_1af8915748f8a26bdbdcdab307924f8c15" prot="public" virt="non-virtual"><scope>AvahiStringList</scope><name>next</name></member>
+      <member refid="struct_avahi_string_list_1ab615405193a5d265adbdbaa723b899e6" prot="public" virt="non-virtual"><scope>AvahiStringList</scope><name>size</name></member>
+      <member refid="struct_avahi_string_list_1adf37d03d2ce058716d4c6a5841f0387a" prot="public" virt="non-virtual"><scope>AvahiStringList</scope><name>text</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

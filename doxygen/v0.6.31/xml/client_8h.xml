@@ -1,0 +1,558 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="client_8h" kind="file" language="C++">
+    <compoundname>client.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includes refid="address_8h" local="no">avahi-common/address.h</includes>
+    <includes refid="strlst_8h" local="no">avahi-common/strlst.h</includes>
+    <includes refid="defs_8h" local="no">avahi-common/defs.h</includes>
+    <includes refid="watch_8h" local="no">avahi-common/watch.h</includes>
+    <includes local="no">avahi-common/gccmacro.h</includes>
+    <includedby refid="ga-client_8h" local="no">avahi-gobject/ga-client.h</includedby>
+    <includedby refid="publish_8h" local="no">avahi-client/publish.h</includedby>
+    <includedby refid="ga-entry-group_8h" local="no">avahi-gobject/ga-entry-group.h</includedby>
+    <includedby refid="lookup_8h" local="no">avahi-client/lookup.h</includedby>
+    <includedby refid="avahi-ui_8h" local="no">avahi-ui/avahi-ui.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>stdarg.h</label>
+      </node>
+      <node id="9">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>sys/poll.h</label>
+      </node>
+      <node id="2">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="8">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>avahi-common/gccmacro.h</label>
+      </node>
+      <node id="3">
+        <label>avahi-common/address.h</label>
+        <link refid="address_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>sys/types.h</label>
+      </node>
+      <node id="5">
+        <label>avahi-common/strlst.h</label>
+        <link refid="strlst_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>avahi-client/client.h</label>
+        <link refid="client.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sys/time.h</label>
+      </node>
+      <node id="1">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17">
+        <label>avahi-gobject/ga-service-resolver.h</label>
+        <link refid="ga-service-resolver_8h"/>
+      </node>
+      <node id="16">
+        <label>avahi-gobject/ga-service-browser.h</label>
+        <link refid="ga-service-browser_8h"/>
+      </node>
+      <node id="18">
+        <label>avahi-client/publish.h</label>
+        <link refid="publish_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>avahi-gobject/ga-entry-group.h</label>
+        <link refid="ga-entry-group_8h"/>
+      </node>
+      <node id="13">
+        <label>avahi-gobject/ga-client.h</label>
+        <link refid="ga-client_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>avahi-client/lookup.h</label>
+        <link refid="lookup_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>avahi-ui/avahi-ui.h</label>
+        <link refid="avahi-ui_8h"/>
+      </node>
+      <node id="12">
+        <label>avahi-client/client.h</label>
+        <link refid="client.h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>avahi-gobject/ga-record-browser.h</label>
+        <link refid="ga-record-browser_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Construction and destruction</header>
+      <memberdef kind="function" id="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        <definition>AvahiClient* avahi_client_new</definition>
+        <argsstring>(const AvahiPoll *poll_api, AvahiClientFlags flags, AvahiClientCallback callback, void *userdata, int *error)</argsstring>
+        <name>avahi_client_new</name>
+        <param>
+          <type>const <ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref> *</type>
+          <declname>poll_api</declname>
+          <briefdescription><para>The abstract event loop API to use </para></briefdescription>
+        </param>
+        <param>
+          <type><ref refid="client_8h_1a46a797e5d352f6f98261834ae3b1a3ed" kindref="member">AvahiClientFlags</ref></type>
+          <declname>flags</declname>
+          <briefdescription><para>Some flags to modify the behaviour of the client library </para></briefdescription>
+        </param>
+        <param>
+          <type><ref refid="client_8h_1ab6f2554a293df7eb42aab48249fc0e59" kindref="member">AvahiClientCallback</ref></type>
+          <declname>callback</declname>
+          <briefdescription><para>A callback that is called whenever the state of the client changes. This may be NULL. Please note that this function is called for the first time from within the <ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new()</ref> context! Thus, in the callback you should not make use of global variables that are initialized only after your call to <ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new()</ref>. A common mistake is to store the AvahiClient pointer returned by <ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new()</ref> in a global variable and assume that this global variable already contains the valid pointer when the callback is called for the first time. A work-around for this is to always use the AvahiClient pointer passed to the callback function instead of the global pointer. </para></briefdescription>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+          <briefdescription><para>Some arbitrary user data pointer that will be passed to the callback function </para></briefdescription>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>error</declname>
+          <briefdescription><para>If creation of the client fails, this integer will contain the error cause. May be NULL if you aren&apos;t interested in the reason why <ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new()</ref> failed. </para></briefdescription>
+        </param>
+        <briefdescription>
+<para>Creates a new client instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="client_8h_1aceb92c59523def4de9f745f4149cb392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void avahi_client_free</definition>
+        <argsstring>(AvahiClient *client)</argsstring>
+        <name>avahi_client_free</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+<para>Free a client instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will automatically free all associated browser, resolve and entry group objects. All pointers to such objects become invalid! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Properties</header>
+      <memberdef kind="function" id="client_8h_1aaa1a26c98dcc8fc0b2b5fba453ae20cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* avahi_client_get_version_string</definition>
+        <argsstring>(AvahiClient *)</argsstring>
+        <name>avahi_client_get_version_string</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get the version of the server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="client_8h_1a89378618c3c592a255551c308ba300bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* avahi_client_get_host_name</definition>
+        <argsstring>(AvahiClient *)</argsstring>
+        <name>avahi_client_get_host_name</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get host name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="client_8h_1a699e909e9bc7e7c56ddf7bab458c5128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_client_set_host_name</definition>
+        <argsstring>(AvahiClient *, const char *name)</argsstring>
+        <name>avahi_client_set_host_name</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set host name. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>0.6.13 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="client_8h_1aa6d5c36bc5fd18752b575c15427b52ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* avahi_client_get_domain_name</definition>
+        <argsstring>(AvahiClient *)</argsstring>
+        <name>avahi_client_get_domain_name</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get domain name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="client_8h_1aaf53f649ec3b9af7ca0fa56c6880bb98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* avahi_client_get_host_name_fqdn</definition>
+        <argsstring>(AvahiClient *)</argsstring>
+        <name>avahi_client_get_host_name_fqdn</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get FQDN domain name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="client_8h_1a3c392604bac6c14522e90bb78b1e17bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9" kindref="member">AvahiClientState</ref></type>
+        <definition>AvahiClientState avahi_client_get_state</definition>
+        <argsstring>(AvahiClient *client)</argsstring>
+        <name>avahi_client_get_state</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+<para>Get state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="94" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Error Handling</header>
+      <memberdef kind="function" id="client_8h_1a763d48f8147ab488456705970ea20e44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_client_errno</definition>
+        <argsstring>(AvahiClient *)</argsstring>
+        <name>avahi_client_errno</name>
+        <param>
+          <type><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get the last error number. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror()</ref> for converting this error code into a human readable string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="99" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Libc NSS Support</header>
+      <memberdef kind="function" id="client_8h_1a7e6ea5f3c07e1df82ad5c523a81bb43d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int avahi_nss_support</definition>
+        <argsstring>(void)</argsstring>
+        <name>avahi_nss_support</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return 1 if gethostbyname() supports mDNS lookups, 0 otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>0.6.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="111" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9" prot="public" static="no">
+        <name>AvahiClientState</name>
+        <enumvalue id="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aab8998306026f5c6d1984fd99f8d3a33" prot="public">
+          <name>AVAHI_CLIENT_S_REGISTERING</name>
+          <initializer>= AVAHI_SERVER_REGISTERING</initializer>
+          <briefdescription>
+<para>Server state: REGISTERING. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aa938fb22163a04c7b30722aa7827c125" prot="public">
+          <name>AVAHI_CLIENT_S_RUNNING</name>
+          <initializer>= AVAHI_SERVER_RUNNING</initializer>
+          <briefdescription>
+<para>Server state: RUNNING. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9afb8608994e0d88eaedacd31a46f54ec5" prot="public">
+          <name>AVAHI_CLIENT_S_COLLISION</name>
+          <initializer>= AVAHI_SERVER_COLLISION</initializer>
+          <briefdescription>
+<para>Server state: COLLISION. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a04583aa28fec0f0987fd2d3a1814db4b" prot="public">
+          <name>AVAHI_CLIENT_FAILURE</name>
+          <initializer>= 100</initializer>
+          <briefdescription>
+<para>Some kind of error happened on the client side. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a0edc78ba86f12b22407707fe63b8fbfa" prot="public">
+          <name>AVAHI_CLIENT_CONNECTING</name>
+          <initializer>= 101</initializer>
+          <briefdescription>
+<para>We&apos;re still connecting. </para>          </briefdescription>
+          <detaileddescription>
+<para>This state is only entered when AVAHI_CLIENT_NO_FAIL has been passed to <ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new()</ref> and the daemon is not yet available. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>States of a client object, a superset of AvahiServerState. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="40" column="1" bodyfile="/home/lathiat/src/avahi/avahi-client/client.h" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="client_8h_1a46a797e5d352f6f98261834ae3b1a3ed" prot="public" static="no">
+        <name>AvahiClientFlags</name>
+        <enumvalue id="client_8h_1a46a797e5d352f6f98261834ae3b1a3eda5fce742105c86333e2840e480d22ff82" prot="public">
+          <name>AVAHI_CLIENT_IGNORE_USER_CONFIG</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Don&apos;t read user configuration. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="client_8h_1a46a797e5d352f6f98261834ae3b1a3edae41004dc9199dcbf7ccec8a9737ed664" prot="public">
+          <name>AVAHI_CLIENT_NO_FAIL</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Don&apos;t fail if the daemon is not available when <ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new()</ref> is called, instead enter AVAHI_CLIENT_CONNECTING state and wait for the daemon to appear. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="48" column="1" bodyfile="/home/lathiat/src/avahi/avahi-client/client.h" bodystart="48" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" prot="public" static="no">
+        <type>struct <ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref></type>
+        <definition>typedef struct AvahiClient AvahiClient</definition>
+        <argsstring></argsstring>
+        <name>AvahiClient</name>
+        <briefdescription>
+<para>A connection context. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="40" column="1" bodyfile="/home/lathiat/src/avahi/avahi-client/client.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="client_8h_1ab6f2554a293df7eb42aab48249fc0e59" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* AvahiClientCallback) (AvahiClient *s, AvahiClientState state, void *userdata)</definition>
+        <argsstring>)(AvahiClient *s, AvahiClientState state, void *userdata)</argsstring>
+        <name>AvahiClientCallback</name>
+        <briefdescription>
+<para>The function prototype for the callback of an AvahiClient. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-client/client.h" line="54" column="1" bodyfile="/home/lathiat/src/avahi/avahi-client/client.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definitions and functions for the client API over D-Bus. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>fooclienthfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fooclienthfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="address_8h" kindref="compound">avahi-common/address.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="strlst_8h" kindref="compound">avahi-common/strlst.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="defs_8h" kindref="compound">avahi-common/defs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="watch_8h" kindref="compound">avahi-common/watch.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/gccmacro.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aab8998306026f5c6d1984fd99f8d3a33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aab8998306026f5c6d1984fd99f8d3a33" kindref="member">AVAHI_CLIENT_S_REGISTERING</ref><sp/>=<sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57ad6c0928968fb856a43f6747b21bc9179" kindref="member">AVAHI_SERVER_REGISTERING</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aa938fb22163a04c7b30722aa7827c125" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9aa938fb22163a04c7b30722aa7827c125" kindref="member">AVAHI_CLIENT_S_RUNNING</ref><sp/>=<sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a60c5c15bc7be098b65559eb9e487986a" kindref="member">AVAHI_SERVER_RUNNING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9afb8608994e0d88eaedacd31a46f54ec5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9afb8608994e0d88eaedacd31a46f54ec5" kindref="member">AVAHI_CLIENT_S_COLLISION</ref><sp/>=<sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57ac4d56d9165da547a608286c736af9a8f" kindref="member">AVAHI_SERVER_COLLISION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a04583aa28fec0f0987fd2d3a1814db4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a04583aa28fec0f0987fd2d3a1814db4b" kindref="member">AVAHI_CLIENT_FAILURE</ref><sp/>=<sp/>100,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a0edc78ba86f12b22407707fe63b8fbfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9a0edc78ba86f12b22407707fe63b8fbfa" kindref="member">AVAHI_CLIENT_CONNECTING</ref><sp/>=<sp/>101<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9" kindref="member">AvahiClientState</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="client_8h_1a46a797e5d352f6f98261834ae3b1a3ed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="49" refid="client_8h_1a46a797e5d352f6f98261834ae3b1a3eda5fce742105c86333e2840e480d22ff82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a46a797e5d352f6f98261834ae3b1a3eda5fce742105c86333e2840e480d22ff82" kindref="member">AVAHI_CLIENT_IGNORE_USER_CONFIG</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="50" refid="client_8h_1a46a797e5d352f6f98261834ae3b1a3edae41004dc9199dcbf7ccec8a9737ed664" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a46a797e5d352f6f98261834ae3b1a3edae41004dc9199dcbf7ccec8a9737ed664" kindref="member">AVAHI_CLIENT_NO_FAIL</ref><sp/>=<sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/><ref refid="client_8h_1a46a797e5d352f6f98261834ae3b1a3ed" kindref="member">AvahiClientFlags</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="client_8h_1ab6f2554a293df7eb42aab48249fc0e59" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="client_8h_1ab6f2554a293df7eb42aab48249fc0e59" kindref="member">AvahiClientCallback</ref>)<sp/>(</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*s,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9" kindref="member">AvahiClientState</ref><sp/>state<sp/>,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>userdata<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*<sp/><ref refid="client_8h_1a07b2a33a3e7cbb18a0eb9d00eade6ae6" kindref="member">avahi_client_new</ref><sp/>(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref><sp/>*poll_api<sp/>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1a46a797e5d352f6f98261834ae3b1a3ed" kindref="member">AvahiClientFlags</ref><sp/>flags<sp/>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="client_8h_1ab6f2554a293df7eb42aab48249fc0e59" kindref="member">AvahiClientCallback</ref><sp/>callback<sp/>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata<sp/>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*error<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="client_8h_1aceb92c59523def4de9f745f4149cb392" kindref="member">avahi_client_free</ref>(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*client);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="client_8h_1aaa1a26c98dcc8fc0b2b5fba453ae20cf" kindref="member">avahi_client_get_version_string</ref><sp/>(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="client_8h_1a89378618c3c592a255551c308ba300bf" kindref="member">avahi_client_get_host_name</ref><sp/>(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="client_8h_1a699e909e9bc7e7c56ddf7bab458c5128" kindref="member">avahi_client_set_host_name</ref>(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="client_8h_1aa6d5c36bc5fd18752b575c15427b52ae" kindref="member">avahi_client_get_domain_name</ref><sp/>(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="client_8h_1aaf53f649ec3b9af7ca0fa56c6880bb98" kindref="member">avahi_client_get_host_name_fqdn</ref><sp/>(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="client_8h_1aaf9074b91ffd35b940e09448a9cd45e9" kindref="member">AvahiClientState</ref><sp/><ref refid="client_8h_1a3c392604bac6c14522e90bb78b1e17bd" kindref="member">avahi_client_get_state</ref>(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*client);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="client_8h_1a763d48f8147ab488456705970ea20e44" kindref="member">avahi_client_errno</ref><sp/>(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref>*);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">uint32_t<sp/>avahi_client_get_local_service_cookie(<ref refid="client_8h_1a3d65e9ea7182c44fa8df04a72f1a56bb" kindref="member">AvahiClient</ref><sp/>*client);</highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="client_8h_1a7e6ea5f3c07e1df82ad5c523a81bb43d" kindref="member">avahi_nss_support</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-client/client.h"/>
+  </compounddef>
+</doxygen>

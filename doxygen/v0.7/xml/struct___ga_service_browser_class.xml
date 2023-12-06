@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct___ga_service_browser_class" kind="struct" language="C++" prot="public">
+    <compoundname>_GaServiceBrowserClass</compoundname>
+    <includes refid="ga-service-browser_8h" local="no">avahi-gobject/ga-service-browser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_service_browser_class_1af7064323f997dc61379647cc59f578e4" prot="public" static="no" mutable="no">
+        <type>GObjectClass</type>
+        <definition>GObjectClass _GaServiceBrowserClass::parent_class</definition>
+        <argsstring></argsstring>
+        <name>parent_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="35" column="1" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="29">
+        <label>_GaServiceBrowserClass</label>
+        <link refid="struct___ga_service_browser_class"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>parent_class</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>GObjectClass</label>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-gobject/ga-service-browser.h" line="34" column="1" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="34" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct___ga_service_browser_class_1af7064323f997dc61379647cc59f578e4" prot="public" virt="non-virtual"><scope>_GaServiceBrowserClass</scope><name>parent_class</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

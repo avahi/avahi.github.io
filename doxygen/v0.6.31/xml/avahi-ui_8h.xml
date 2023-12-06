@@ -1,0 +1,666 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="avahi-ui_8h" kind="file" language="C++">
+    <compoundname>avahi-ui.h</compoundname>
+    <includes local="no">gtk/gtk.h</includes>
+    <includes refid="client_8h" local="no">avahi-client/client.h</includes>
+    <incdepgraph>
+      <node id="283">
+        <label>stdarg.h</label>
+      </node>
+      <node id="286">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch_8h"/>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>sys/poll.h</label>
+      </node>
+      <node id="279">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="285">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+      <node id="276">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="284">
+        <label>avahi-common/gccmacro.h</label>
+      </node>
+      <node id="280">
+        <label>avahi-common/address.h</label>
+        <link refid="address_8h"/>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>sys/types.h</label>
+      </node>
+      <node id="275">
+        <label>avahi-ui/avahi-ui.h</label>
+        <link refid="avahi-ui.h"/>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="282">
+        <label>avahi-common/strlst.h</label>
+        <link refid="strlst_8h"/>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+      </node>
+      <node id="277">
+        <label>avahi-client/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>sys/time.h</label>
+      </node>
+      <node id="278">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Construction</header>
+      <memberdef kind="function" id="avahi-ui_8h_1aacc1489db929d0e87f66435457c6f21c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* aui_service_dialog_new</definition>
+        <argsstring>(const gchar *title, GtkWindow *parent, const gchar *first_button_text,...) G_GNUC_NULL_TERMINATED</argsstring>
+        <name>aui_service_dialog_new</name>
+        <param>
+          <type>const gchar *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>GtkWindow *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>first_button_text</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Create a new service browser dialog with the specific title, parent window and the speicified buttons. </para>        </briefdescription>
+        <detaileddescription>
+<para>The buttons are specified in a similar way to GtkFileChooserDialog. Please note that at least one button has to respond GTK_RESPONSE_ACCEPT. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Service types to browse for</header>
+      <memberdef kind="function" id="avahi-ui_8h_1adad9e6283c5bc7611b085452ab5541dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_browse_service_types</definition>
+        <argsstring>(AuiServiceDialog *d, const gchar *type,...) G_GNUC_NULL_TERMINATED</argsstring>
+        <name>aui_service_dialog_set_browse_service_types</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Select the service types to browse for. </para>        </briefdescription>
+        <detaileddescription>
+<para>Takes a NULL terminated list of DNS-SD service types. i.e. _http._tcp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1ada94d75f4373a4f372b8ed3425c51024" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_browse_service_typesv</definition>
+        <argsstring>(AuiServiceDialog *d, const gchar *const *type)</argsstring>
+        <name>aui_service_dialog_set_browse_service_typesv</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const gchar *const *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Same as <ref refid="avahi-ui_8h_1adad9e6283c5bc7611b085452ab5541dc" kindref="member">aui_service_dialog_set_browse_service_types()</ref> but take a NULL terminated array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a3c535c719d76fdca7ee1119c55c683ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const gchar *const *</type>
+        <definition>const gchar* const* aui_service_dialog_get_browse_service_types</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_browse_service_types</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Return the service types currently browsed for. </para>        </briefdescription>
+        <detaileddescription>
+<para>i.e. what was previously set with <ref refid="avahi-ui_8h_1adad9e6283c5bc7611b085452ab5541dc" kindref="member">aui_service_dialog_set_browse_service_types()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a87f2fb5da172e530f2dfe16b33e2d850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_service_type_name</definition>
+        <argsstring>(AuiServiceDialog *d, const gchar *type, const gchar *name)</argsstring>
+        <name>aui_service_dialog_set_service_type_name</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Overwrite the pretty name shown in the service type column. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>0.6.22 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="96" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Domain to browse in</header>
+      <memberdef kind="function" id="avahi-ui_8h_1a338a771380cdde5f94686958b7868da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_domain</definition>
+        <argsstring>(AuiServiceDialog *d, const gchar *domain)</argsstring>
+        <name>aui_service_dialog_set_domain</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Set the domain to browse in. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a708007329d09098245febe53ba8f4ef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const gchar *</type>
+        <definition>const gchar* aui_service_dialog_get_domain</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_domain</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Query the domain that is browsed in. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="105" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Selected service item</header>
+      <memberdef kind="function" id="avahi-ui_8h_1aa7be24642c2d99a1e75f25b42b1bda73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_service_type</definition>
+        <argsstring>(AuiServiceDialog *d, const gchar *name)</argsstring>
+        <name>aui_service_dialog_set_service_type</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the service type for the service to select. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a8b79a8a17e1f98492d733200465a2947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const gchar *</type>
+        <definition>const gchar* aui_service_dialog_get_service_type</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_service_type</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Query the service type of the currently selected service. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1aa51466463bde5cfccc7419459fae6ab6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_service_name</definition>
+        <argsstring>(AuiServiceDialog *d, const gchar *name)</argsstring>
+        <name>aui_service_dialog_set_service_name</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the service name for the service to select. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a777978e9941abeb4ffdccd9b7c100d71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const gchar *</type>
+        <definition>const gchar* aui_service_dialog_get_service_name</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_service_name</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Query the service name of the currently select service. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="121" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Resolved service information</header>
+      <memberdef kind="function" id="avahi-ui_8h_1ab7bf506a7e5570986322b86f01212904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_avahi_address" kindref="compound">AvahiAddress</ref> *</type>
+        <definition>const AvahiAddress* aui_service_dialog_get_address</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_address</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Return the IP address of the selected service. </para>        </briefdescription>
+        <detaileddescription>
+<para>(Only valid if host name resolving has not been disabled via <ref refid="avahi-ui_8h_1a56aa5a96aa27538fe7ebd6908687032c" kindref="member">aui_service_dialog_set_resolve_host_name()</ref>) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="128" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1ad34fb194d5f658b5b1ca26d80dc464a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>guint16</type>
+        <definition>guint16 aui_service_dialog_get_port</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_port</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Return the IP port number of the selected service. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a9418d2f653104936db85ac5a668acfc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const gchar *</type>
+        <definition>const gchar* aui_service_dialog_get_host_name</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_host_name</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Return the host name of the selected service. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a38628ddbc68c9b55e30dc7caf07fb4a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+        <definition>const AvahiStringList* aui_service_dialog_get_txt_data</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_txt_data</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Return the TXT metadata of the selected service. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="137" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Resolving settings</header>
+      <memberdef kind="function" id="avahi-ui_8h_1a9a4f6719aac880e0fbc48e75c88726c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_resolve_service</definition>
+        <argsstring>(AuiServiceDialog *d, gboolean resolve)</argsstring>
+        <name>aui_service_dialog_set_resolve_service</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>gboolean</type>
+          <declname>resolve</declname>
+        </param>
+        <briefdescription>
+<para>Disable/Enable automatic service resolving. </para>        </briefdescription>
+        <detaileddescription>
+<para>Disabling this feature will require you to resolve the selected service on our own. I.e. the port number, the TXT data and the host name/IP address will not be available after a service has been selected. This functionality offers a certain optimization in the traffic imposed on the network. Most people will not want to touch this. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="149" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1aa0541540bc7eb6cd34028d3af45873eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean aui_service_dialog_get_resolve_service</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_resolve_service</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Query the last status of <ref refid="avahi-ui_8h_1a9a4f6719aac880e0fbc48e75c88726c9" kindref="member">aui_service_dialog_set_resolve_service()</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a56aa5a96aa27538fe7ebd6908687032c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_resolve_host_name</definition>
+        <argsstring>(AuiServiceDialog *d, gboolean resolve)</argsstring>
+        <name>aui_service_dialog_set_resolve_host_name</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>gboolean</type>
+          <declname>resolve</declname>
+        </param>
+        <briefdescription>
+<para>Disable/Enable automatic host name resolving. </para>        </briefdescription>
+        <detaileddescription>
+<para>Disabling this feature will cause <ref refid="avahi-ui_8h_1ab7bf506a7e5570986322b86f01212904" kindref="member">aui_service_dialog_get_address()</ref> return NULL in all case because avahi-ui will not resolve the host name of the selected service to an address. This is a slight optimization regarding the traffic imposed by this query to the network. By default, avahi-ui will resolve the host names of selected services. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a194ebf0550620cc5c25a4bc085783ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean aui_service_dialog_get_resolve_host_name</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_resolve_host_name</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Query the last status of <ref refid="avahi-ui_8h_1a56aa5a96aa27538fe7ebd6908687032c" kindref="member">aui_service_dialog_set_resolve_host_name()</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="163" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Address family</header>
+      <memberdef kind="function" id="avahi-ui_8h_1aeb41ef9055809368a5b150393aa58f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aui_service_dialog_set_address_family</definition>
+        <argsstring>(AuiServiceDialog *d, AvahiProtocol proto)</argsstring>
+        <name>aui_service_dialog_set_address_family</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>proto</declname>
+        </param>
+        <briefdescription>
+<para>Select the address family to look for services of. </para>        </briefdescription>
+        <detaileddescription>
+<para>This can be used to look only for IPv6 services or only for IPv4 services. By default avahi-ui will browse for both IPv4 and IPv6 services. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="avahi-ui_8h_1a73fa01811ea71c10b8fd1af0acd1666e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+        <definition>AvahiProtocol aui_service_dialog_get_address_family</definition>
+        <argsstring>(AuiServiceDialog *d)</argsstring>
+        <name>aui_service_dialog_get_address_family</name>
+        <param>
+          <type><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Query the address family we&apos;re looking for. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="175" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" prot="public" static="no">
+        <type>typedefG_BEGIN_DECLS struct _AuiServiceDialog</type>
+        <definition>typedef typedefG_BEGIN_DECLS struct _AuiServiceDialog AuiServiceDialog</definition>
+        <argsstring></argsstring>
+        <name>AuiServiceDialog</name>
+        <briefdescription>
+<para>The GTK service dialog structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" line="29" column="1" bodyfile="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Gtk dialog for browsing for services. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>fooavahiuihfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fooavahiuihfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtk/gtk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="client_8h" kindref="compound">avahi-client/client.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">G_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SHOULD_SKIP_THIS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUI_TYPE_SERVICE_DIALOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(aui_service_dialog_get_type())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUI_SERVICE_DIALOG(obj)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(G_TYPE_CHECK_INSTANCE_CAST((obj),<sp/>AUI_TYPE_SERVICE_DIALOG,<sp/>AuiServiceDialog))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUI_SERVICE_DIALOG_CLASS(klass)<sp/><sp/><sp/><sp/>(G_TYPE_CHECK_CLASS_CAST((klass),<sp/>AUI_TYPE_SERVICE_DIALOG,<sp/>AuiServiceDialogClass))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUI_IS_SERVICE_DIALOG(obj)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(G_TYPE_CHECK_INSTANCE_TYPE((obj),<sp/>AUI_TYPE_SERVICE_DIALOG))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUI_IS_SERVICE_DIALOG_CLASS(klass)<sp/>(G_TYPE_CHECK_CLASS_TYPE((klass),<sp/>AUI_TYPE_SERVICE_DIALOG))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUI_SERVICE_DIALOG_GET_CLASS(obj)<sp/><sp/>(G_TYPE_INSTANCE_GET_CLASS((obj),<sp/>AUI_TYPE_SERVICE_DIALOG,<sp/>AuiServiceDialogClass))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_AuiServiceDialogPrivate<sp/>AuiServiceDialogPrivate;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_AuiServiceDialogClass<sp/><sp/>AuiServiceDialogClass;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_AuiServiceDialogClass<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>GtkDialogClass<sp/>parent_class;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Padding<sp/>for<sp/>future<sp/>expansion<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*_aui_reserved1)(void);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*_aui_reserved2)(void);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*_aui_reserved3)(void);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*_aui_reserved4)(void);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_AuiServiceDialog<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>GtkDialog<sp/>parent_instance;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>AuiServiceDialogPrivate<sp/>*priv;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ServiceDialog<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">GType<sp/>aui_service_dialog_get_type(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>G_GNUC_CONST;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_AuiServiceDialog<sp/><ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">GtkWidget*<sp/><ref refid="avahi-ui_8h_1aacc1489db929d0e87f66435457c6f21c" kindref="member">aui_service_dialog_new</ref>(</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*title,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkWindow<sp/>*parent,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*first_button_text,<sp/>...)<sp/>G_GNUC_NULL_TERMINATED;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">GtkWidget<sp/>*aui_service_dialog_new_valist(</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>gchar<sp/>*title,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkWindow<sp/>*parent,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>gchar<sp/>*first_button_text,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_list<sp/>varargs);</highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1adad9e6283c5bc7611b085452ab5541dc" kindref="member">aui_service_dialog_set_browse_service_types</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/>const<sp/>gchar<sp/>*type,<sp/>...)<sp/>G_GNUC_NULL_TERMINATED;</highlight></codeline>
+<codeline lineno="92"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1ada94d75f4373a4f372b8ed3425c51024" kindref="member">aui_service_dialog_set_browse_service_typesv</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/>const<sp/>gchar<sp/>*const*type);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">const<sp/>gchar*const*<sp/><ref refid="avahi-ui_8h_1a3c535c719d76fdca7ee1119c55c683ed" kindref="member">aui_service_dialog_get_browse_service_types</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1a87f2fb5da172e530f2dfe16b33e2d850" kindref="member">aui_service_dialog_set_service_type_name</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/>const<sp/>gchar<sp/>*type,<sp/>const<sp/>gchar<sp/>*name);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1a338a771380cdde5f94686958b7868da0" kindref="member">aui_service_dialog_set_domain</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/>const<sp/>gchar<sp/>*domain);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">const<sp/>gchar*<sp/><ref refid="avahi-ui_8h_1a708007329d09098245febe53ba8f4ef3" kindref="member">aui_service_dialog_get_domain</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1aa7be24642c2d99a1e75f25b42b1bda73" kindref="member">aui_service_dialog_set_service_type</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/>const<sp/>gchar<sp/>*name);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">const<sp/>gchar*<sp/><ref refid="avahi-ui_8h_1a8b79a8a17e1f98492d733200465a2947" kindref="member">aui_service_dialog_get_service_type</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1aa51466463bde5cfccc7419459fae6ab6" kindref="member">aui_service_dialog_set_service_name</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/>const<sp/>gchar<sp/>*name);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">const<sp/>gchar*<sp/><ref refid="avahi-ui_8h_1a777978e9941abeb4ffdccd9b7c100d71" kindref="member">aui_service_dialog_get_service_name</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">const<sp/><ref refid="struct_avahi_address" kindref="compound">AvahiAddress</ref>*<sp/><ref refid="avahi-ui_8h_1ab7bf506a7e5570986322b86f01212904" kindref="member">aui_service_dialog_get_address</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">guint16<sp/><ref refid="avahi-ui_8h_1ad34fb194d5f658b5b1ca26d80dc464a1" kindref="member">aui_service_dialog_get_port</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">const<sp/>gchar*<sp/><ref refid="avahi-ui_8h_1a9418d2f653104936db85ac5a668acfc2" kindref="member">aui_service_dialog_get_host_name</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">const<sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*<ref refid="avahi-ui_8h_1a38628ddbc68c9b55e30dc7caf07fb4a2" kindref="member">aui_service_dialog_get_txt_data</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1a9a4f6719aac880e0fbc48e75c88726c9" kindref="member">aui_service_dialog_set_resolve_service</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/>gboolean<sp/>resolve);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">gboolean<sp/><ref refid="avahi-ui_8h_1aa0541540bc7eb6cd34028d3af45873eb" kindref="member">aui_service_dialog_get_resolve_service</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1a56aa5a96aa27538fe7ebd6908687032c" kindref="member">aui_service_dialog_set_resolve_host_name</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/>gboolean<sp/>resolve);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">gboolean<sp/><ref refid="avahi-ui_8h_1a194ebf0550620cc5c25a4bc085783ea4" kindref="member">aui_service_dialog_get_resolve_host_name</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="avahi-ui_8h_1aeb41ef9055809368a5b150393aa58f6e" kindref="member">aui_service_dialog_set_address_family</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d,<sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>proto);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/><ref refid="avahi-ui_8h_1a73fa01811ea71c10b8fd1af0acd1666e" kindref="member">aui_service_dialog_get_address_family</ref>(<ref refid="avahi-ui_8h_1a1123144c922a121256683dafa32c6837" kindref="member">AuiServiceDialog</ref><sp/>*d);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">G_END_DECLS</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-ui/avahi-ui.h"/>
+  </compounddef>
+</doxygen>

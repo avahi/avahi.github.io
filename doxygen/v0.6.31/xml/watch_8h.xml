@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="watch_8h" kind="file" language="C++">
+    <compoundname>watch.h</compoundname>
+    <includes local="no">sys/poll.h</includes>
+    <includes local="no">sys/time.h</includes>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includedby refid="simple-watch_8h" local="no">avahi-common/simple-watch.h</includedby>
+    <includedby refid="thread-watch_8h" local="no">avahi-common/thread-watch.h</includedby>
+    <includedby refid="qt-watch_8h" local="no">avahi-qt/qt-watch.h</includedby>
+    <includedby refid="glib-watch_8h" local="no">avahi-glib/glib-watch.h</includedby>
+    <includedby refid="client_8h" local="no">avahi-client/client.h</includedby>
+    <includedby refid="publish_8h" local="no">avahi-client/publish.h</includedby>
+    <includedby refid="lookup_8h" local="no">avahi-client/lookup.h</includedby>
+    <incdepgraph>
+      <node id="129">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch.h"/>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>sys/poll.h</label>
+      </node>
+      <node id="132">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="131">
+        <label>sys/time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="143">
+        <label>avahi-gobject/ga-service-resolver.h</label>
+        <link refid="ga-service-resolver_8h"/>
+      </node>
+      <node id="142">
+        <label>avahi-gobject/ga-service-browser.h</label>
+        <link refid="ga-service-browser_8h"/>
+      </node>
+      <node id="133">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch.h"/>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>avahi-qt/qt-watch.h</label>
+        <link refid="qt-watch_8h"/>
+      </node>
+      <node id="144">
+        <label>avahi-client/publish.h</label>
+        <link refid="publish_8h"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>avahi-gobject/ga-entry-group.h</label>
+        <link refid="ga-entry-group_8h"/>
+      </node>
+      <node id="139">
+        <label>avahi-gobject/ga-client.h</label>
+        <link refid="ga-client_8h"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>avahi-client/lookup.h</label>
+        <link refid="lookup_8h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+      </node>
+      <node id="137">
+        <label>avahi-glib/glib-watch.h</label>
+        <link refid="glib-watch_8h"/>
+      </node>
+      <node id="146">
+        <label>avahi-ui/avahi-ui.h</label>
+        <link refid="avahi-ui_8h"/>
+      </node>
+      <node id="138">
+        <label>avahi-client/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>avahi-common/simple-watch.h</label>
+        <link refid="simple-watch_8h"/>
+      </node>
+      <node id="141">
+        <label>avahi-gobject/ga-record-browser.h</label>
+        <link refid="ga-record-browser_8h"/>
+      </node>
+      <node id="135">
+        <label>avahi-common/thread-watch.h</label>
+        <link refid="thread-watch_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_avahi_poll" prot="public">AvahiPoll</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93c" prot="public" static="no">
+        <name>AvahiWatchEvent</name>
+        <enumvalue id="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93caafd0dcefd1fe378cac33fb3794586db8" prot="public">
+          <name>AVAHI_WATCH_IN</name>
+          <initializer>= POLLIN</initializer>
+          <briefdescription>
+<para>Input event. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93ca1ad20f467b0da7b6d839faa2858048a6" prot="public">
+          <name>AVAHI_WATCH_OUT</name>
+          <initializer>= POLLOUT</initializer>
+          <briefdescription>
+<para>Output event. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93ca342f3fe3ea6400f38b5820767cfdf0fd" prot="public">
+          <name>AVAHI_WATCH_ERR</name>
+          <initializer>= POLLERR</initializer>
+          <briefdescription>
+<para>Error event. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93cac007fcd4a1af39c645b1bdce712f30ba" prot="public">
+          <name>AVAHI_WATCH_HUP</name>
+          <initializer>= POLLHUP</initializer>
+          <briefdescription>
+<para>Hangup event. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of watch events. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/watch.h" line="42" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/watch.h" bodystart="42" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" prot="public" static="no">
+        <type>struct <ref refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" kindref="member">AvahiWatch</ref></type>
+        <definition>typedef struct AvahiWatch AvahiWatch</definition>
+        <argsstring></argsstring>
+        <name>AvahiWatch</name>
+        <briefdescription>
+<para>An I/O watch object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/watch.h" line="123" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/watch.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="watch_8h_1a7c49ec2c98706902366ce0f74958626d" prot="public" static="no">
+        <type>struct <ref refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" kindref="member">AvahiTimeout</ref></type>
+        <definition>typedef struct AvahiTimeout AvahiTimeout</definition>
+        <argsstring></argsstring>
+        <name>AvahiTimeout</name>
+        <briefdescription>
+<para>A timeout watch object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/watch.h" line="123" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/watch.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="watch_8h_1a6586ab33f3b85ab632ca30e90b963389" prot="public" static="no">
+        <type>struct <ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref></type>
+        <definition>typedef struct AvahiPoll AvahiPoll</definition>
+        <argsstring></argsstring>
+        <name>AvahiPoll</name>
+        <briefdescription>
+<para>An event polling abstraction object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/watch.h" line="123" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/watch.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="watch_8h_1ad406caea4ea65888ca937fa63fcb485e" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* AvahiWatchCallback) (AvahiWatch *w, int fd, AvahiWatchEvent event, void *userdata)</definition>
+        <argsstring>)(AvahiWatch *w, int fd, AvahiWatchEvent event, void *userdata)</argsstring>
+        <name>AvahiWatchCallback</name>
+        <briefdescription>
+<para>Called whenever an I/O event happens on an I/O watch. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/watch.h" line="50" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/watch.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="watch_8h_1a8a071d916a69aff92c3279d04640feda" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* AvahiTimeoutCallback) (AvahiTimeout *t, void *userdata)</definition>
+        <argsstring>)(AvahiTimeout *t, void *userdata)</argsstring>
+        <name>AvahiTimeoutCallback</name>
+        <briefdescription>
+<para>Called when the timeout is reached. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-common/watch.h" line="53" column="1" bodyfile="/home/lathiat/src/avahi/avahi-common/watch.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simplistic main loop abstraction. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>foowatchhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>foowatchhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#include<sp/>&lt;sys/poll.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" kindref="member">AvahiWatch</ref><sp/><ref refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" kindref="member">AvahiWatch</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" kindref="member">AvahiTimeout</ref><sp/><ref refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" kindref="member">AvahiTimeout</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="watch_8h_1a6586ab33f3b85ab632ca30e90b963389" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref><sp/><ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="43" refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93caafd0dcefd1fe378cac33fb3794586db8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93caafd0dcefd1fe378cac33fb3794586db8" kindref="member">AVAHI_WATCH_IN</ref><sp/>=<sp/>POLLIN,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93ca1ad20f467b0da7b6d839faa2858048a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93ca1ad20f467b0da7b6d839faa2858048a6" kindref="member">AVAHI_WATCH_OUT</ref><sp/>=<sp/>POLLOUT,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93ca342f3fe3ea6400f38b5820767cfdf0fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93ca342f3fe3ea6400f38b5820767cfdf0fd" kindref="member">AVAHI_WATCH_ERR</ref><sp/>=<sp/>POLLERR,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93cac007fcd4a1af39c645b1bdce712f30ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93cac007fcd4a1af39c645b1bdce712f30ba" kindref="member">AVAHI_WATCH_HUP</ref><sp/>=<sp/>POLLHUP<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93c" kindref="member">AvahiWatchEvent</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="watch_8h_1ad406caea4ea65888ca937fa63fcb485e" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="watch_8h_1ad406caea4ea65888ca937fa63fcb485e" kindref="member">AvahiWatchCallback</ref>)(<ref refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" kindref="member">AvahiWatch</ref><sp/>*w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93c" kindref="member">AvahiWatchEvent</ref><sp/>event,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="struct_avahi_poll_1a197dd32ad17917ea3f421414a047f368" kindref="member">userdata</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="watch_8h_1a8a071d916a69aff92c3279d04640feda" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="watch_8h_1a8a071d916a69aff92c3279d04640feda" kindref="member">AvahiTimeoutCallback</ref>)(<ref refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" kindref="member">AvahiTimeout</ref><sp/>*t,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="struct_avahi_poll_1a197dd32ad17917ea3f421414a047f368" kindref="member">userdata</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="struct_avahi_poll" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="struct_avahi_poll_1a197dd32ad17917ea3f421414a047f368" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="struct_avahi_poll_1a197dd32ad17917ea3f421414a047f368" kindref="member">userdata</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="struct_avahi_poll_1acf59dc0ace2682e2d18225d4a0f9609c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" kindref="member">AvahiWatch</ref>*<sp/>(*watch_new)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref><sp/>*api,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93c" kindref="member">AvahiWatchEvent</ref><sp/>event,<sp/><ref refid="watch_8h_1ad406caea4ea65888ca937fa63fcb485e" kindref="member">AvahiWatchCallback</ref><sp/>callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="struct_avahi_poll_1a197dd32ad17917ea3f421414a047f368" kindref="member">userdata</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="struct_avahi_poll_1a64292a4216965c97b9609834be0fcd1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct_avahi_poll_1a64292a4216965c97b9609834be0fcd1e" kindref="member">watch_update</ref>)(<ref refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" kindref="member">AvahiWatch</ref><sp/>*w,<sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93c" kindref="member">AvahiWatchEvent</ref><sp/>event);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="struct_avahi_poll_1a6f3b2a7cfcbabfbff6fe2b4833baed0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="watch_8h_1ab1145cb8739036ece0ebe02ad0f4b93c" kindref="member">AvahiWatchEvent</ref><sp/>(*<ref refid="struct_avahi_poll_1a6f3b2a7cfcbabfbff6fe2b4833baed0b" kindref="member">watch_get_events</ref>)(<ref refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" kindref="member">AvahiWatch</ref><sp/>*w);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="struct_avahi_poll_1ac52a247915e919cb5ca335068beb3452" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct_avahi_poll_1ac52a247915e919cb5ca335068beb3452" kindref="member">watch_free</ref>)(<ref refid="watch_8h_1afd7706bc6d19570049ca837f7a5ae262" kindref="member">AvahiWatch</ref><sp/>*w);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="struct_avahi_poll_1abc2890fd69c1753aae84fb8e48044be4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" kindref="member">AvahiTimeout</ref>*<sp/>(*timeout_new)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_avahi_poll" kindref="compound">AvahiPoll</ref><sp/>*api,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>*tv,<sp/><ref refid="watch_8h_1a8a071d916a69aff92c3279d04640feda" kindref="member">AvahiTimeoutCallback</ref><sp/>callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="struct_avahi_poll_1a197dd32ad17917ea3f421414a047f368" kindref="member">userdata</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="struct_avahi_poll_1ae4a591cec4963cd877e6ed337f9000e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct_avahi_poll_1ae4a591cec4963cd877e6ed337f9000e1" kindref="member">timeout_update</ref>)(<ref refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" kindref="member">AvahiTimeout</ref><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>*tv);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="struct_avahi_poll_1a7e25d9fa9e25b084b7c112e8a78e713a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct_avahi_poll_1a7e25d9fa9e25b084b7c112e8a78e713a" kindref="member">timeout_free</ref>)(<ref refid="watch_8h_1a7c49ec2c98706902366ce0f74958626d" kindref="member">AvahiTimeout</ref><sp/>*t);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-common/watch.h"/>
+  </compounddef>
+</doxygen>

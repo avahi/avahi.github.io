@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct___ga_record_browser" kind="struct" language="C++" prot="public">
+    <compoundname>_GaRecordBrowser</compoundname>
+    <includes refid="ga-record-browser_8h" local="no">avahi-gobject/ga-record-browser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_record_browser_1ae193661955056e79ebdcc3eab21ebb96" prot="public" static="no" mutable="no">
+        <type>GObject</type>
+        <definition>GObject _GaRecordBrowser::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-record-browser.h" line="40" column="1" bodyfile="avahi-gobject/ga-record-browser.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="20">
+        <label>_GaRecordBrowser</label>
+        <link refid="struct___ga_record_browser"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>GObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-gobject/ga-record-browser.h" line="39" column="1" bodyfile="avahi-gobject/ga-record-browser.h" bodystart="39" bodyend="41"/>
+    <listofallmembers>
+      <member refid="struct___ga_record_browser_1ae193661955056e79ebdcc3eab21ebb96" prot="public" virt="non-virtual"><scope>_GaRecordBrowser</scope><name>parent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

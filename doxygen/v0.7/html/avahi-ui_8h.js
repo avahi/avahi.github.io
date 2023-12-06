@@ -1,0 +1,25 @@
+var avahi_ui_8h =
+[
+    [ "AuiServiceDialog", "avahi-ui_8h.html#a1123144c922a121256683dafa32c6837", null ],
+    [ "aui_service_dialog_get_address", "avahi-ui_8h.html#ab7bf506a7e5570986322b86f01212904", null ],
+    [ "aui_service_dialog_get_address_family", "avahi-ui_8h.html#a73fa01811ea71c10b8fd1af0acd1666e", null ],
+    [ "aui_service_dialog_get_browse_service_types", "avahi-ui_8h.html#a3c535c719d76fdca7ee1119c55c683ed", null ],
+    [ "aui_service_dialog_get_domain", "avahi-ui_8h.html#a708007329d09098245febe53ba8f4ef3", null ],
+    [ "aui_service_dialog_get_host_name", "avahi-ui_8h.html#a9418d2f653104936db85ac5a668acfc2", null ],
+    [ "aui_service_dialog_get_port", "avahi-ui_8h.html#ad34fb194d5f658b5b1ca26d80dc464a1", null ],
+    [ "aui_service_dialog_get_resolve_host_name", "avahi-ui_8h.html#a194ebf0550620cc5c25a4bc085783ea4", null ],
+    [ "aui_service_dialog_get_resolve_service", "avahi-ui_8h.html#aa0541540bc7eb6cd34028d3af45873eb", null ],
+    [ "aui_service_dialog_get_service_name", "avahi-ui_8h.html#a777978e9941abeb4ffdccd9b7c100d71", null ],
+    [ "aui_service_dialog_get_service_type", "avahi-ui_8h.html#a8b79a8a17e1f98492d733200465a2947", null ],
+    [ "aui_service_dialog_get_txt_data", "avahi-ui_8h.html#a38628ddbc68c9b55e30dc7caf07fb4a2", null ],
+    [ "aui_service_dialog_new", "avahi-ui_8h.html#aacc1489db929d0e87f66435457c6f21c", null ],
+    [ "aui_service_dialog_set_address_family", "avahi-ui_8h.html#aeb41ef9055809368a5b150393aa58f6e", null ],
+    [ "aui_service_dialog_set_browse_service_types", "avahi-ui_8h.html#adad9e6283c5bc7611b085452ab5541dc", null ],
+    [ "aui_service_dialog_set_browse_service_typesv", "avahi-ui_8h.html#ada94d75f4373a4f372b8ed3425c51024", null ],
+    [ "aui_service_dialog_set_domain", "avahi-ui_8h.html#a338a771380cdde5f94686958b7868da0", null ],
+    [ "aui_service_dialog_set_resolve_host_name", "avahi-ui_8h.html#a56aa5a96aa27538fe7ebd6908687032c", null ],
+    [ "aui_service_dialog_set_resolve_service", "avahi-ui_8h.html#a9a4f6719aac880e0fbc48e75c88726c9", null ],
+    [ "aui_service_dialog_set_service_name", "avahi-ui_8h.html#aa51466463bde5cfccc7419459fae6ab6", null ],
+    [ "aui_service_dialog_set_service_type", "avahi-ui_8h.html#aa7be24642c2d99a1e75f25b42b1bda73", null ],
+    [ "aui_service_dialog_set_service_type_name", "avahi-ui_8h.html#a87f2fb5da172e530f2dfe16b33e2d850", null ]
+];

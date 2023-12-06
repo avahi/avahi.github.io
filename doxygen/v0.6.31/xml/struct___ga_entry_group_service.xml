@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="struct___ga_entry_group_service" kind="struct" language="C++" prot="public">
+    <compoundname>_GaEntryGroupService</compoundname>
+    <includes refid="ga-entry-group_8h" local="no">avahi-gobject/ga-entry-group.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_entry_group_service_1a7e9b70d1258bb05ea60972289db1b28f" prot="public" static="no" mutable="no">
+        <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+        <definition>AvahiIfIndex _GaEntryGroupService::interface</definition>
+        <argsstring></argsstring>
+        <name>interface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="44" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___ga_entry_group_service_1aa16af647eee3a37923c1c2c347aabc4b" prot="public" static="no" mutable="no">
+        <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+        <definition>AvahiProtocol _GaEntryGroupService::protocol</definition>
+        <argsstring></argsstring>
+        <name>protocol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="45" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___ga_entry_group_service_1a4b18fd02b904c6a11f3231e95bfd0635" prot="public" static="no" mutable="no">
+        <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+        <definition>AvahiPublishFlags _GaEntryGroupService::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="46" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___ga_entry_group_service_1a6d04f6ae887737af52aec160e3064ade" prot="public" static="no" mutable="no">
+        <type>gchar *</type>
+        <definition>gchar* _GaEntryGroupService::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="47" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___ga_entry_group_service_1adaf1c4b6463e6fc8a4fc5f71c4bf525d" prot="public" static="no" mutable="no">
+        <type>gchar *</type>
+        <definition>gchar* _GaEntryGroupService::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="48" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___ga_entry_group_service_1a5fc0c99d03957139e4b380a796e58844" prot="public" static="no" mutable="no">
+        <type>gchar *</type>
+        <definition>gchar* _GaEntryGroupService::domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="49" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___ga_entry_group_service_1a2229bceeff26f7aa496b6dba8b074469" prot="public" static="no" mutable="no">
+        <type>gchar *</type>
+        <definition>gchar* _GaEntryGroupService::host</definition>
+        <argsstring></argsstring>
+        <name>host</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="50" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___ga_entry_group_service_1a61a12fd48cc39e6f73834156c3651b7f" prot="public" static="no" mutable="no">
+        <type>guint16</type>
+        <definition>guint16 _GaEntryGroupService::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="51" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>AvahiPublishFlags</label>
+      </node>
+      <node id="15">
+        <label>gchar *</label>
+      </node>
+      <node id="18">
+        <label>int</label>
+      </node>
+      <node id="14">
+        <label>_GaEntryGroupService</label>
+        <link refid="struct___ga_entry_group_service"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>domain</edgelabel>
+          <edgelabel>host</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>flags</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>port</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>protocol</edgelabel>
+          <edgelabel>interface</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>guint16</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="43" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="43" bodyend="52"/>
+    <listofallmembers>
+      <member refid="struct___ga_entry_group_service_1a5fc0c99d03957139e4b380a796e58844" prot="public" virt="non-virtual"><scope>_GaEntryGroupService</scope><name>domain</name></member>
+      <member refid="struct___ga_entry_group_service_1a4b18fd02b904c6a11f3231e95bfd0635" prot="public" virt="non-virtual"><scope>_GaEntryGroupService</scope><name>flags</name></member>
+      <member refid="struct___ga_entry_group_service_1a2229bceeff26f7aa496b6dba8b074469" prot="public" virt="non-virtual"><scope>_GaEntryGroupService</scope><name>host</name></member>
+      <member refid="struct___ga_entry_group_service_1a7e9b70d1258bb05ea60972289db1b28f" prot="public" virt="non-virtual"><scope>_GaEntryGroupService</scope><name>interface</name></member>
+      <member refid="struct___ga_entry_group_service_1a6d04f6ae887737af52aec160e3064ade" prot="public" virt="non-virtual"><scope>_GaEntryGroupService</scope><name>name</name></member>
+      <member refid="struct___ga_entry_group_service_1a61a12fd48cc39e6f73834156c3651b7f" prot="public" virt="non-virtual"><scope>_GaEntryGroupService</scope><name>port</name></member>
+      <member refid="struct___ga_entry_group_service_1aa16af647eee3a37923c1c2c347aabc4b" prot="public" virt="non-virtual"><scope>_GaEntryGroupService</scope><name>protocol</name></member>
+      <member refid="struct___ga_entry_group_service_1adaf1c4b6463e6fc8a4fc5f71c4bf525d" prot="public" virt="non-virtual"><scope>_GaEntryGroupService</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

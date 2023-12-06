@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_avahi_address" kind="struct" language="C++" prot="public">
+    <compoundname>AvahiAddress</compoundname>
+    <includes refid="address_8h" local="no">avahi-common/address.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_avahi_address_1adf7f95b8c2b57f25d876a99825dd2dbe" prot="public" static="no" mutable="no">
+        <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+        <definition>AvahiProtocol AvahiAddress::proto</definition>
+        <argsstring></argsstring>
+        <name>proto</name>
+        <briefdescription>
+<para>Address family. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/address.h" line="71" column="1" bodyfile="avahi-common/address.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_address_1a49a7f521c465d29a2f21c3fda98665ca" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_avahi_i_pv6_address" kindref="compound">AvahiIPv6Address</ref></type>
+        <definition>AvahiIPv6Address AvahiAddress::ipv6</definition>
+        <argsstring></argsstring>
+        <name>ipv6</name>
+        <briefdescription>
+<para>Address when IPv6. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/address.h" line="74" column="1" bodyfile="avahi-common/address.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_address_1aefb7bd89ec97bd6b353cf504cf097f74" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_avahi_i_pv4_address" kindref="compound">AvahiIPv4Address</ref></type>
+        <definition>AvahiIPv4Address AvahiAddress::ipv4</definition>
+        <argsstring></argsstring>
+        <name>ipv4</name>
+        <briefdescription>
+<para>Address when IPv4. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/address.h" line="75" column="1" bodyfile="avahi-common/address.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_address_1a90ae7878c92e60a81a327c36abdd3124" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AvahiAddress::data[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>Type-independent data field. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/address.h" line="76" column="1" bodyfile="avahi-common/address.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_avahi_address_1ac8871c1c8c621da8987eb8828dd13313" prot="public" static="no" mutable="no">
+        <type>union AvahiAddress::@2</type>
+        <definition>union AvahiAddress::@2  AvahiAddress::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/address.h" line="77" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Protocol (address family) independent address structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="44">
+        <label>anonymous:data</label>
+      </node>
+      <node id="38">
+        <label>AvahiAddress</label>
+        <link refid="struct_avahi_address"/>
+        <childnode refid="39" relation="usage">
+          <edgelabel>ipv6</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>ipv4</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>proto</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>AvahiIPv4Address</label>
+        <link refid="struct_avahi_i_pv4_address"/>
+        <childnode refid="42" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>AvahiIPv6Address</label>
+        <link refid="struct_avahi_i_pv6_address"/>
+        <childnode refid="40" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>int</label>
+      </node>
+      <node id="42">
+        <label>uint32_t</label>
+      </node>
+      <node id="40">
+        <label>uint8_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-common/address.h" line="70" column="1" bodyfile="avahi-common/address.h" bodystart="70" bodyend="78"/>
+    <listofallmembers>
+      <member refid="struct_avahi_address_1a90ae7878c92e60a81a327c36abdd3124" prot="public" virt="non-virtual"><scope>AvahiAddress</scope><name>data</name></member>
+      <member refid="struct_avahi_address_1ac8871c1c8c621da8987eb8828dd13313" prot="public" virt="non-virtual"><scope>AvahiAddress</scope><name>data</name></member>
+      <member refid="struct_avahi_address_1aefb7bd89ec97bd6b353cf504cf097f74" prot="public" virt="non-virtual"><scope>AvahiAddress</scope><name>ipv4</name></member>
+      <member refid="struct_avahi_address_1a49a7f521c465d29a2f21c3fda98665ca" prot="public" virt="non-virtual"><scope>AvahiAddress</scope><name>ipv6</name></member>
+      <member refid="struct_avahi_address_1adf7f95b8c2b57f25d876a99825dd2dbe" prot="public" virt="non-virtual"><scope>AvahiAddress</scope><name>proto</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

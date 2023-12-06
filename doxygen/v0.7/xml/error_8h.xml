@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="error_8h" kind="file" language="C++">
+    <compoundname>error.h</compoundname>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includedby refid="ga-error_8h" local="no">avahi-gobject/ga-error.h</includedby>
+    <incdepgraph>
+      <node id="89">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="88">
+        <label>avahi-common/error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="90">
+        <label>avahi-common/error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>avahi-gobject/ga-error.h</label>
+        <link refid="ga-error_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="error_8h_1a61dadd085c1777f559549e05962b2c9e" prot="public" static="no">
+        <name>@5</name>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eac882ba5c5c93d08e03b122995def91c9" prot="public">
+          <name>AVAHI_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>OK. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea7ea8a62a314efe7393c01d8cd7bea6aa" prot="public">
+          <name>AVAHI_ERR_FAILURE</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+<para>Generic error code. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea5f6f5f3cbcae9cadc9c25ca622963cbc" prot="public">
+          <name>AVAHI_ERR_BAD_STATE</name>
+          <initializer>= -2</initializer>
+          <briefdescription>
+<para>Object was in a bad state. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea3ff1e2d39eef04d524a7bbfb71bd7974" prot="public">
+          <name>AVAHI_ERR_INVALID_HOST_NAME</name>
+          <initializer>= -3</initializer>
+          <briefdescription>
+<para>Invalid host name. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ead5804418d7cb71e2b59ab11c4b3ba372" prot="public">
+          <name>AVAHI_ERR_INVALID_DOMAIN_NAME</name>
+          <initializer>= -4</initializer>
+          <briefdescription>
+<para>Invalid domain name. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea9fe306236da14c3a637d3912cb2d5615" prot="public">
+          <name>AVAHI_ERR_NO_NETWORK</name>
+          <initializer>= -5</initializer>
+          <briefdescription>
+<para>No suitable network protocol available. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea42497acc76ecd555200f0374ec43368f" prot="public">
+          <name>AVAHI_ERR_INVALID_TTL</name>
+          <initializer>= -6</initializer>
+          <briefdescription>
+<para>Invalid DNS TTL. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea72d75300aee4873960107f8d9b7832c6" prot="public">
+          <name>AVAHI_ERR_IS_PATTERN</name>
+          <initializer>= -7</initializer>
+          <briefdescription>
+<para>RR key is pattern. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea5162d9b82323f79097bb72ffdab3dda5" prot="public">
+          <name>AVAHI_ERR_COLLISION</name>
+          <initializer>= -8</initializer>
+          <briefdescription>
+<para>Name collision. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea8c6b49ae49317ed6bc021428bf914cf5" prot="public">
+          <name>AVAHI_ERR_INVALID_RECORD</name>
+          <initializer>= -9</initializer>
+          <briefdescription>
+<para>Invalid RR. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea020a612b93965a97b67bb829aeb22d03" prot="public">
+          <name>AVAHI_ERR_INVALID_SERVICE_NAME</name>
+          <initializer>= -10</initializer>
+          <briefdescription>
+<para>Invalid service name. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea24c6e71bfd0e4fa9ca62306593f2dc2b" prot="public">
+          <name>AVAHI_ERR_INVALID_SERVICE_TYPE</name>
+          <initializer>= -11</initializer>
+          <briefdescription>
+<para>Invalid service type. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eaf5948525f3bd0dfc46ac66436acbf2e2" prot="public">
+          <name>AVAHI_ERR_INVALID_PORT</name>
+          <initializer>= -12</initializer>
+          <briefdescription>
+<para>Invalid port number. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea20edd6ab3085b9cd0b1a446ecfcbd961" prot="public">
+          <name>AVAHI_ERR_INVALID_KEY</name>
+          <initializer>= -13</initializer>
+          <briefdescription>
+<para>Invalid key. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eac13b96a2f5075c759d935cc01336dabe" prot="public">
+          <name>AVAHI_ERR_INVALID_ADDRESS</name>
+          <initializer>= -14</initializer>
+          <briefdescription>
+<para>Invalid address. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eaf90afd67cfc22969312c36af7b6987be" prot="public">
+          <name>AVAHI_ERR_TIMEOUT</name>
+          <initializer>= -15</initializer>
+          <briefdescription>
+<para>Timeout reached. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eacf3f28ab03e1bcc8fd5a4801368067cd" prot="public">
+          <name>AVAHI_ERR_TOO_MANY_CLIENTS</name>
+          <initializer>= -16</initializer>
+          <briefdescription>
+<para>Too many clients. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea483cb6bd2e62a33cd104015e988bc0df" prot="public">
+          <name>AVAHI_ERR_TOO_MANY_OBJECTS</name>
+          <initializer>= -17</initializer>
+          <briefdescription>
+<para>Too many objects. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eaeafe2e033690f61b5bff815263c96efa" prot="public">
+          <name>AVAHI_ERR_TOO_MANY_ENTRIES</name>
+          <initializer>= -18</initializer>
+          <briefdescription>
+<para>Too many entries. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eacd46c51a081958f88c7d2ec211755554" prot="public">
+          <name>AVAHI_ERR_OS</name>
+          <initializer>= -19</initializer>
+          <briefdescription>
+<para>OS error. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eadfb132e99927fa8db12db4579cee61ce" prot="public">
+          <name>AVAHI_ERR_ACCESS_DENIED</name>
+          <initializer>= -20</initializer>
+          <briefdescription>
+<para>Access denied. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eaa72d0f4838b851624b97ac14c9cdfee8" prot="public">
+          <name>AVAHI_ERR_INVALID_OPERATION</name>
+          <initializer>= -21</initializer>
+          <briefdescription>
+<para>Invalid operation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea6debfe7ae2383831a881b103e3a4ffca" prot="public">
+          <name>AVAHI_ERR_DBUS_ERROR</name>
+          <initializer>= -22</initializer>
+          <briefdescription>
+<para>An unexpected D-Bus error occurred. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea9f3b5148bdcf30516aa4079867bcf0f7" prot="public">
+          <name>AVAHI_ERR_DISCONNECTED</name>
+          <initializer>= -23</initializer>
+          <briefdescription>
+<para>Daemon connection failed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea7ed597c1c4c03fbbd1f287116d3a4f1d" prot="public">
+          <name>AVAHI_ERR_NO_MEMORY</name>
+          <initializer>= -24</initializer>
+          <briefdescription>
+<para>Memory exhausted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea27f56dd39aaed6fda9411a3f50f54ddc" prot="public">
+          <name>AVAHI_ERR_INVALID_OBJECT</name>
+          <initializer>= -25</initializer>
+          <briefdescription>
+<para>The object passed to this function was invalid. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eae4c09ab340d7fa5d3b0c5f2b378cdbb4" prot="public">
+          <name>AVAHI_ERR_NO_DAEMON</name>
+          <initializer>= -26</initializer>
+          <briefdescription>
+<para>Daemon not running. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea5d4e73474bd17ee3105b6026f4d2bed3" prot="public">
+          <name>AVAHI_ERR_INVALID_INTERFACE</name>
+          <initializer>= -27</initializer>
+          <briefdescription>
+<para>Invalid interface. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eac985359bb59e00ad8907253c48b9dc75" prot="public">
+          <name>AVAHI_ERR_INVALID_PROTOCOL</name>
+          <initializer>= -28</initializer>
+          <briefdescription>
+<para>Invalid protocol. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eae2896683fc79eac9b46434979c936266" prot="public">
+          <name>AVAHI_ERR_INVALID_FLAGS</name>
+          <initializer>= -29</initializer>
+          <briefdescription>
+<para>Invalid flags. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea36bfe4aa91b0da1a9218c146383b1d8b" prot="public">
+          <name>AVAHI_ERR_NOT_FOUND</name>
+          <initializer>= -30</initializer>
+          <briefdescription>
+<para>Not found. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea6d0a0fdc3b2661d96bf29633a37746fe" prot="public">
+          <name>AVAHI_ERR_INVALID_CONFIG</name>
+          <initializer>= -31</initializer>
+          <briefdescription>
+<para>Configuration error. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eaf8ff25efc0fd5b17e31253008f20faf9" prot="public">
+          <name>AVAHI_ERR_VERSION_MISMATCH</name>
+          <initializer>= -32</initializer>
+          <briefdescription>
+<para>Verson mismatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eae6de3b81698d6c265866671de756f198" prot="public">
+          <name>AVAHI_ERR_INVALID_SERVICE_SUBTYPE</name>
+          <initializer>= -33</initializer>
+          <briefdescription>
+<para>Invalid service subtype. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea58141c669e6380cd968a1a02c43a88e7" prot="public">
+          <name>AVAHI_ERR_INVALID_PACKET</name>
+          <initializer>= -34</initializer>
+          <briefdescription>
+<para>Invalid packet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eab9ae3c18c258cb913910216ea0df5815" prot="public">
+          <name>AVAHI_ERR_INVALID_DNS_ERROR</name>
+          <initializer>= -35</initializer>
+          <briefdescription>
+<para>Invlaid DNS return code. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea8db1a4818301e48873d13a7313d5e560" prot="public">
+          <name>AVAHI_ERR_DNS_FORMERR</name>
+          <initializer>= -36</initializer>
+          <briefdescription>
+<para>DNS Error: Form error. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea0e9081ab65d58551eb979c7c98d22494" prot="public">
+          <name>AVAHI_ERR_DNS_SERVFAIL</name>
+          <initializer>= -37</initializer>
+          <briefdescription>
+<para>DNS Error: Server Failure. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eae7461d485ffc80c520cf033c6ecb55ec" prot="public">
+          <name>AVAHI_ERR_DNS_NXDOMAIN</name>
+          <initializer>= -38</initializer>
+          <briefdescription>
+<para>DNS Error: No such domain. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eaf7b2ae63d4023d184bd9c0fb56cd6861" prot="public">
+          <name>AVAHI_ERR_DNS_NOTIMP</name>
+          <initializer>= -39</initializer>
+          <briefdescription>
+<para>DNS Error: Not implemented. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea0dfcf4fbc28f778319f40ee1ebccced2" prot="public">
+          <name>AVAHI_ERR_DNS_REFUSED</name>
+          <initializer>= -40</initializer>
+          <briefdescription>
+<para>DNS Error: Operation refused. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eaae1f2efa5c4fb5bb1c3250e533165ebf" prot="public">
+          <name>AVAHI_ERR_DNS_YXDOMAIN</name>
+          <initializer>= -41</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eae80a2be735040fded7da9feda99b8a6a" prot="public">
+          <name>AVAHI_ERR_DNS_YXRRSET</name>
+          <initializer>= -42</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea7047cab9555a570e92a0f75693ed3f9f" prot="public">
+          <name>AVAHI_ERR_DNS_NXRRSET</name>
+          <initializer>= -43</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea653cbb61390eea3fd6855bcbc92de0a1" prot="public">
+          <name>AVAHI_ERR_DNS_NOTAUTH</name>
+          <initializer>= -44</initializer>
+          <briefdescription>
+<para>DNS Error: Not authorized. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea091b26445648cd58d9ed7405db55ccdc" prot="public">
+          <name>AVAHI_ERR_DNS_NOTZONE</name>
+          <initializer>= -45</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea0da60df8d3bc5417bedd237b75bb6141" prot="public">
+          <name>AVAHI_ERR_INVALID_RDATA</name>
+          <initializer>= -46</initializer>
+          <briefdescription>
+<para>Invalid RDATA. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea53b3471f26208c6da431f4d3934acfbe" prot="public">
+          <name>AVAHI_ERR_INVALID_DNS_CLASS</name>
+          <initializer>= -47</initializer>
+          <briefdescription>
+<para>Invalid DNS class. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eafeedd406c8f77898f954ad7644cfec2c" prot="public">
+          <name>AVAHI_ERR_INVALID_DNS_TYPE</name>
+          <initializer>= -48</initializer>
+          <briefdescription>
+<para>Invalid DNS type. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea23c9bfed90004370b092778c890e0a3a" prot="public">
+          <name>AVAHI_ERR_NOT_SUPPORTED</name>
+          <initializer>= -49</initializer>
+          <briefdescription>
+<para>Not supported. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea2e817f26664a466432f95eb9551684cb" prot="public">
+          <name>AVAHI_ERR_NOT_PERMITTED</name>
+          <initializer>= -50</initializer>
+          <briefdescription>
+<para>Operation not permitted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea47f918702bcac2931a7caf2b57ba9aff" prot="public">
+          <name>AVAHI_ERR_INVALID_ARGUMENT</name>
+          <initializer>= -51</initializer>
+          <briefdescription>
+<para>Invalid argument. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea0aceb1695bd8fe759657e6affac0ebf6" prot="public">
+          <name>AVAHI_ERR_IS_EMPTY</name>
+          <initializer>= -52</initializer>
+          <briefdescription>
+<para>Is empty. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9ea3d8c8ae0bba5d165a28d91ff96f2118f" prot="public">
+          <name>AVAHI_ERR_NO_CHANGE</name>
+          <initializer>= -53</initializer>
+          <briefdescription>
+<para>The requested operation is invalid because it is redundant. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="error_8h_1a61dadd085c1777f559549e05962b2c9eaacdb368b12b7503fab2fe11f88c49b53" prot="public">
+          <name>AVAHI_ERR_MAX</name>
+          <initializer>= -54</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Error codes used by avahi. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/error.h" line="30" column="1" bodyfile="avahi-common/error.h" bodystart="30" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* avahi_strerror</definition>
+        <argsstring>(int error)</argsstring>
+        <name>avahi_strerror</name>
+        <param>
+          <type>int</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Return a human readable error string for the specified error code. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/error.h" line="103" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Error codes and auxiliary functions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>fooerrorhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fooerrorhfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="31" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eac882ba5c5c93d08e03b122995def91c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eac882ba5c5c93d08e03b122995def91c9" kindref="member">AVAHI_OK</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea7ea8a62a314efe7393c01d8cd7bea6aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea7ea8a62a314efe7393c01d8cd7bea6aa" kindref="member">AVAHI_ERR_FAILURE</ref><sp/>=<sp/>-1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea5f6f5f3cbcae9cadc9c25ca622963cbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea5f6f5f3cbcae9cadc9c25ca622963cbc" kindref="member">AVAHI_ERR_BAD_STATE</ref><sp/>=<sp/>-2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea3ff1e2d39eef04d524a7bbfb71bd7974" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea3ff1e2d39eef04d524a7bbfb71bd7974" kindref="member">AVAHI_ERR_INVALID_HOST_NAME</ref><sp/>=<sp/>-3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ead5804418d7cb71e2b59ab11c4b3ba372" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ead5804418d7cb71e2b59ab11c4b3ba372" kindref="member">AVAHI_ERR_INVALID_DOMAIN_NAME</ref><sp/>=<sp/>-4,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea9fe306236da14c3a637d3912cb2d5615" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea9fe306236da14c3a637d3912cb2d5615" kindref="member">AVAHI_ERR_NO_NETWORK</ref><sp/>=<sp/>-5,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea42497acc76ecd555200f0374ec43368f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea42497acc76ecd555200f0374ec43368f" kindref="member">AVAHI_ERR_INVALID_TTL</ref><sp/>=<sp/>-6,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea72d75300aee4873960107f8d9b7832c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea72d75300aee4873960107f8d9b7832c6" kindref="member">AVAHI_ERR_IS_PATTERN</ref><sp/>=<sp/>-7,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea5162d9b82323f79097bb72ffdab3dda5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea5162d9b82323f79097bb72ffdab3dda5" kindref="member">AVAHI_ERR_COLLISION</ref><sp/>=<sp/>-8,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea8c6b49ae49317ed6bc021428bf914cf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea8c6b49ae49317ed6bc021428bf914cf5" kindref="member">AVAHI_ERR_INVALID_RECORD</ref><sp/>=<sp/>-9,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea020a612b93965a97b67bb829aeb22d03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea020a612b93965a97b67bb829aeb22d03" kindref="member">AVAHI_ERR_INVALID_SERVICE_NAME</ref><sp/>=<sp/>-10,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea24c6e71bfd0e4fa9ca62306593f2dc2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea24c6e71bfd0e4fa9ca62306593f2dc2b" kindref="member">AVAHI_ERR_INVALID_SERVICE_TYPE</ref><sp/>=<sp/>-11,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaf5948525f3bd0dfc46ac66436acbf2e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaf5948525f3bd0dfc46ac66436acbf2e2" kindref="member">AVAHI_ERR_INVALID_PORT</ref><sp/>=<sp/>-12,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea20edd6ab3085b9cd0b1a446ecfcbd961" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea20edd6ab3085b9cd0b1a446ecfcbd961" kindref="member">AVAHI_ERR_INVALID_KEY</ref><sp/>=<sp/>-13,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eac13b96a2f5075c759d935cc01336dabe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eac13b96a2f5075c759d935cc01336dabe" kindref="member">AVAHI_ERR_INVALID_ADDRESS</ref><sp/>=<sp/>-14,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaf90afd67cfc22969312c36af7b6987be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaf90afd67cfc22969312c36af7b6987be" kindref="member">AVAHI_ERR_TIMEOUT</ref><sp/>=<sp/>-15,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eacf3f28ab03e1bcc8fd5a4801368067cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eacf3f28ab03e1bcc8fd5a4801368067cd" kindref="member">AVAHI_ERR_TOO_MANY_CLIENTS</ref><sp/>=<sp/>-16,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea483cb6bd2e62a33cd104015e988bc0df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea483cb6bd2e62a33cd104015e988bc0df" kindref="member">AVAHI_ERR_TOO_MANY_OBJECTS</ref><sp/>=<sp/>-17,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaeafe2e033690f61b5bff815263c96efa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaeafe2e033690f61b5bff815263c96efa" kindref="member">AVAHI_ERR_TOO_MANY_ENTRIES</ref><sp/>=<sp/>-18,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eacd46c51a081958f88c7d2ec211755554" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eacd46c51a081958f88c7d2ec211755554" kindref="member">AVAHI_ERR_OS</ref><sp/>=<sp/>-19,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eadfb132e99927fa8db12db4579cee61ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eadfb132e99927fa8db12db4579cee61ce" kindref="member">AVAHI_ERR_ACCESS_DENIED</ref><sp/>=<sp/>-20,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaa72d0f4838b851624b97ac14c9cdfee8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaa72d0f4838b851624b97ac14c9cdfee8" kindref="member">AVAHI_ERR_INVALID_OPERATION</ref><sp/>=<sp/>-21,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea6debfe7ae2383831a881b103e3a4ffca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea6debfe7ae2383831a881b103e3a4ffca" kindref="member">AVAHI_ERR_DBUS_ERROR</ref><sp/>=<sp/>-22,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea9f3b5148bdcf30516aa4079867bcf0f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea9f3b5148bdcf30516aa4079867bcf0f7" kindref="member">AVAHI_ERR_DISCONNECTED</ref><sp/>=<sp/>-23,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea7ed597c1c4c03fbbd1f287116d3a4f1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea7ed597c1c4c03fbbd1f287116d3a4f1d" kindref="member">AVAHI_ERR_NO_MEMORY</ref><sp/>=<sp/>-24,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea27f56dd39aaed6fda9411a3f50f54ddc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea27f56dd39aaed6fda9411a3f50f54ddc" kindref="member">AVAHI_ERR_INVALID_OBJECT</ref><sp/>=<sp/>-25,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae4c09ab340d7fa5d3b0c5f2b378cdbb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae4c09ab340d7fa5d3b0c5f2b378cdbb4" kindref="member">AVAHI_ERR_NO_DAEMON</ref><sp/>=<sp/>-26,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea5d4e73474bd17ee3105b6026f4d2bed3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea5d4e73474bd17ee3105b6026f4d2bed3" kindref="member">AVAHI_ERR_INVALID_INTERFACE</ref><sp/>=<sp/>-27,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eac985359bb59e00ad8907253c48b9dc75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eac985359bb59e00ad8907253c48b9dc75" kindref="member">AVAHI_ERR_INVALID_PROTOCOL</ref><sp/>=<sp/>-28,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae2896683fc79eac9b46434979c936266" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae2896683fc79eac9b46434979c936266" kindref="member">AVAHI_ERR_INVALID_FLAGS</ref><sp/>=<sp/>-29,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea36bfe4aa91b0da1a9218c146383b1d8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea36bfe4aa91b0da1a9218c146383b1d8b" kindref="member">AVAHI_ERR_NOT_FOUND</ref><sp/>=<sp/>-30,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea6d0a0fdc3b2661d96bf29633a37746fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea6d0a0fdc3b2661d96bf29633a37746fe" kindref="member">AVAHI_ERR_INVALID_CONFIG</ref><sp/>=<sp/>-31,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaf8ff25efc0fd5b17e31253008f20faf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaf8ff25efc0fd5b17e31253008f20faf9" kindref="member">AVAHI_ERR_VERSION_MISMATCH</ref><sp/>=<sp/>-32,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae6de3b81698d6c265866671de756f198" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae6de3b81698d6c265866671de756f198" kindref="member">AVAHI_ERR_INVALID_SERVICE_SUBTYPE</ref><sp/>=<sp/>-33,<sp/></highlight></codeline>
+<codeline lineno="68" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea58141c669e6380cd968a1a02c43a88e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea58141c669e6380cd968a1a02c43a88e7" kindref="member">AVAHI_ERR_INVALID_PACKET</ref><sp/>=<sp/>-34,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eab9ae3c18c258cb913910216ea0df5815" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eab9ae3c18c258cb913910216ea0df5815" kindref="member">AVAHI_ERR_INVALID_DNS_ERROR</ref><sp/>=<sp/>-35,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea8db1a4818301e48873d13a7313d5e560" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea8db1a4818301e48873d13a7313d5e560" kindref="member">AVAHI_ERR_DNS_FORMERR</ref><sp/>=<sp/>-36,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea0e9081ab65d58551eb979c7c98d22494" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea0e9081ab65d58551eb979c7c98d22494" kindref="member">AVAHI_ERR_DNS_SERVFAIL</ref><sp/>=<sp/>-37,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae7461d485ffc80c520cf033c6ecb55ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae7461d485ffc80c520cf033c6ecb55ec" kindref="member">AVAHI_ERR_DNS_NXDOMAIN</ref><sp/>=<sp/>-38,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaf7b2ae63d4023d184bd9c0fb56cd6861" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaf7b2ae63d4023d184bd9c0fb56cd6861" kindref="member">AVAHI_ERR_DNS_NOTIMP</ref><sp/>=<sp/>-39,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea0dfcf4fbc28f778319f40ee1ebccced2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea0dfcf4fbc28f778319f40ee1ebccced2" kindref="member">AVAHI_ERR_DNS_REFUSED</ref><sp/>=<sp/>-40,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaae1f2efa5c4fb5bb1c3250e533165ebf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaae1f2efa5c4fb5bb1c3250e533165ebf" kindref="member">AVAHI_ERR_DNS_YXDOMAIN</ref><sp/>=<sp/>-41,</highlight></codeline>
+<codeline lineno="77" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae80a2be735040fded7da9feda99b8a6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eae80a2be735040fded7da9feda99b8a6a" kindref="member">AVAHI_ERR_DNS_YXRRSET</ref><sp/>=<sp/>-42,</highlight></codeline>
+<codeline lineno="78" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea7047cab9555a570e92a0f75693ed3f9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea7047cab9555a570e92a0f75693ed3f9f" kindref="member">AVAHI_ERR_DNS_NXRRSET</ref><sp/>=<sp/>-43,</highlight></codeline>
+<codeline lineno="79" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea653cbb61390eea3fd6855bcbc92de0a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea653cbb61390eea3fd6855bcbc92de0a1" kindref="member">AVAHI_ERR_DNS_NOTAUTH</ref><sp/>=<sp/>-44,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea091b26445648cd58d9ed7405db55ccdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea091b26445648cd58d9ed7405db55ccdc" kindref="member">AVAHI_ERR_DNS_NOTZONE</ref><sp/>=<sp/>-45,</highlight></codeline>
+<codeline lineno="81" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea0da60df8d3bc5417bedd237b75bb6141" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea0da60df8d3bc5417bedd237b75bb6141" kindref="member">AVAHI_ERR_INVALID_RDATA</ref><sp/>=<sp/>-46,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea53b3471f26208c6da431f4d3934acfbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea53b3471f26208c6da431f4d3934acfbe" kindref="member">AVAHI_ERR_INVALID_DNS_CLASS</ref><sp/>=<sp/>-47,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eafeedd406c8f77898f954ad7644cfec2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eafeedd406c8f77898f954ad7644cfec2c" kindref="member">AVAHI_ERR_INVALID_DNS_TYPE</ref><sp/>=<sp/>-48,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea23c9bfed90004370b092778c890e0a3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea23c9bfed90004370b092778c890e0a3a" kindref="member">AVAHI_ERR_NOT_SUPPORTED</ref><sp/>=<sp/>-49,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea2e817f26664a466432f95eb9551684cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea2e817f26664a466432f95eb9551684cb" kindref="member">AVAHI_ERR_NOT_PERMITTED</ref><sp/>=<sp/>-50,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea47f918702bcac2931a7caf2b57ba9aff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea47f918702bcac2931a7caf2b57ba9aff" kindref="member">AVAHI_ERR_INVALID_ARGUMENT</ref><sp/>=<sp/>-51,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea0aceb1695bd8fe759657e6affac0ebf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea0aceb1695bd8fe759657e6affac0ebf6" kindref="member">AVAHI_ERR_IS_EMPTY</ref><sp/>=<sp/>-52,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea3d8c8ae0bba5d165a28d91ff96f2118f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9ea3d8c8ae0bba5d165a28d91ff96f2118f" kindref="member">AVAHI_ERR_NO_CHANGE</ref><sp/>=<sp/>-53,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/****</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>****<sp/><sp/><sp/><sp/>IF<sp/>YOU<sp/>ADD<sp/>A<sp/>NEW<sp/>ERROR<sp/>CODE<sp/>HERE,<sp/>PLEASE<sp/>DON&apos;T<sp/>FORGET<sp/>TO<sp/>ADD</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>****<sp/><sp/><sp/><sp/>IT<sp/>TO<sp/>THE<sp/>STRING<sp/>ARRAY<sp/>IN<sp/>avahi_strerror()<sp/>IN<sp/>error.c<sp/>AND</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>****<sp/><sp/><sp/><sp/>TO<sp/>THE<sp/>ARRAY<sp/>IN<sp/>dbus.c<sp/>AND<sp/>FINALLY<sp/>TO<sp/>dbus.h!</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>****</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>****<sp/><sp/><sp/><sp/>Also<sp/>remember<sp/>to<sp/>update<sp/>the<sp/>MAX<sp/>value<sp/>below.</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>****/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaacdb368b12b7503fab2fe11f88c49b53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a61dadd085c1777f559549e05962b2c9eaacdb368b12b7503fab2fe11f88c49b53" kindref="member">AVAHI_ERR_MAX</ref><sp/>=<sp/>-54</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="error_8h_1acb801f36563fde5d25b0b2b2cae8dfe0" kindref="member">avahi_strerror</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="avahi-common/error.h"/>
+  </compounddef>
+</doxygen>

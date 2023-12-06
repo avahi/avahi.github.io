@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct___ga_service_browser" kind="struct" language="C++" prot="public">
+    <compoundname>_GaServiceBrowser</compoundname>
+    <includes refid="ga-service-browser_8h" local="no">avahi-gobject/ga-service-browser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_service_browser_1aa838ab35417bcb13de15f117f678b69b" prot="public" static="no" mutable="no">
+        <type>GObject</type>
+        <definition>GObject _GaServiceBrowser::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-service-browser.h" line="39" column="1" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="27">
+        <label>GObject</label>
+      </node>
+      <node id="26">
+        <label>_GaServiceBrowser</label>
+        <link refid="struct___ga_service_browser"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-gobject/ga-service-browser.h" line="38" column="1" bodyfile="avahi-gobject/ga-service-browser.h" bodystart="38" bodyend="40"/>
+    <listofallmembers>
+      <member refid="struct___ga_service_browser_1aa838ab35417bcb13de15f117f678b69b" prot="public" virt="non-virtual"><scope>_GaServiceBrowser</scope><name>parent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

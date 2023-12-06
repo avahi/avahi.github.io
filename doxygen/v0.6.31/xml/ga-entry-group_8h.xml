@@ -1,0 +1,998 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="ga-entry-group_8h" kind="file" language="C++">
+    <compoundname>ga-entry-group.h</compoundname>
+    <includes local="no">glib-object.h</includes>
+    <includes refid="publish_8h" local="no">avahi-client/publish.h</includes>
+    <includes refid="client_8h" local="no">avahi-client/client.h</includes>
+    <includes refid="ga-client_8h" local="yes">ga-client.h</includes>
+    <incdepgraph>
+      <node id="191">
+        <label>stdarg.h</label>
+      </node>
+      <node id="194">
+        <label>avahi-common/watch.h</label>
+        <link refid="watch_8h"/>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+      <node id="195">
+        <label>sys/poll.h</label>
+      </node>
+      <node id="185">
+        <label>avahi-client/publish.h</label>
+        <link refid="publish_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>avahi-gobject/ga-entry-group.h</label>
+        <link refid="ga-entry-group.h"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="198">
+        <label>ga-client.h</label>
+        <link refid="ga-client_8h"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+      </node>
+      <node id="193">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>avahi-common/gccmacro.h</label>
+      </node>
+      <node id="188">
+        <label>avahi-common/address.h</label>
+        <link refid="address_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>sys/types.h</label>
+      </node>
+      <node id="190">
+        <label>avahi-common/strlst.h</label>
+        <link refid="strlst_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>avahi-client/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>sys/time.h</label>
+      </node>
+      <node id="186">
+        <label>inttypes.h</label>
+      </node>
+      <node id="184">
+        <label>glib-object.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct___ga_entry_group_service" prot="public">_GaEntryGroupService</innerclass>
+    <innerclass refid="struct___ga_entry_group_class" prot="public">_GaEntryGroupClass</innerclass>
+    <innerclass refid="struct___ga_entry_group" prot="public">_GaEntryGroup</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ga-entry-group_8h_1a711864b4ed9b61a1c325febec29ec0a5" prot="public" static="no">
+        <name>GA_TYPE_ENTRY_GROUP</name>
+        <initializer>(<ref refid="ga-entry-group_8h_1af6439a9bfe4957a5bf7fd41414d5ce95" kindref="member">ga_entry_group_get_type</ref>())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="65" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-entry-group_8h_1a59d863a18f5a33bd0afb1e46dc01b305" prot="public" static="no">
+        <name>GA_ENTRY_GROUP</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_CHECK_INSTANCE_CAST((obj), <ref refid="ga-entry-group_8h_1a711864b4ed9b61a1c325febec29ec0a5" kindref="member">GA_TYPE_ENTRY_GROUP</ref>, <ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="67" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-entry-group_8h_1aef56718a291e3d831ff020048c3dea69" prot="public" static="no">
+        <name>GA_ENTRY_GROUP_CLASS</name>
+        <param><defname>klass</defname></param>
+        <initializer>(G_TYPE_CHECK_CLASS_CAST((klass), <ref refid="ga-entry-group_8h_1a711864b4ed9b61a1c325febec29ec0a5" kindref="member">GA_TYPE_ENTRY_GROUP</ref>, <ref refid="ga-entry-group_8h_1a4c75f4ccfd580e2936057f06c4e07fea" kindref="member">GaEntryGroupClass</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="69" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-entry-group_8h_1aed5acbed6ec944d76275a249a95d5b94" prot="public" static="no">
+        <name>IS_GA_ENTRY_GROUP</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_CHECK_INSTANCE_TYPE((obj), <ref refid="ga-entry-group_8h_1a711864b4ed9b61a1c325febec29ec0a5" kindref="member">GA_TYPE_ENTRY_GROUP</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="71" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-entry-group_8h_1ac2fa18c60d0349a4f8c29cd6cb0545a0" prot="public" static="no">
+        <name>IS_GA_ENTRY_GROUP_CLASS</name>
+        <param><defname>klass</defname></param>
+        <initializer>(G_TYPE_CHECK_CLASS_TYPE((klass), <ref refid="ga-entry-group_8h_1a711864b4ed9b61a1c325febec29ec0a5" kindref="member">GA_TYPE_ENTRY_GROUP</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="73" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ga-entry-group_8h_1a8f1c98baf309f172df794f898a7ef2ef" prot="public" static="no">
+        <name>GA_ENTRY_GROUP_GET_CLASS</name>
+        <param><defname>obj</defname></param>
+        <initializer>(G_TYPE_INSTANCE_GET_CLASS ((obj), <ref refid="ga-entry-group_8h_1a711864b4ed9b61a1c325febec29ec0a5" kindref="member">GA_TYPE_ENTRY_GROUP</ref>, <ref refid="ga-entry-group_8h_1a4c75f4ccfd580e2936057f06c4e07fea" kindref="member">GaEntryGroupClass</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="75" column="9" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302" prot="public" static="no">
+        <name>GaEntryGroupState</name>
+        <enumvalue id="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a23bbcb3477ae902cf165f6f0c5aa5a0f" prot="public">
+          <name>GA_ENTRY_GROUP_STATE_UNCOMMITED</name>
+          <initializer>= AVAHI_ENTRY_GROUP_UNCOMMITED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a00a287590e87913374971812696abc0c" prot="public">
+          <name>GA_ENTRY_GROUP_STATE_REGISTERING</name>
+          <initializer>= AVAHI_ENTRY_GROUP_REGISTERING</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a1fc8a37d455e685bf35a7f69d9810fe5" prot="public">
+          <name>GA_ENTRY_GROUP_STATE_ESTABLISHED</name>
+          <initializer>= AVAHI_ENTRY_GROUP_ESTABLISHED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a40334b1f007e8db8c996c86698735c05" prot="public">
+          <name>GA_ENTRY_GROUP_STATE_COLLISTION</name>
+          <initializer>= AVAHI_ENTRY_GROUP_COLLISION</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a23e05dd750e9fa0a48152b751ed837c2" prot="public">
+          <name>GA_ENTRY_GROUP_STATE_FAILURE</name>
+          <initializer>= AVAHI_ENTRY_GROUP_FAILURE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="31" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="31" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" prot="public" static="no">
+        <type>struct <ref refid="struct___ga_entry_group_service" kindref="compound">_GaEntryGroupService</ref></type>
+        <definition>typedef struct _GaEntryGroupService GaEntryGroupService</definition>
+        <argsstring></argsstring>
+        <name>GaEntryGroupService</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="29" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" prot="public" static="no">
+        <type>struct <ref refid="struct___ga_entry_group" kindref="compound">_GaEntryGroup</ref></type>
+        <definition>typedef struct _GaEntryGroup GaEntryGroup</definition>
+        <argsstring></argsstring>
+        <name>GaEntryGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="29" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ga-entry-group_8h_1a4c75f4ccfd580e2936057f06c4e07fea" prot="public" static="no">
+        <type>struct <ref refid="struct___ga_entry_group_class" kindref="compound">_GaEntryGroupClass</ref></type>
+        <definition>typedef struct _GaEntryGroupClass GaEntryGroupClass</definition>
+        <argsstring></argsstring>
+        <name>GaEntryGroupClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="29" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ga-entry-group_8h_1af6439a9bfe4957a5bf7fd41414d5ce95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GType</type>
+        <definition>GType ga_entry_group_get_type</definition>
+        <argsstring>(void)</argsstring>
+        <name>ga_entry_group_get_type</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1ac8a3d5036805cc5c89742a81bca0ed31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+        <definition>GaEntryGroup* ga_entry_group_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>ga_entry_group_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1a442b15d6befc1e0c688797665aa65ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_attach</definition>
+        <argsstring>(GaEntryGroup *group, GaClient *client, GError **error)</argsstring>
+        <name>ga_entry_group_attach</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="ga-client_8h_1ae8e7c30061823c30d100c12592dd7eb6" kindref="member">GaClient</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1aac7fa90a9cfc1c3a6533d336c20483cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+        <definition>GaEntryGroupService* ga_entry_group_add_service_strlist</definition>
+        <argsstring>(GaEntryGroup *group, const gchar *name, const gchar *type, guint16 port, GError **error, AvahiStringList *txt)</argsstring>
+        <name>ga_entry_group_add_service_strlist</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>txt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1ac32d807922b680e6fc49958a39aabbe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+        <definition>GaEntryGroupService* ga_entry_group_add_service_full_strlist</definition>
+        <argsstring>(GaEntryGroup *group, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const gchar *name, const gchar *type, const gchar *domain, const gchar *host, guint16 port, GError **error, AvahiStringList *txt)</argsstring>
+        <name>ga_entry_group_add_service_full_strlist</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref> *</type>
+          <declname>txt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1ae5c1f3dd65d381896c9b6177abe3aaf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+        <definition>GaEntryGroupService* ga_entry_group_add_service</definition>
+        <argsstring>(GaEntryGroup *group, const gchar *name, const gchar *type, guint16 port, GError **error,...)</argsstring>
+        <name>ga_entry_group_add_service</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1ade823b26c3f92c8e010f74b1b5dc8067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+        <definition>GaEntryGroupService* ga_entry_group_add_service_full</definition>
+        <argsstring>(GaEntryGroup *group, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const gchar *name, const gchar *type, const gchar *domain, const gchar *host, guint16 port, GError **error,...)</argsstring>
+        <name>ga_entry_group_add_service_full</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1a0811b8b9d3be1f6cdb47e6bd17734a7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_add_record</definition>
+        <argsstring>(GaEntryGroup *group, AvahiPublishFlags flags, const gchar *name, guint16 type, guint32 ttl, const void *rdata, gsize size, GError **error)</argsstring>
+        <name>ga_entry_group_add_record</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>guint32</type>
+          <declname>ttl</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>rdata</declname>
+        </param>
+        <param>
+          <type>gsize</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1a758a789239af2665b038a472faf74ce2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_add_record_full</definition>
+        <argsstring>(GaEntryGroup *group, AvahiIfIndex interface, AvahiProtocol protocol, AvahiPublishFlags flags, const gchar *name, guint16 clazz, guint16 type, guint32 ttl, const void *rdata, gsize size, GError **error)</argsstring>
+        <name>ga_entry_group_add_record_full</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>clazz</declname>
+        </param>
+        <param>
+          <type>guint16</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>guint32</type>
+          <declname>ttl</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>rdata</declname>
+        </param>
+        <param>
+          <type>gsize</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1a96fd5c3a64d9fbb2a8fc860443797c1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ga_entry_group_service_freeze</definition>
+        <argsstring>(GaEntryGroupService *service)</argsstring>
+        <name>ga_entry_group_service_freeze</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+          <declname>service</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1a45506d6625bf0b3811e08cd76d9b48e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_service_set</definition>
+        <argsstring>(GaEntryGroupService *service, const gchar *key, const gchar *value, GError **error)</argsstring>
+        <name>ga_entry_group_service_set</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+          <declname>service</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1a83f1ed9be89794bf1657b4a5ed342a76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_service_set_arbitrary</definition>
+        <argsstring>(GaEntryGroupService *service, const gchar *key, const guint8 *value, gsize size, GError **error)</argsstring>
+        <name>ga_entry_group_service_set_arbitrary</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+          <declname>service</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const guint8 *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>gsize</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="156" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1aaae530e2e0d5e08eca77c6693d17c4dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_service_remove_key</definition>
+        <argsstring>(GaEntryGroupService *service, const gchar *key, GError **error)</argsstring>
+        <name>ga_entry_group_service_remove_key</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+          <declname>service</declname>
+        </param>
+        <param>
+          <type>const gchar *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1a9a006600ca3e7ff8844ded9f880b7abb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_service_thaw</definition>
+        <argsstring>(GaEntryGroupService *service, GError **error)</argsstring>
+        <name>ga_entry_group_service_thaw</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" kindref="member">GaEntryGroupService</ref> *</type>
+          <declname>service</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1ada7417150403088073adf9b943b01819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_commit</definition>
+        <argsstring>(GaEntryGroup *group, GError **error)</argsstring>
+        <name>ga_entry_group_commit</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ga-entry-group_8h_1a4c66b603f0fd0d6dd336247580a5ffa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ga_entry_group_reset</definition>
+        <argsstring>(GaEntryGroup *group, GError **error)</argsstring>
+        <name>ga_entry_group_reset</name>
+        <param>
+          <type><ref refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" kindref="member">GaEntryGroup</ref> *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>GError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="171" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>ga-entry-group.h<sp/>-<sp/>Header<sp/>for<sp/>GaEntryGroup</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2006-2007<sp/>Collabora<sp/>Ltd.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>St,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__GA_ENTRY_GROUP_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__GA_ENTRY_GROUP_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glib-object.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="publish_8h" kindref="compound">avahi-client/publish.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="client_8h" kindref="compound">avahi-client/client.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ga-client_8h" kindref="compound">ga-client.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">G_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a23bbcb3477ae902cf165f6f0c5aa5a0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a23bbcb3477ae902cf165f6f0c5aa5a0f" kindref="member">GA_ENTRY_GROUP_STATE_UNCOMMITED</ref><sp/>=<sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a6afdc2228658792da73171e5b26dc328" kindref="member">AVAHI_ENTRY_GROUP_UNCOMMITED</ref>,</highlight></codeline>
+<codeline lineno="33" refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a00a287590e87913374971812696abc0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a00a287590e87913374971812696abc0c" kindref="member">GA_ENTRY_GROUP_STATE_REGISTERING</ref><sp/>=<sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a5627957ceaf2fdd51e1f2585aa871213" kindref="member">AVAHI_ENTRY_GROUP_REGISTERING</ref>,</highlight></codeline>
+<codeline lineno="34" refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a1fc8a37d455e685bf35a7f69d9810fe5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a1fc8a37d455e685bf35a7f69d9810fe5" kindref="member">GA_ENTRY_GROUP_STATE_ESTABLISHED</ref><sp/>=<sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217acdb3fe1295e58561c666cbf7ee6adf5a" kindref="member">AVAHI_ENTRY_GROUP_ESTABLISHED</ref>,</highlight></codeline>
+<codeline lineno="35" refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a40334b1f007e8db8c996c86698735c05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a40334b1f007e8db8c996c86698735c05" kindref="member">GA_ENTRY_GROUP_STATE_COLLISTION</ref><sp/>=<sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a8f163dbd719eb71f404f89415d8c9f3e" kindref="member">AVAHI_ENTRY_GROUP_COLLISION</ref>,</highlight></codeline>
+<codeline lineno="36" refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a23e05dd750e9fa0a48152b751ed837c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302a23e05dd750e9fa0a48152b751ed837c2" kindref="member">GA_ENTRY_GROUP_STATE_FAILURE</ref><sp/>=<sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a83adf26c6d556c2f4ce32cce3a62030e" kindref="member">AVAHI_ENTRY_GROUP_FAILURE</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/><ref refid="ga-entry-group_8h_1afe69a46248be7b76db981449e7ae0302" kindref="member">GaEntryGroupState</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="ga-entry-group_8h_1a0e07a70ea5c666d1807ce2cf38c3a1c6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_entry_group_service" kindref="compound">_GaEntryGroupService</ref><sp/><ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref>;</highlight></codeline>
+<codeline lineno="40" refid="ga-entry-group_8h_1ac8ac617d1ae046cc8ab3a7929f5a6f38" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_entry_group" kindref="compound">_GaEntryGroup</ref><sp/><ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref>;</highlight></codeline>
+<codeline lineno="41" refid="ga-entry-group_8h_1a4c75f4ccfd580e2936057f06c4e07fea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_entry_group_class" kindref="compound">_GaEntryGroupClass</ref><sp/><ref refid="struct___ga_entry_group_class" kindref="compound">GaEntryGroupClass</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="struct___ga_entry_group_service" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_entry_group_service" kindref="compound">_GaEntryGroupService</ref><sp/>{</highlight></codeline>
+<codeline lineno="44" refid="struct___ga_entry_group_service_1a7e9b70d1258bb05ea60972289db1b28f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/><ref refid="struct___ga_entry_group_service_1a7e9b70d1258bb05ea60972289db1b28f" kindref="member">interface</ref>;</highlight></codeline>
+<codeline lineno="45" refid="struct___ga_entry_group_service_1aa16af647eee3a37923c1c2c347aabc4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/><ref refid="struct___ga_entry_group_service_1aa16af647eee3a37923c1c2c347aabc4b" kindref="member">protocol</ref>;</highlight></codeline>
+<codeline lineno="46" refid="struct___ga_entry_group_service_1a4b18fd02b904c6a11f3231e95bfd0635" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/><ref refid="struct___ga_entry_group_service_1a4b18fd02b904c6a11f3231e95bfd0635" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="47" refid="struct___ga_entry_group_service_1a6d04f6ae887737af52aec160e3064ade" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gchar<sp/>*<ref refid="struct___ga_entry_group_service_1a6d04f6ae887737af52aec160e3064ade" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="48" refid="struct___ga_entry_group_service_1adaf1c4b6463e6fc8a4fc5f71c4bf525d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gchar<sp/>*<ref refid="struct___ga_entry_group_service_1adaf1c4b6463e6fc8a4fc5f71c4bf525d" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="49" refid="struct___ga_entry_group_service_1a5fc0c99d03957139e4b380a796e58844" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gchar<sp/>*<ref refid="struct___ga_entry_group_service_1a5fc0c99d03957139e4b380a796e58844" kindref="member">domain</ref>;</highlight></codeline>
+<codeline lineno="50" refid="struct___ga_entry_group_service_1a2229bceeff26f7aa496b6dba8b074469" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gchar<sp/>*<ref refid="struct___ga_entry_group_service_1a2229bceeff26f7aa496b6dba8b074469" kindref="member">host</ref>;</highlight></codeline>
+<codeline lineno="51" refid="struct___ga_entry_group_service_1a61a12fd48cc39e6f73834156c3651b7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>guint16<sp/><ref refid="struct___ga_entry_group_service_1a61a12fd48cc39e6f73834156c3651b7f" kindref="member">port</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="struct___ga_entry_group_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_entry_group_class" kindref="compound">_GaEntryGroupClass</ref><sp/>{</highlight></codeline>
+<codeline lineno="55" refid="struct___ga_entry_group_class_1af76d0998147e4a747362d08e3ac1372d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GObjectClass<sp/><ref refid="struct___ga_entry_group_class_1af76d0998147e4a747362d08e3ac1372d" kindref="member">parent_class</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="struct___ga_entry_group" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___ga_entry_group" kindref="compound">_GaEntryGroup</ref><sp/>{</highlight></codeline>
+<codeline lineno="59" refid="struct___ga_entry_group_1ac67e04b79534b39030ea2bd5e400db0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GObject<sp/><ref refid="struct___ga_entry_group_1ac67e04b79534b39030ea2bd5e400db0a" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">GType<sp/><ref refid="ga-entry-group_8h_1af6439a9bfe4957a5bf7fd41414d5ce95" kindref="member">ga_entry_group_get_type</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TYPE<sp/>MACROS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="ga-entry-group_8h_1a711864b4ed9b61a1c325febec29ec0a5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_TYPE_ENTRY_GROUP<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/>(ga_entry_group_get_type())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="ga-entry-group_8h_1a59d863a18f5a33bd0afb1e46dc01b305" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_ENTRY_GROUP(obj)<sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_INSTANCE_CAST((obj),<sp/>GA_TYPE_ENTRY_GROUP,<sp/>GaEntryGroup))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="ga-entry-group_8h_1aef56718a291e3d831ff020048c3dea69" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_ENTRY_GROUP_CLASS(klass)<sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_CLASS_CAST((klass),<sp/>GA_TYPE_ENTRY_GROUP,<sp/>GaEntryGroupClass))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="ga-entry-group_8h_1aed5acbed6ec944d76275a249a95d5b94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GA_ENTRY_GROUP(obj)<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_INSTANCE_TYPE((obj),<sp/>GA_TYPE_ENTRY_GROUP))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="ga-entry-group_8h_1ac2fa18c60d0349a4f8c29cd6cb0545a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GA_ENTRY_GROUP_CLASS(klass)<sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_CHECK_CLASS_TYPE((klass),<sp/>GA_TYPE_ENTRY_GROUP))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="ga-entry-group_8h_1a8f1c98baf309f172df794f898a7ef2ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GA_ENTRY_GROUP_GET_CLASS(obj)<sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/>(G_TYPE_INSTANCE_GET_CLASS<sp/>((obj),<sp/>GA_TYPE_ENTRY_GROUP,<sp/>GaEntryGroupClass))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<ref refid="ga-entry-group_8h_1ac8a3d5036805cc5c89742a81bca0ed31" kindref="member">ga_entry_group_new</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1a442b15d6befc1e0c688797665aa65ca9" kindref="member">ga_entry_group_attach</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<sp/>group,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct___ga_client" kindref="compound">GaClient</ref><sp/>*<sp/>client,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<ref refid="ga-entry-group_8h_1aac7fa90a9cfc1c3a6533d336c20483cc" kindref="member">ga_entry_group_add_service_strlist</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<sp/>group,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>name,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>type,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>port,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GError<sp/>**<sp/>error,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txt);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<ref refid="ga-entry-group_8h_1ac32d807922b680e6fc49958a39aabbe7" kindref="member">ga_entry_group_add_service_full_strlist</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>group,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interface,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>domain,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>host,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>port,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GError<sp/>**<sp/>error,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_avahi_string_list" kindref="compound">AvahiStringList</ref><sp/>*</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txt);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<ref refid="ga-entry-group_8h_1ae5c1f3dd65d381896c9b6177abe3aaf3" kindref="member">ga_entry_group_add_service</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<sp/>group,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>name,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>type,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>port,<sp/>GError<sp/>**<sp/>error,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<ref refid="ga-entry-group_8h_1ade823b26c3f92c8e010f74b1b5dc8067" kindref="member">ga_entry_group_add_service_full</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<sp/>group,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>name,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>type,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>domain,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>host,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>port,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GError<sp/>**<sp/>error,<sp/>...);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Add<sp/>raw<sp/>record<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1a0811b8b9d3be1f6cdb47e6bd17734a7e" kindref="member">ga_entry_group_add_record</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<sp/>group,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>name,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>type,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint32<sp/>ttl,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*rdata,<sp/>gsize<sp/>size,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1a758a789239af2665b038a472faf74ce2" kindref="member">ga_entry_group_add_record_full</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<sp/>group,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1a2fda397a8f430cb537e37bbca0afb535" kindref="member">AvahiIfIndex</ref><sp/>interface,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="address_8h_1a5342ada86ff1566a7fc6e855b3d46c3d" kindref="member">AvahiProtocol</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref><sp/>flags,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>name,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>clazz,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint16<sp/>type,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>guint32<sp/>ttl,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*rdata,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gsize<sp/>size,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ga-entry-group_8h_1a96fd5c3a64d9fbb2a8fc860443797c1c" kindref="member">ga_entry_group_service_freeze</ref>(<ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<sp/>service);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Set<sp/>a<sp/>key<sp/>in<sp/>the<sp/>service<sp/>record.<sp/>If<sp/>the<sp/>service<sp/>isn&apos;t<sp/>frozen<sp/>it&apos;s<sp/>committed</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/>*<sp/>immediately<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1a45506d6625bf0b3811e08cd76d9b48e4" kindref="member">ga_entry_group_service_set</ref>(<ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<sp/>service,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>value,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1a83f1ed9be89794bf1657b4a5ed342a76" kindref="member">ga_entry_group_service_set_arbitrary</ref>(<ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<sp/>service,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>guint8<sp/>*<sp/>value,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gsize<sp/>size,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Remove<sp/>one<sp/>key<sp/>from<sp/>the<sp/>service<sp/>record<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1aaae530e2e0d5e08eca77c6693d17c4dd" kindref="member">ga_entry_group_service_remove_key</ref>(<ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<sp/>service,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gchar<sp/>*<sp/>key,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Update<sp/>the<sp/>txt<sp/>record<sp/>of<sp/>the<sp/>frozen<sp/>service<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1a9a006600ca3e7ff8844ded9f880b7abb" kindref="member">ga_entry_group_service_thaw</ref>(<ref refid="struct___ga_entry_group_service" kindref="compound">GaEntryGroupService</ref><sp/>*<sp/>service,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Commit<sp/>all<sp/>newly<sp/>added<sp/>services<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1ada7417150403088073adf9b943b01819" kindref="member">ga_entry_group_commit</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<sp/>group,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Invalidated<sp/>all<sp/>GaEntryGroupServices<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">gboolean<sp/><ref refid="ga-entry-group_8h_1a4c66b603f0fd0d6dd336247580a5ffa2" kindref="member">ga_entry_group_reset</ref>(<ref refid="struct___ga_entry_group" kindref="compound">GaEntryGroup</ref><sp/>*<sp/>group,<sp/>GError<sp/>**<sp/>error);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">G_END_DECLS</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>#ifndef<sp/>__GA_ENTRY_GROUP_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h"/>
+  </compounddef>
+</doxygen>

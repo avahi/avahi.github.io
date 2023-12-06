@@ -1,0 +1,732 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="defs_8h" kind="file" language="C++">
+    <compoundname>defs.h</compoundname>
+    <includes local="no">avahi-common/cdecl.h</includes>
+    <includedby refid="client_8h" local="no">avahi-client/client.h</includedby>
+    <includedby refid="publish_8h" local="no">avahi-client/publish.h</includedby>
+    <includedby refid="ga-enums_8h" local="no">avahi-gobject/ga-enums.h</includedby>
+    <includedby refid="lookup_8h" local="no">avahi-client/lookup.h</includedby>
+    <includedby refid="ga-record-browser_8h" local="no">avahi-gobject/ga-record-browser.h</includedby>
+    <includedby refid="ga-service-browser_8h" local="no">avahi-gobject/ga-service-browser.h</includedby>
+    <incdepgraph>
+      <node id="71">
+        <label>avahi-common/cdecl.h</label>
+      </node>
+      <node id="70">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="79">
+        <label>avahi-client/publish.h</label>
+        <link refid="publish_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>avahi-gobject/ga-service-browser.h</label>
+        <link refid="ga-service-browser_8h"/>
+      </node>
+      <node id="74">
+        <label>avahi-gobject/ga-client.h</label>
+        <link refid="ga-client_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>avahi-client/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>avahi-client/lookup.h</label>
+        <link refid="lookup_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>avahi-gobject/ga-enums.h</label>
+        <link refid="ga-enums_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>avahi-gobject/ga-entry-group.h</label>
+        <link refid="ga-entry-group_8h"/>
+      </node>
+      <node id="72">
+        <label>avahi-common/defs.h</label>
+        <link refid="defs_8h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>avahi-gobject/ga-service-resolver.h</label>
+        <link refid="ga-service-resolver_8h"/>
+      </node>
+      <node id="76">
+        <label>avahi-gobject/ga-record-browser.h</label>
+        <link refid="ga-record-browser_8h"/>
+      </node>
+      <node id="81">
+        <label>avahi-ui/avahi-ui.h</label>
+        <link refid="avahi-ui_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>States</header>
+      <memberdef kind="enum" id="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57" prot="public" static="no">
+        <name>AvahiServerState</name>
+        <enumvalue id="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a41651921ddf5f2d7a90025615a9d53e7" prot="public">
+          <name>AVAHI_SERVER_INVALID</name>
+          <briefdescription>
+<para>Invalid state (initial) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57ad6c0928968fb856a43f6747b21bc9179" prot="public">
+          <name>AVAHI_SERVER_REGISTERING</name>
+          <briefdescription>
+<para>Host RRs are being registered. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a60c5c15bc7be098b65559eb9e487986a" prot="public">
+          <name>AVAHI_SERVER_RUNNING</name>
+          <briefdescription>
+<para>All host RRs have been established. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57ac4d56d9165da547a608286c736af9a8f" prot="public">
+          <name>AVAHI_SERVER_COLLISION</name>
+          <briefdescription>
+<para>There is a collision with a host RR. </para>          </briefdescription>
+          <detaileddescription>
+<para>All host RRs have been withdrawn, the user should set a new host name via avahi_server_set_host_name() </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a989b7d6ca246c216564bf9d3c2fa6d63" prot="public">
+          <name>AVAHI_SERVER_FAILURE</name>
+          <briefdescription>
+<para>Some fatal failure happened, the server is unable to proceed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>States of a server object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="221" column="1" bodyfile="avahi-common/defs.h" bodystart="221" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="enum" id="defs_8h_1a141829383c5b97e9c0fa75ca0e590217" prot="public" static="no">
+        <name>AvahiEntryGroupState</name>
+        <enumvalue id="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a6afdc2228658792da73171e5b26dc328" prot="public">
+          <name>AVAHI_ENTRY_GROUP_UNCOMMITED</name>
+          <briefdescription>
+<para>The group has not yet been commited, the user must still call <ref refid="publish_8h_1a2375338d23af4281399404758840a2de" kindref="member">avahi_entry_group_commit()</ref> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a5627957ceaf2fdd51e1f2585aa871213" prot="public">
+          <name>AVAHI_ENTRY_GROUP_REGISTERING</name>
+          <briefdescription>
+<para>The entries of the group are currently being registered. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a141829383c5b97e9c0fa75ca0e590217acdb3fe1295e58561c666cbf7ee6adf5a" prot="public">
+          <name>AVAHI_ENTRY_GROUP_ESTABLISHED</name>
+          <briefdescription>
+<para>The entries have successfully been established. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a8f163dbd719eb71f404f89415d8c9f3e" prot="public">
+          <name>AVAHI_ENTRY_GROUP_COLLISION</name>
+          <briefdescription>
+<para>A name collision for one of the entries in the group has been detected, the entries have been withdrawn. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a83adf26c6d556c2f4ce32cce3a62030e" prot="public">
+          <name>AVAHI_ENTRY_GROUP_FAILURE</name>
+          <briefdescription>
+<para>Some kind of failure happened, the entries have been withdrawn. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>States of an entry group object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="230" column="1" bodyfile="avahi-common/defs.h" bodystart="230" bodyend="236"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Flags</header>
+      <memberdef kind="enum" id="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" prot="public" static="no">
+        <name>AvahiPublishFlags</name>
+        <enumvalue id="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3aa903cfcd5cb48d49ecac8a49eafd0a53" prot="public">
+          <name>AVAHI_PUBLISH_UNIQUE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>For raw records: The RRset is intended to be unique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3a1d88f624cdd5e9db53816719d1a28164" prot="public">
+          <name>AVAHI_PUBLISH_NO_PROBE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>For raw records: Though the RRset is intended to be unique no probes shall be sent. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3adf1987c5e657d4da84ecaffaf184007b" prot="public">
+          <name>AVAHI_PUBLISH_NO_ANNOUNCE</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>For raw records: Do not announce this RR to other hosts. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3ae1cc131541b9bcb8bfe049fde7aeb2aa" prot="public">
+          <name>AVAHI_PUBLISH_ALLOW_MULTIPLE</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>For raw records: Allow multiple local records of this type, even if they are intended to be unique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3a26ca9e7b2848c5cb34547c3fa0dd3aac" prot="public">
+          <name>AVAHI_PUBLISH_UPDATE</name>
+          <initializer>= 64</initializer>
+          <briefdescription>
+<para>Update existing records instead of adding new ones. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Some flags for publishing functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="243" column="1" bodyfile="avahi-common/defs.h" bodystart="243" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="enum" id="defs_8h_1afa669747c3ff55190d86673dff960e50" prot="public" static="no">
+        <name>AvahiLookupFlags</name>
+        <enumvalue id="defs_8h_1afa669747c3ff55190d86673dff960e50a6424641f01e829bd62854df0ca2354b1" prot="public">
+          <name>AVAHI_LOOKUP_NO_TXT</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>When doing service resolving, don&apos;t lookup TXT record. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1afa669747c3ff55190d86673dff960e50a1e6cab5169236e3d23581fad5e337d04" prot="public">
+          <name>AVAHI_LOOKUP_NO_ADDRESS</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>When doing service resolving, don&apos;t lookup A/AAAA record. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Some flags for lookup functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="260" column="1" bodyfile="avahi-common/defs.h" bodystart="260" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="enum" id="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7" prot="public" static="no">
+        <name>AvahiLookupResultFlags</name>
+        <enumvalue id="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a901cb53511bc147c0b5373a93b623b54" prot="public">
+          <name>AVAHI_LOOKUP_RESULT_CACHED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>This response originates from the cache. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7aa1617f6736538c40bb14b3d54336e66c" prot="public">
+          <name>AVAHI_LOOKUP_RESULT_WIDE_AREA</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>This response originates from wide area DNS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7ac34ea399ed04f8650fad8a5e098cfa29" prot="public">
+          <name>AVAHI_LOOKUP_RESULT_MULTICAST</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>This response originates from multicast DNS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7abbf16c5d7a3790451bd1a9d835702d5d" prot="public">
+          <name>AVAHI_LOOKUP_RESULT_LOCAL</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>This record/service resides on and was announced by the local host. </para>          </briefdescription>
+          <detaileddescription>
+<para>Only available in service and record browsers and only on AVAHI_BROWSER_NEW. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a25d1fbc291fd65bcc1d12a5b51ebd6c9" prot="public">
+          <name>AVAHI_LOOKUP_RESULT_OUR_OWN</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para>This service belongs to the same local client as the browser object. </para>          </briefdescription>
+          <detaileddescription>
+<para>Only available in avahi-client, and only for service browsers and only on AVAHI_BROWSER_NEW. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7af14e302768822589ce3ee73667c942f1" prot="public">
+          <name>AVAHI_LOOKUP_RESULT_STATIC</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+<para>The returned data has been defined statically by some configuration option. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Some flags for lookup callback functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="270" column="1" bodyfile="avahi-common/defs.h" bodystart="270" bodyend="277"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Events</header>
+      <memberdef kind="enum" id="defs_8h_1af7ff3b95259b3441a282b87d82eebd87" prot="public" static="no">
+        <name>AvahiBrowserEvent</name>
+        <enumvalue id="defs_8h_1af7ff3b95259b3441a282b87d82eebd87adb84c76ca1876beeb4f1ac718633667c" prot="public">
+          <name>AVAHI_BROWSER_NEW</name>
+          <briefdescription>
+<para>The object is new on the network. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1af7ff3b95259b3441a282b87d82eebd87ab3adb8824483c87b557a885ee280814c" prot="public">
+          <name>AVAHI_BROWSER_REMOVE</name>
+          <briefdescription>
+<para>The object has been removed from the network. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a796b2e4c7e82580fb93fd29151aa5752" prot="public">
+          <name>AVAHI_BROWSER_CACHE_EXHAUSTED</name>
+          <briefdescription>
+<para>One-time event, to notify the user that all entries from the caches have been sent. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a430e1134047305e7b892e784cf72f815" prot="public">
+          <name>AVAHI_BROWSER_ALL_FOR_NOW</name>
+          <briefdescription>
+<para>One-time event, to notify the user that more records will probably not show up in the near future, i.e. </para>          </briefdescription>
+          <detaileddescription>
+<para>all cache entries have been read and all static servers been queried </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a84a4230c3a9f25afde40f65d21909675" prot="public">
+          <name>AVAHI_BROWSER_FAILURE</name>
+          <briefdescription>
+<para>Browsing failed due to some reason which can be retrieved using avahi_server_errno()/avahi_client_errno() </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of callback event when browsing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="284" column="1" bodyfile="avahi-common/defs.h" bodystart="284" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="enum" id="defs_8h_1ae524657615ba2ec3b17613098a3394cf" prot="public" static="no">
+        <name>AvahiResolverEvent</name>
+        <enumvalue id="defs_8h_1ae524657615ba2ec3b17613098a3394cfaa27397e0a76171dd9afe7cf2fe9b1f22" prot="public">
+          <name>AVAHI_RESOLVER_FOUND</name>
+          <briefdescription>
+<para>RR found, resolving successful. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1ae524657615ba2ec3b17613098a3394cfa407f93fe14b008cc1a7ff00eef454528" prot="public">
+          <name>AVAHI_RESOLVER_FAILURE</name>
+          <briefdescription>
+<para>Resolving failed due to some reason which can be retrieved using avahi_server_errno()/avahi_client_errno() </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of callback event when resolving. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="293" column="1" bodyfile="avahi-common/defs.h" bodystart="293" bodyend="296"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Other definitions</header>
+      <memberdef kind="enum" id="defs_8h_1a6d263451184e4975cf3e4951d826dc8c" prot="public" static="no">
+        <name>AvahiDomainBrowserType</name>
+        <enumvalue id="defs_8h_1a6d263451184e4975cf3e4951d826dc8cad155e1c71dac65c146730d62799e0b82" prot="public">
+          <name>AVAHI_DOMAIN_BROWSER_BROWSE</name>
+          <briefdescription>
+<para>Browse for a list of available browsing domains. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca032ec70e5e4a27a030f586e04a93823f" prot="public">
+          <name>AVAHI_DOMAIN_BROWSER_BROWSE_DEFAULT</name>
+          <briefdescription>
+<para>Browse for the default browsing domain. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca12b82dfcdb9f60dedf30d646b2f649a8" prot="public">
+          <name>AVAHI_DOMAIN_BROWSER_REGISTER</name>
+          <briefdescription>
+<para>Browse for a list of available registering domains. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca13330ac2ff5437bc7e1c8a6afb6797c7" prot="public">
+          <name>AVAHI_DOMAIN_BROWSER_REGISTER_DEFAULT</name>
+          <briefdescription>
+<para>Browse for the default registering domain. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca4b3e38c4dbe40becddcec7df996ef401" prot="public">
+          <name>AVAHI_DOMAIN_BROWSER_BROWSE_LEGACY</name>
+          <briefdescription>
+<para>Legacy browse domain - see DNS-SD spec for more information. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1a6d263451184e4975cf3e4951d826dc8caa4a98e19be60941bcf9c1e465bc5d2f3" prot="public">
+          <name>AVAHI_DOMAIN_BROWSER_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The type of domain to browse for. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="303" column="1" bodyfile="avahi-common/defs.h" bodystart="303" bodyend="310"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DNS RR definitions</header>
+      <description><para>fulldocs </para></description>
+      <memberdef kind="enum" id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04" prot="public" static="no">
+        <name>@3</name>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04adf28e553d9cbc227a9273e55c8198ea3" prot="public">
+          <name>AVAHI_DNS_TYPE_A</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a1fbbbefc9b3a3407fb19f3dba8857df0" prot="public">
+          <name>AVAHI_DNS_TYPE_NS</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a084143b14e97dc12f8792c70b88ed8a1" prot="public">
+          <name>AVAHI_DNS_TYPE_CNAME</name>
+          <initializer>= 0x05</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04afd42fc4b4da4f0488738c98c2a5f6093" prot="public">
+          <name>AVAHI_DNS_TYPE_SOA</name>
+          <initializer>= 0x06</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a366c09a0fe7bfac5ed70322247e4519d" prot="public">
+          <name>AVAHI_DNS_TYPE_PTR</name>
+          <initializer>= 0x0C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a9a936fd4e30f9cb124b02fae82bded46" prot="public">
+          <name>AVAHI_DNS_TYPE_HINFO</name>
+          <initializer>= 0x0D</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a227e32b40e782606a274cb7b29c3c763" prot="public">
+          <name>AVAHI_DNS_TYPE_MX</name>
+          <initializer>= 0x0F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04afd10032391d2c1dc8e531bb9ea321f93" prot="public">
+          <name>AVAHI_DNS_TYPE_TXT</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a3d0ec2ed8bb921f35cb209fc20354218" prot="public">
+          <name>AVAHI_DNS_TYPE_AAAA</name>
+          <initializer>= 0x1C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a9b98147cfa786ea536568ccb3b27df81" prot="public">
+          <name>AVAHI_DNS_TYPE_SRV</name>
+          <initializer>= 0x21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>DNS record types, see RFC 1035. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="328" column="1" bodyfile="avahi-common/defs.h" bodystart="328" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="enum" id="defs_8h_1adc29c2ff13d900c2f185ee95427fb06c" prot="public" static="no">
+        <name>@4</name>
+        <enumvalue id="defs_8h_1adc29c2ff13d900c2f185ee95427fb06cad70a95f8cbbed6aae2aaebd9443b8b9a" prot="public">
+          <name>AVAHI_DNS_CLASS_IN</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+<para>Probably the only class we will ever use. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>DNS record classes, see RFC 1035. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="342" column="1" bodyfile="avahi-common/defs.h" bodystart="342" bodyend="344"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="defs_8h_1a1f6448907add022b34cdc8d23982c898" prot="public" static="no">
+        <name>AVAHI_DEFAULT_TTL_HOST_NAME</name>
+        <initializer>(120)</initializer>
+        <briefdescription>
+<para>The default TTL for RRs which contain a host name of some kind. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="349" column="9" bodyfile="avahi-common/defs.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defs_8h_1aee3075c4e6548130db9e9fac83ec4538" prot="public" static="no">
+        <name>AVAHI_DEFAULT_TTL</name>
+        <initializer>(75*60)</initializer>
+        <briefdescription>
+<para>The default TTL for all other records. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-common/defs.h" line="352" column="9" bodyfile="avahi-common/defs.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Some common definitions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>foodefshfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>foodefshfoo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>avahi.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>avahi<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>avahi;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#include<sp/>&lt;avahi-common/cdecl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">AVAHI_C_DECL_BEGIN</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="222" refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a41651921ddf5f2d7a90025615a9d53e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a41651921ddf5f2d7a90025615a9d53e7" kindref="member">AVAHI_SERVER_INVALID</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="223" refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57ad6c0928968fb856a43f6747b21bc9179" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57ad6c0928968fb856a43f6747b21bc9179" kindref="member">AVAHI_SERVER_REGISTERING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224" refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a60c5c15bc7be098b65559eb9e487986a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a60c5c15bc7be098b65559eb9e487986a" kindref="member">AVAHI_SERVER_RUNNING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225" refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57ac4d56d9165da547a608286c736af9a8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57ac4d56d9165da547a608286c736af9a8f" kindref="member">AVAHI_SERVER_COLLISION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226" refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a989b7d6ca246c216564bf9d3c2fa6d63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57a989b7d6ca246c216564bf9d3c2fa6d63" kindref="member">AVAHI_SERVER_FAILURE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}<sp/><ref refid="defs_8h_1a69585bb3f1e59c790dc0645d8bfdbc57" kindref="member">AvahiServerState</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="231" refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a6afdc2228658792da73171e5b26dc328" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a6afdc2228658792da73171e5b26dc328" kindref="member">AVAHI_ENTRY_GROUP_UNCOMMITED</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="232" refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a5627957ceaf2fdd51e1f2585aa871213" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a5627957ceaf2fdd51e1f2585aa871213" kindref="member">AVAHI_ENTRY_GROUP_REGISTERING</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233" refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217acdb3fe1295e58561c666cbf7ee6adf5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217acdb3fe1295e58561c666cbf7ee6adf5a" kindref="member">AVAHI_ENTRY_GROUP_ESTABLISHED</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234" refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a8f163dbd719eb71f404f89415d8c9f3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a8f163dbd719eb71f404f89415d8c9f3e" kindref="member">AVAHI_ENTRY_GROUP_COLLISION</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="235" refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a83adf26c6d556c2f4ce32cce3a62030e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217a83adf26c6d556c2f4ce32cce3a62030e" kindref="member">AVAHI_ENTRY_GROUP_FAILURE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}<sp/><ref refid="defs_8h_1a141829383c5b97e9c0fa75ca0e590217" kindref="member">AvahiEntryGroupState</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="244" refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3aa903cfcd5cb48d49ecac8a49eafd0a53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3aa903cfcd5cb48d49ecac8a49eafd0a53" kindref="member">AVAHI_PUBLISH_UNIQUE</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="245" refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3a1d88f624cdd5e9db53816719d1a28164" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3a1d88f624cdd5e9db53816719d1a28164" kindref="member">AVAHI_PUBLISH_NO_PROBE</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246" refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3adf1987c5e657d4da84ecaffaf184007b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3adf1987c5e657d4da84ecaffaf184007b" kindref="member">AVAHI_PUBLISH_NO_ANNOUNCE</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247" refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3ae1cc131541b9bcb8bfe049fde7aeb2aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3ae1cc131541b9bcb8bfe049fde7aeb2aa" kindref="member">AVAHI_PUBLISH_ALLOW_MULTIPLE</ref><sp/>=<sp/>8,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_PUBLISH_NO_REVERSE<sp/>=<sp/>16,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_PUBLISH_NO_COOKIE<sp/>=<sp/>32,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="252" refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3a26ca9e7b2848c5cb34547c3fa0dd3aac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3a26ca9e7b2848c5cb34547c3fa0dd3aac" kindref="member">AVAHI_PUBLISH_UPDATE</ref><sp/>=<sp/>64,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_PUBLISH_USE_WIDE_AREA<sp/>=<sp/>128,<sp/><sp/></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_PUBLISH_USE_MULTICAST<sp/>=<sp/>256<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}<sp/><ref refid="defs_8h_1a4b10ef40d32caa6ef2e2d62cae00b4a3" kindref="member">AvahiPublishFlags</ref>;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="defs_8h_1afa669747c3ff55190d86673dff960e50" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_LOOKUP_USE_WIDE_AREA<sp/>=<sp/>1,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>AVAHI_LOOKUP_USE_MULTICAST<sp/>=<sp/>2,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="265" refid="defs_8h_1afa669747c3ff55190d86673dff960e50a6424641f01e829bd62854df0ca2354b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1afa669747c3ff55190d86673dff960e50a6424641f01e829bd62854df0ca2354b1" kindref="member">AVAHI_LOOKUP_NO_TXT</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="266" refid="defs_8h_1afa669747c3ff55190d86673dff960e50a1e6cab5169236e3d23581fad5e337d04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1afa669747c3ff55190d86673dff960e50a1e6cab5169236e3d23581fad5e337d04" kindref="member">AVAHI_LOOKUP_NO_ADDRESS</ref><sp/>=<sp/>8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}<sp/><ref refid="defs_8h_1afa669747c3ff55190d86673dff960e50" kindref="member">AvahiLookupFlags</ref>;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="271" refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a901cb53511bc147c0b5373a93b623b54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a901cb53511bc147c0b5373a93b623b54" kindref="member">AVAHI_LOOKUP_RESULT_CACHED</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="272" refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7aa1617f6736538c40bb14b3d54336e66c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7aa1617f6736538c40bb14b3d54336e66c" kindref="member">AVAHI_LOOKUP_RESULT_WIDE_AREA</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273" refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7ac34ea399ed04f8650fad8a5e098cfa29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7ac34ea399ed04f8650fad8a5e098cfa29" kindref="member">AVAHI_LOOKUP_RESULT_MULTICAST</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="274" refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7abbf16c5d7a3790451bd1a9d835702d5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7abbf16c5d7a3790451bd1a9d835702d5d" kindref="member">AVAHI_LOOKUP_RESULT_LOCAL</ref><sp/>=<sp/>8,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275" refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a25d1fbc291fd65bcc1d12a5b51ebd6c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7a25d1fbc291fd65bcc1d12a5b51ebd6c9" kindref="member">AVAHI_LOOKUP_RESULT_OUR_OWN</ref><sp/>=<sp/>16,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="276" refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7af14e302768822589ce3ee73667c942f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7af14e302768822589ce3ee73667c942f1" kindref="member">AVAHI_LOOKUP_RESULT_STATIC</ref><sp/>=<sp/>32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal">}<sp/><ref refid="defs_8h_1a0d69521c9408634d97c41435f4ecbfd7" kindref="member">AvahiLookupResultFlags</ref>;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="285" refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87adb84c76ca1876beeb4f1ac718633667c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87adb84c76ca1876beeb4f1ac718633667c" kindref="member">AVAHI_BROWSER_NEW</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286" refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87ab3adb8824483c87b557a885ee280814c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87ab3adb8824483c87b557a885ee280814c" kindref="member">AVAHI_BROWSER_REMOVE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="287" refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a796b2e4c7e82580fb93fd29151aa5752" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a796b2e4c7e82580fb93fd29151aa5752" kindref="member">AVAHI_BROWSER_CACHE_EXHAUSTED</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="288" refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a430e1134047305e7b892e784cf72f815" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a430e1134047305e7b892e784cf72f815" kindref="member">AVAHI_BROWSER_ALL_FOR_NOW</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="289" refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a84a4230c3a9f25afde40f65d21909675" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87a84a4230c3a9f25afde40f65d21909675" kindref="member">AVAHI_BROWSER_FAILURE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}<sp/><ref refid="defs_8h_1af7ff3b95259b3441a282b87d82eebd87" kindref="member">AvahiBrowserEvent</ref>;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="defs_8h_1ae524657615ba2ec3b17613098a3394cf" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="294" refid="defs_8h_1ae524657615ba2ec3b17613098a3394cfaa27397e0a76171dd9afe7cf2fe9b1f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1ae524657615ba2ec3b17613098a3394cfaa27397e0a76171dd9afe7cf2fe9b1f22" kindref="member">AVAHI_RESOLVER_FOUND</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="295" refid="defs_8h_1ae524657615ba2ec3b17613098a3394cfa407f93fe14b008cc1a7ff00eef454528" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1ae524657615ba2ec3b17613098a3394cfa407f93fe14b008cc1a7ff00eef454528" kindref="member">AVAHI_RESOLVER_FAILURE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}<sp/><ref refid="defs_8h_1ae524657615ba2ec3b17613098a3394cf" kindref="member">AvahiResolverEvent</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="304" refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8cad155e1c71dac65c146730d62799e0b82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8cad155e1c71dac65c146730d62799e0b82" kindref="member">AVAHI_DOMAIN_BROWSER_BROWSE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="305" refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca032ec70e5e4a27a030f586e04a93823f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca032ec70e5e4a27a030f586e04a93823f" kindref="member">AVAHI_DOMAIN_BROWSER_BROWSE_DEFAULT</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306" refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca12b82dfcdb9f60dedf30d646b2f649a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca12b82dfcdb9f60dedf30d646b2f649a8" kindref="member">AVAHI_DOMAIN_BROWSER_REGISTER</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="307" refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca13330ac2ff5437bc7e1c8a6afb6797c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca13330ac2ff5437bc7e1c8a6afb6797c7" kindref="member">AVAHI_DOMAIN_BROWSER_REGISTER_DEFAULT</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="308" refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca4b3e38c4dbe40becddcec7df996ef401" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8ca4b3e38c4dbe40becddcec7df996ef401" kindref="member">AVAHI_DOMAIN_BROWSER_BROWSE_LEGACY</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="309" refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8caa4a98e19be60941bcf9c1e465bc5d2f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8caa4a98e19be60941bcf9c1e465bc5d2f3" kindref="member">AVAHI_DOMAIN_BROWSER_MAX</ref></highlight></codeline>
+<codeline lineno="310"><highlight class="normal">}<sp/><ref refid="defs_8h_1a6d263451184e4975cf3e4951d826dc8c" kindref="member">AvahiDomainBrowserType</ref>;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="preprocessor">#define<sp/>AVAHI_SERVICE_COOKIE<sp/>&quot;org.freedesktop.Avahi.cookie&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="preprocessor">#define<sp/>AVAHI_SERVICE_COOKIE_INVALID<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="329" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04adf28e553d9cbc227a9273e55c8198ea3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04adf28e553d9cbc227a9273e55c8198ea3" kindref="member">AVAHI_DNS_TYPE_A</ref><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="330" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a1fbbbefc9b3a3407fb19f3dba8857df0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a1fbbbefc9b3a3407fb19f3dba8857df0" kindref="member">AVAHI_DNS_TYPE_NS</ref><sp/>=<sp/>0x02,</highlight></codeline>
+<codeline lineno="331" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a084143b14e97dc12f8792c70b88ed8a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a084143b14e97dc12f8792c70b88ed8a1" kindref="member">AVAHI_DNS_TYPE_CNAME</ref><sp/>=<sp/>0x05,</highlight></codeline>
+<codeline lineno="332" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04afd42fc4b4da4f0488738c98c2a5f6093" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04afd42fc4b4da4f0488738c98c2a5f6093" kindref="member">AVAHI_DNS_TYPE_SOA</ref><sp/>=<sp/>0x06,</highlight></codeline>
+<codeline lineno="333" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a366c09a0fe7bfac5ed70322247e4519d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a366c09a0fe7bfac5ed70322247e4519d" kindref="member">AVAHI_DNS_TYPE_PTR</ref><sp/>=<sp/>0x0C,</highlight></codeline>
+<codeline lineno="334" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a9a936fd4e30f9cb124b02fae82bded46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a9a936fd4e30f9cb124b02fae82bded46" kindref="member">AVAHI_DNS_TYPE_HINFO</ref><sp/>=<sp/>0x0D,</highlight></codeline>
+<codeline lineno="335" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a227e32b40e782606a274cb7b29c3c763" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a227e32b40e782606a274cb7b29c3c763" kindref="member">AVAHI_DNS_TYPE_MX</ref><sp/>=<sp/>0x0F,</highlight></codeline>
+<codeline lineno="336" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04afd10032391d2c1dc8e531bb9ea321f93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04afd10032391d2c1dc8e531bb9ea321f93" kindref="member">AVAHI_DNS_TYPE_TXT</ref><sp/>=<sp/>0x10,</highlight></codeline>
+<codeline lineno="337" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a3d0ec2ed8bb921f35cb209fc20354218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a3d0ec2ed8bb921f35cb209fc20354218" kindref="member">AVAHI_DNS_TYPE_AAAA</ref><sp/>=<sp/>0x1C,</highlight></codeline>
+<codeline lineno="338" refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a9b98147cfa786ea536568ccb3b27df81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1abc6126af1d45847bc59afa0aa3216b04a9b98147cfa786ea536568ccb3b27df81" kindref="member">AVAHI_DNS_TYPE_SRV</ref><sp/>=<sp/>0x21</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="343" refid="defs_8h_1adc29c2ff13d900c2f185ee95427fb06cad70a95f8cbbed6aae2aaebd9443b8b9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1adc29c2ff13d900c2f185ee95427fb06cad70a95f8cbbed6aae2aaebd9443b8b9a" kindref="member">AVAHI_DNS_CLASS_IN</ref><sp/>=<sp/>0x01<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="344"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349" refid="defs_8h_1a1f6448907add022b34cdc8d23982c898" refkind="member"><highlight class="preprocessor">#define<sp/>AVAHI_DEFAULT_TTL_HOST_NAME<sp/>(120)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352" refid="defs_8h_1aee3075c4e6548130db9e9fac83ec4538" refkind="member"><highlight class="preprocessor">#define<sp/>AVAHI_DEFAULT_TTL<sp/>(75*60)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal">AVAHI_C_DECL_END</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="avahi-common/defs.h"/>
+  </compounddef>
+</doxygen>

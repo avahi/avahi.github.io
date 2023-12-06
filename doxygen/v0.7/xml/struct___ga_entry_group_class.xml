@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct___ga_entry_group_class" kind="struct" language="C++" prot="public">
+    <compoundname>_GaEntryGroupClass</compoundname>
+    <includes refid="ga-entry-group_8h" local="no">avahi-gobject/ga-entry-group.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_entry_group_class_1af76d0998147e4a747362d08e3ac1372d" prot="public" static="no" mutable="no">
+        <type>GObjectClass</type>
+        <definition>GObjectClass _GaEntryGroupClass::parent_class</definition>
+        <argsstring></argsstring>
+        <name>parent_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="avahi-gobject/ga-entry-group.h" line="55" column="1" bodyfile="avahi-gobject/ga-entry-group.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>_GaEntryGroupClass</label>
+        <link refid="struct___ga_entry_group_class"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>parent_class</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>GObjectClass</label>
+      </node>
+    </collaborationgraph>
+    <location file="avahi-gobject/ga-entry-group.h" line="54" column="1" bodyfile="avahi-gobject/ga-entry-group.h" bodystart="54" bodyend="56"/>
+    <listofallmembers>
+      <member refid="struct___ga_entry_group_class_1af76d0998147e4a747362d08e3ac1372d" prot="public" virt="non-virtual"><scope>_GaEntryGroupClass</scope><name>parent_class</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

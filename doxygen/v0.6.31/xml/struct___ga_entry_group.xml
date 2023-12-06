@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="struct___ga_entry_group" kind="struct" language="C++" prot="public">
+    <compoundname>_GaEntryGroup</compoundname>
+    <includes refid="ga-entry-group_8h" local="no">avahi-gobject/ga-entry-group.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___ga_entry_group_1ac67e04b79534b39030ea2bd5e400db0a" prot="public" static="no" mutable="no">
+        <type>GObject</type>
+        <definition>GObject _GaEntryGroup::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="59" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>_GaEntryGroup</label>
+        <link refid="struct___ga_entry_group"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>GObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" line="58" column="1" bodyfile="/home/lathiat/src/avahi/avahi-gobject/ga-entry-group.h" bodystart="58" bodyend="60"/>
+    <listofallmembers>
+      <member refid="struct___ga_entry_group_1ac67e04b79534b39030ea2bd5e400db0a" prot="public" virt="non-virtual"><scope>_GaEntryGroup</scope><name>parent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
