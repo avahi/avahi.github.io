@@ -34,11 +34,10 @@ for name in listed:
     p = FOLDER + name
     if name.endswith(".gz"):
         date = datetime.fromtimestamp(getmtime(p)).strftime("%Y-%m-%d %H:%M:%S")
-        s += t.substitute(file=p, date=date, size=size(getsize(p)))
+        s += t.substitute(file=name, date=date, size=size(getsize(p)))
 with open(FOLDER + PATH_TO_FILE, "r", encoding="utf-8") as file:
     file_data = file.read()
     file_data = file_data.replace("<placeholder></placeholder>", s)
 
 with open(FOLDER + PATH_TO_FILE, "w", encoding="utf-8") as file:
     file.write(file_data)
-os.remove(FOLDER + "build.py")
